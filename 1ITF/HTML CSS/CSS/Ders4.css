@@ -1,0 +1,42 @@
+*{
+    /* margin: 0;
+    border: 5px solid salmon; */
+}
+
+
+#paragraf3{
+    background-color: coral;
+    /* margin-top: 25px;
+    margin-bottom: 50px;
+    margin-left: 70px;
+    margin-right: 15px; */
+
+    margin: 25px 15px 50px 70px;
+    /* margin:  saat yönünde aynısını tek satırda yazabiliriz. üst sağ alt sol */
+}
+
+#paragraf1{
+    background-color: blue;
+    /* inline ile yapıldığından birinci önceliğe sahiptir buradan değiştirilemez. */
+}
+
+.ortak{
+    background-color: chartreuse;
+}
+
+#paragraf5{
+    background-color: blueviolet;
+    border: 10px dashed red;
+    padding: 10px ;
+    margin: 50px;
+    border-radius: 30px;
+}
+
+#paragraf6{
+    background-color: aqua;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    padding: 20px 10px 30px 40px;
+    text-shadow: 8px 8px 2px red;
+}
