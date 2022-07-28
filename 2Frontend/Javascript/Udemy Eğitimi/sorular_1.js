@@ -40,3 +40,5 @@ if(vki < 18.5){
 }
 
 console.log(`Boyunuz ${boy} m., kilonuz ${kilo} kg., ve Vücut Kitle İndexiniz : ${vki}`);
+
+console.log("deneme oldu mu workspace");
