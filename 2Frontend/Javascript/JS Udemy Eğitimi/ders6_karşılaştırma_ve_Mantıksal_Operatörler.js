@@ -52,9 +52,9 @@ console.log("--------------------")
 
 
 // MANTIKSAL OPERATÖRLER   
-// AND      &&      ve
-//  OR      ||      veya
-// NOT      !       değildir
+// AND      &&      ve          (ampersan)
+//  OR      ||      veya        (pipe)
+// NOT      !       değildir    (negation)
 
 
 /*  

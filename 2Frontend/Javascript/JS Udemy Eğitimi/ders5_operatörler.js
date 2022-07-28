@@ -60,12 +60,12 @@ console.log(ax);   // 458
 
 console.log('')
 
-// Arttırma azaltma operatörleri
+// Arttırma (Increment) ve Azaltma (Decrement) operatörleri  (Post - Pre ili çeşiti vardır.)
 
 let sayi3 = 20
 console.log(sayi3)
 
-sayi3++  // = sayi3 + 1 demektir bu kullanım  // 20+1= 21
+sayi3++  // = sayi3 + 1 demektir bu kullanım  // 20+1= 21  
 ++sayi3  // de yazılabilir  //21+1=22
 console.log(sayi3)
 
