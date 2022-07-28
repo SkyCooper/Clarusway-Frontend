@@ -1,0 +1,41 @@
+/*
+    CSS Kodları
+    Standart isimlendirme: class-name
+*/
+/* Kullanım Metodları */
+/* tag kullanımı:
+    p { ... } 
+    a { ... }
+    span { ... }
+    div { ... }
+*/
+/* id kullanımı: <p id="idName">
+    #idName { ... }
+*/
+/* class kullanımı: <p class="className">
+    .className { ... }
+*/
+body { /* veya yıldız (*) */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: #363333;
+    background-color: #ffffee;
+}
+
+#birinci {
+    background-color: #ffffff;
+    border: 1px solid #fb0505; /* kenar işlemleri */
+    margin: 20px; /* etrafında boşluk */
+    padding: 10px; /* iç boşluk */
+ }
+
+.ikinci {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin: 20px;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=,, initial-scale=1.0">
+    <title>Tablo</title>
+    <style>
+
+        thead{
+            background-color: antiquewhite;
+        }
+
+        #name1{
+            color: blue;
+            background-color: rgb(196, 222, 255);
+            text-align: center;
+        }
+
+        .satır2{
+            background-color: rgb(175, 160, 189);
+            text-decoration-color: aquamarine;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    }
+
+    </style>
+</head>
+<body>
+    <h1>Tablo Yapılması</h1>
+    <p>Tablolar table etiketi içerisine yazılır, 
+        <br> tr--> Table Row ile çevrelenir. 
+        <br> th --> table header etiketine başlıklar 
+        <br> td--> Table data tagıne içerikler yazılır. 
+        <br> boreder --> attiributi ile tabloya çizgi/kalınlık verileri. 
+        <br> colspan --> yatay uzat 
+        <br> rowspan --> dikey uzat 
+        <br> allign--> attirubite ile default olarak  ortalanan başlıklar ile sola yaslı olan satır yazıları değiştirilir. 
+        <br> thead-->  içine th ile  başılar yazılıyor. ortalanmış/kalın olarak yazılır. 
+        <br> tbody --> içine td'ler yani içerikler yazılır.
+
+</p>
+
+    <!-- style için 3 farklı yöntem vardır.
+    1. tag içine sytle attiribute ile yazma
+    2. head bölümünde sytle attiribute içine yazma
+        - #id verilerek (uniq tir.)
+        - .class verilerek (gruba verilebilir)
+        - direk ismini yazarak
+    3. style.css dosyası ile bağlantı kurup hepsni oraya yazma -->
+
+
+    <table border="2">  <!-- bunun kırmızı olması zaten yapma gerek yok css ile yap demek -->
+        <thead>
+
+            <tr>
+                <th>1 nu. Adı</th>
+                <th>2 nu. Soyadı</th>
+                <th>3 nu. TCK NO</th>
+                <th>4 nu. Kan Grb </th>
+                <th>5 nu. Kilo</th>
+          
+            </tr>
+
+        </thead>
+
+        <tbody>
+            
+        <tr>
+            <td id="name1">Cooper</td>
+            <td>Sky</td>
+            <td>12345</td>
+            <td>A +</td>
+            <td>65</td>
+            
+        </tr>
+    
+
+        
+        <tr class="satır2">
+            
+            <td>Mustafa</td>
+            <td>Black</td>
+            <td>54236</td>
+            <td>B +</td>
+            <td >82</td>
+        </tr>
+        <tr>
+            
+            <td >Veli</td>
+            <td rowspan="3"> Bilir </td>
+            <td>0**547</td>
+            <td>AB -</td>
+            <td>78</td>
+        </tr>
+        <tr>
+            
+            <td align="left">Ali</td>
+            <!-- <td>Bilir</td> -->
+            <td>02547</td>
+            <td>AB +</td>
+            <td>77</td>
+        </tr>
+
+            
+         <tr>
+            <td colspan="2" align="center">Deli Bilmez</td>
+            <!-- <td>Tatlı</td> -->
+            <td>1102547</td>
+            <td>0 +</td>
+            <td>96</td>
+                
+        </tr>
+        </tbody>
+            
+
+    </table>
+</body>
+</html>

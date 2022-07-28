@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body{
+    background-color: black;
+    color: white;
+    margin-bottom: 5000px;
+}
+
+.container{
+    /* border: 2px solid red; */
+    width: 80%;
+    margin: auto;
+    background-color: rgb(38, 34, 34);
+    border-radius: 20px;
+    /* padding: 1rem; */
+}
+
+#title{
+    font-size: 90px;
+    text-align: center;
+}
+
+.heading{
+    font-family: 'Lobster', cursive;
+}
+#span1{
+    color: red;
+}
+
+#img-div{
+    /* border: 2px solid red; */
+    /* text-align: center; */
+}
+
+#image{
+    width: 500px;
+    margin: auto;
+    display: block;
+    box-shadow: 5px 5px 100px red;
+    border-radius: 50px;
+}
+
+#date{
+    text-align: center;
+}
+
+#info{
+    /* border: 2px solid red; */
+    width: 80%;
+    margin: 20px auto;
+    text-align:justify;
+    font-size: 25px;
+}
+
+#marvel{
+    color: red;
+    margin-left: 10%;
+}
+
+ul{
+    
+    width: 80%;
+    margin: auto;
+}
+
+li{
+    font-size: 24px;
+    line-height: 3rem;
+}
+
+#footer{
+    /* border: 2px solid red; */
+    margin: 2rem;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+#link{
+    text-decoration: none;
+    color: darkgoldenrod;
+    border: 2px solid darkgoldenrod;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgb(47, 45, 45);
+}
+
+#link:hover{
+    background-color: darkgoldenrod;
+    color: red;
+}

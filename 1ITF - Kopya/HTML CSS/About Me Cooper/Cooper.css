@@ -1,0 +1,142 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+.container{
+    /* border: 2px solid red; */
+    width: 80%;
+    margin: auto;
+    background-color: grey;
+    border-radius: 20px;
+    /* padding: 1rem; */
+}
+
+#title{
+font-size: 90px;
+text-align: center;
+}
+
+.heading{
+font-family: 'Lobster', cursive;
+text-align: justify;
+}
+
+#span1{
+    color: red;
+}
+
+#img-div{
+    /* border: 2px solid red;  
+    nerede çalıştığımıza bakmak için */
+    text-align: center;
+
+}
+
+
+#banner{
+    text-align: center;
+}
+
+#image{
+    width: 500px;
+    margin: auto;
+    display: block;
+    box-shadow: 5px 5px 200px rgb(34, 29, 29);
+    border-radius: 50px;
+    background-color: rgb(186, 172, 200);
+}
+
+#date{
+    color: rgba(238, 8, 8, 0.696);
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+}
+
+#info{
+    /* border: 2px solid red; 
+    nerede çalıştığımıza bakmak için*/
+    width: 80%;
+    margin: 20px auto;
+    text-align: justify;
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+}
+
+#eğitim{
+    color: rgb(155, 86, 86);
+    margin-left: 10%;
+    font-size: 35px;
+
+}
+
+ul{
+    /* border: 2px solid red; 
+    nerede çalıştığımıza bakmak için */
+    width: 80%;
+    margin: auto;
+}
+
+li{
+    font-size: 24px;
+    line-height: 3rem;
+    /* 1 rem 16 pixsel */
+    font-family: 'Lobster', cursive;
+
+}
+
+#footer{
+margin: 30px;
+padding: 1rem;
+font-size: 2rem;
+margin-left: 10%;
+font-family: 'Lobster', cursive;
+
+
+}
+
+#link{
+    color: darkorange;
+    text-decoration: none;
+    border: 2px solid darkorange;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(45, 45, 45);
+
+}
+
+
+#link2{
+    color: rgb(15, 35, 218);
+    text-decoration: none;
+    border: 2px solid rgb(56, 11, 220);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(45, 45, 45);
+
+}
+
+#link3{
+    color: red;
+    text-decoration: none;
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(45, 45, 45);
+
+}
+
+#link:hover{
+    background-color: blanchedalmond;
+    color: red;
+}
+
+#link2:hover{
+    background-color: rgb(28, 173, 202);
+    color: red;
+}
+
+#link3:hover{
+    background-color: rgb(218, 120, 120);
+    color: red;
+}

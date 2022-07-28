@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Büyük başlık</h1>
+    <h2>Başlık</h2>
+    <h3>Başlık</h3>
+    <h4>Başlık</h4>
+    <h5>Başlık</h5>
+    <h6>Küçük başlık</h6>
+    <p>
+        Bir paragraf oluşturdum.<br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, iusto enim? <br>Tenetur explicabo dolores vero omnis ut eveniet vel! Porro quasi sequi maiores aliquid eius! Ea accusamus reprehenderit dolor unde.
+        <br> bir alt satıra yazdım.
+    </p>
+    <hr> <!-- yatay çizgi (ayraç) -->
+    <p>
+        başka bir paragraf. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vitae soluta quis dolorem eius consequuntur sequi officia. Aspernatur tempore magnam, mollitia eum consequuntur possimus cumque. Quibusdam itaque temporibus dignissimos ipsa? <br>
+    </p>
+    <hr> <!-- yatay çizgi (ayraç) -->
+    <p><strong>kalın yazı</strong> <b>kalın</b></p>
+    <p><em>italik yazı</em> <i>italik yazı</i></p>
+    <p><ins>altı çizili yazı</ins> <u>altı çizili yazı</u></p>
+    <p><del>üzeri çizili yazı</del> <s>üzeri çizili yazı</s></p>
+    <p><mark>önemli bir yazı</mark></p>
+    <ol type="1"> <!-- Ordered List -->
+        <b>Sıralı Liste</b>
+        <li>Lorem ipsum dolor sit.</li> <!-- List Item -->
+        <li>Lorem ipsum dolor sit.</li> <!-- List Item -->
+        <li>Lorem ipsum dolor sit.</li> <!-- List Item -->
+        <li>Lorem ipsum dolor sit.</li> <!-- List Item -->
+    </ol>
+    <ul type="square"> <!-- Unordered List -->
+        <b>Sırasız Önemsiz Listeler</b>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+    </ul>
+
+    <p>lorem            ipsum</p> <!-- birden fazla boşluk tanınmaz. -->
+    <p>lorem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ipsum</p> <!-- birden fazla boşluk için &nbsp; kullanılır. -->
+    
+    <dl> <!-- description list -->
+        <dt>Liste Başlığı</dt> <!-- description title -->
+        <dd>Lorem ipsum, dolor sit amet consectetur adipisicing.</dd> <!-- description data/detail -->
+        <dd>Lorem ipsum, dolor sit amet consectetur adipisicing.</dd> <!-- description data/detail -->
+        <dd>Lorem ipsum, dolor sit amet consectetur adipisicing.</dd> <!-- description data/detail -->
+        <dd>Lorem ipsum, dolor sit amet consectetur adipisicing.</dd> <!-- description data/detail -->
+        <dd>Lorem ipsum, dolor sit amet consectetur adipisicing.</dd> <!-- description data/detail -->
+    </dl>
+    
+    <!-- TABLES -> Data listeleme dışında kullanılmıyor. <div> kullanılıyor. -->
+    <table border="1" width="100%" cellspacing="10" cellpadding="10">
+        <thead> <!-- table head -->
+            <tr> <!-- table row -->
+                <th>Sutun Başlık 1</th> <!-- table head -->
+                <th>Sutun Başlık 2</th> <!-- table head -->
+                <th>Sutun Başlık 3</th> <!-- table head -->
+                <th>Sutun Başlık 4</th> <!-- table head -->
+            </tr>
+        </thead>
+        <tbody> <!-- table body -->
+            <tr> <!-- table row -->
+                <td>içerik 1</td> <!-- table data -->
+                <td>içerik 2</td> <!-- table data -->
+                <td>içerik 3</td> <!-- table data -->
+                <td>içerik 4</td> <!-- table data -->
+            </tr>
+            <tr> <!-- table row -->
+                <td colspan="2">içerik 1</td> <!-- colspan for "column" -->
+                <td colspan="2">içerik 2</td>
+            </tr>
+            <tr> <!-- table row -->
+                <td rowspan="2">içerik 1</td> <!-- rowspan for "row-column" -->
+                <td>içerik 2</td> <!-- table data -->
+                <td>içerik 3</td> <!-- table data -->
+                <td>içerik 4</td> <!-- table data -->
+            </tr>
+            <tr> <!-- table row -->
+                <td>içerik 2</td> <!-- table data -->
+                <td>içerik 3</td> <!-- table data -->
+                <td>içerik 4</td> <!-- table data -->
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        internetten resim:
+        <img src="https://www.klasiksanatlar.com/img/sayfalar/b/1_1598452306_resim.png" width="100px" height="50px">
+    </p>
+    <p>
+        lokalden resim (aynı klasörden):
+        <img src="resim.jpeg" width="200px" height="100px">
+    </p>
+    <p>
+        <a href="http://www.google.com" target="_blank">
+            Linke tıkla
+        </a>
+    </p>
+    <p>
+        <a href="http://www.google.com" target="_blank">
+            <dl> <!-- description list -->
+                <dt>Liste Başlığı</dt> <!-- description title -->
+                <dd>Lorem ipsum, dolor sit amet consectetur adipisicing.</dd> <!-- description data/detail -->
+                <dd>Lorem ipsum, dolor sit amet consectetur adipisicing.</dd> <!-- description data/detail -->
+                <dd>Lorem ipsum, dolor sit amet consectetur adipisicing.</dd> <!-- description data/detail -->
+                <dd>Lorem ipsum, dolor sit amet consectetur adipisicing.</dd> <!-- description data/detail -->
+                <dd>Lorem ipsum, dolor sit amet consectetur adipisicing.</dd> <!-- description data/detail -->
+            </dl>
+        </a>
+    </p>
+    <p>
+        <a href="resim.jpeg"> <!-- tarayıcı açabildiği dosyayı açar -->
+            view JPEG
+        </a>
+    </p>
+    <p>
+        <a href="indirilecek_dosya.zip"> <!-- tarayıcı açamadığı dosyayı indirir -->
+            download ZIP
+        </a>
+    </p>
+    <div class="div-class"> <!-- divider, container -->
+        <p>
+            Lorem ipsum dolor sit amet <span class="span-class">voluptas</span> adipisicing elit. Facere nemo tempora assumenda ipsum eos, maxime recusandae aliquam ex, sit dicta voluptas odit ipsam qui vero, quasi reiciendis voluptatum quod. Molestias!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque fugiat iure voluptates totam aperiam quam illum eius ipsam fuga necessitatibus provident, ipsa perspiciatis dolor, dolore quidem? At, error. Nihil, quisquam.
+        </p>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</body>
+</html>
