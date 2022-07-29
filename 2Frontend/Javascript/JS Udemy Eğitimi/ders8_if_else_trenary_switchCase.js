@@ -3,9 +3,10 @@ if (koşul) {}
 else if (koşul) {}
 else {} 
 
-if den sonra mutlaka koşulu parantez içine yaz ve ; kullanmadan süslü parantez aç
+if den sonra mutlaka koşul parantez içine yazılır ve ; kullanmadan süslü parantez açılır
+veya parantez içine sadece boolen değer yazılır
 else if aynı syntaxla yazılır, elif değil
-else koşulsuz direk süsülü parantez.
+else bloğunda herhangi bir koşul belirtmeden sadece süslü parantez açılır.
 
 // böylede hata vermeden çalışır.
 if (koşul) {
@@ -101,7 +102,7 @@ if (asalSayiMi) {} // parantez içi zaten boolen bir değere sahip olduğu için
 
 
 let a = 10, b = 5, c = 0;
-if (a > b) {        //  burası tru olduğundan
+if (a > b) {        //  burası true olduğundan
     c = a + b;      //  bu kod çalışır 10+5=15
 } else {
     c = a - b;
