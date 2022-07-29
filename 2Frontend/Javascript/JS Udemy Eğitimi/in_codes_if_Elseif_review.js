@@ -43,22 +43,25 @@ const school = 'univercity';
 // karşılaştırma yapmak için (===) operatörünü kullanmak daha doğru sonuç verecektir.
 
 console.log("--if kullanımı--");
+//tek satırda,
 if (firstName == 'Cooper'){console.log("Merhaba Cooper")}
 
+//çoklu satırda,
 if (lastName === 'Sky'){
     console.log("Merhaba Sky")
 }
 
 // if ten sonra sadece tek satırlık kod yazılacaksa süslü paranteze gerek yok, ama yine if ten sonra ; kullanılmaz.
-
 if (age === 18) console.log("18 yaşında");
 
-// koşul olarak boolen değer kullanma;
 
+// koşul olarak boolen değer kullanma;
 if (isStudent){
     console.log("Merhaba öğrenci1");
 }
 
+// parantez içi zaten boolen bir değere sahip olduğu için direk kullanılabilir.
+// Aslında ikiside aynıdır,
 if (isStudent===true){
     console.log("Merhaba öğrenci2");
 }
@@ -87,6 +90,18 @@ if (isStudent === false){
 }
 
 
+// let benimYasim = 31, onunYasi =25;       //tek satırda tanımlama yapıldı. 
+// console.log("Benim yaşım: " + benimYasim + " Onun yaşı: " + onunYasi);
+// console.log(`Benim yaşım: ${benimYasim} Onun yaşı: ${onunYasi}`);
+
+// if (benimYasim < onunYasi) {             // 31<25 false olduğundan if çalışmaz
+// console.log("Ben senden küçüğüm"); 
+// } 
+// else {                                   // else çalışır.
+//     console.log("Ben ondan büyüğüm");
+// }
+
+
 console.log("--if/else if/else kullanımı--");
 
 if (age<18) {
@@ -96,6 +111,16 @@ if (age<18) {
 } else {
     console.log("18 yaşından büyük");
 }
+
+
+// let x = 10; y = 20;  z = 2;
+
+// if (x%2 > y%2) {console.log("x tek y ise çifttir.");} 
+// else if(x%2 < y%2) {console.log("x çift y ise tektir.");} 
+// else if(x === y) {console.log("x ve y değer ve tip olarak eşittir.");} 
+// else if(y/2 === x) {console.log("y/2 ve x değer ve tip olarak eşittir.");} 
+// else { console.log("Hiçbir koşul doğru değildir.");}
+
 
 
 
@@ -123,6 +148,19 @@ if (age>=18) {
     console.log("Ehliyet alamazsınız");
 }
 
+
+// let sayi1 = 10, sayi2 = 20;
+// if (sayi1 > sayi2) {
+
+//     if (sayi2 > 20)
+//         console.log("Sayı1 hem sayı2 den hemde 20den büyüktür.");
+//     }
+//     else {
+//         console.log("Else çalışır");       
+// }
+
+
+
 // ilave koşul ekleme,
 if (age>=18) {
     if ((school === 'univercity') || (school === 'high school')) {
@@ -134,12 +172,14 @@ if (age>=18) {
     console.log("Ehliyet alamazsınız");
 }
 
+
 // koşul arttırma ve else if ekleme
 if (age > 0 && age<12) {
     console.log("Çocuk");
 } else if (age >= 13 && age <= 19) {
     console.log("Ergen");
 } else {console.log("Yetişkin");}
+
 
 
 console.log("--undefined kullanımı--");
@@ -150,8 +190,8 @@ if (typeof id !== 'undefined') {
     console.log("id: " + id);
 } else {
     console.log(" No id");
-
 }
+
 
 
 

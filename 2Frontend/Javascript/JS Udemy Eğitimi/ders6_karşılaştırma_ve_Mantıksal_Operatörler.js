@@ -142,3 +142,25 @@ console.log("----------------")
 console.log(0 || false); // true yok  son bulduğu falsie değer --> false
 console.log(false || 0 ); // true yok bulduğu falsie değer --> 0 
 console.log(3 || 0 ); // ilk true değer --> 3 
+
+
+// Ternary/Üçlü Operators  :
+// bir koşul yazmamızı sağlar. 
+
+let isRaining = true
+isRaining
+     ? console.log('You need a raincoat.')  // true --> burası çalışır,
+     : console.log('No need for a raincoat.')
+
+let isRain = false
+isRain
+       ? console.log('You need a raincoat.')
+       : console.log('No need for a raincoat.') // false --> burası çalışır,
+
+
+let isRainy; // undefined --> yani false olduğundan, No need for a raincoat
+isRainy ? console.log('You need a raincoat.') : console.log('No need for a raincoat.') 
+
+
+let result = 5 > 4 ? 'Evet 5 4 ten büyüktür.' : 'Hayır 5 4 ten büyük değildir.'
+console.log(result);
