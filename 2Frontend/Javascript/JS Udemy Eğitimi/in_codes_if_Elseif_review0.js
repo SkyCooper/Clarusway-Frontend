@@ -1,65 +1,87 @@
-"use strict";
+// "use strict";
 
-// 29 Temmuz 2022, Cuma
+// // 29 Temmuz 2022, Cuma
 
-/*
-if (koşul) {}
-else if (koşul) {}
-else {} 
+// /*
+// if (koşul) {}
+// else if (koşul) {}
+// else {} 
 
-if den sonra mutlaka koşul parantez içine yazılır ve ; kullanmadan süslü parantez açılır
-veya parantez içine sadece boolen değer yazılır
-else if aynı syntaxla yazılır, elif değil
-else bloğunda herhangi bir koşul belirtmeden sadece süslü parantez açılır.
+// if den sonra mutlaka koşul parantez içine yazılır ve ; kullanmadan süslü parantez açılır
+// veya parantez içine sadece boolen değer yazılır
+// else if aynı syntaxla yazılır, elif değil
+// else bloğunda herhangi bir koşul belirtmeden sadece süslü parantez açılır.
 
-// böylede hata vermeden çalışır.
-if (koşul) {
-} else if (koşul) {
-} else {
-} 
-
-
-// veya böylede çalışır. boşluklar önemsizdir.
-if (koşul) {
+// // böylede hata vermeden çalışır.
+// if (koşul) {
+// } else if (koşul) {
+// } else {
+// } 
 
 
-}
-
-else if (koşul) {
-
-}
-
-else {
-
-} 
-*/
+// // veya böylede çalışır. boşluklar önemsizdir.
+// if (koşul) {
 
 
+// }
 
+// else if (koşul) {
 
-// karşılaştırma yapmak için (===) operatörünü kullanmak daha doğru sonuç verecektir.
+// }
 
-console.log("--if kullanımı--");
-//tek satırda,
+// else {
 
-
-//çoklu satırda,
-
-
-// if ten sonra sadece tek satırlık kod yazılacaksa süslü paranteze gerek yok, ama yine if ten sonra ; kullanılmaz.
+// } 
+// */
+// const firstName = 'Cooper';
+// const lastName = 'Sky';
+// const age = 18;
+// const isStudent = true;
 
 
 
-// koşul olarak boolen değer kullanma;
+// // karşılaştırma yapmak için (===) operatörünü kullanmak daha doğru sonuç verecektir.
+
+// console.log("--if kullanımı--");
+// //tek satırda,
+// if (firstName === 'Cooper') {console.log("Merhaba Cooper");}
+
+// //çoklu satırda,
+// if (firstName === 'Cooper') {
+//     console.log("Merhaba Cooper1");
+// }
 
 
-// parantez içi zaten boolen bir değere sahip olduğu için direk kullanılabilir.
-// Aslında ikiside aynıdır,
+// // if ten sonra sadece tek satırlık kod yazılacaksa süslü paranteze gerek yok, ama yine if ten sonra ; kullanılmaz.
+// if (firstName === 'Cooper') console.log("Merhaba Cooper3");
 
 
 
-console.log("--if/else kullanımı--");
 
+// // koşul olarak boolen değer kullanma;
+// if (isStudent === true){console.log("Merhaba öğrenci");}
+// if (isStudent === false){console.log("Merhaba öğrenci3");}
+
+// // parantez içi zaten boolen bir değere sahip olduğu için direk kullanılabilir.
+// // Aslında ikiside aynıdır,
+// if (isStudent){console.log("Merhaba öğrenci2");}
+// if (true){console.log("Merhaba öğrenci4");}
+
+
+
+// console.log("--if/else kullanımı--");
+// if (isStudent === true){
+//     console.log("Merhaba Öğrenci5");
+// }else {
+//     console.log("Kayıt olun");
+
+// }
+// if (isStudent === false){
+//     console.log("Merhaba Öğrenci5");
+// }else {
+//     console.log("Kayıt olun");
+
+// }
 
 
 
@@ -75,12 +97,20 @@ console.log("--if/else kullanımı--");
 // }
 
 
-console.log("--if/else if/else kullanımı--");
+// console.log("--if/else if/else kullanımı--");
+
+// if (age < 18) {
+//     console.log("18 yaşından küçük");
+// } else if (age === 18) {
+//     console.log("18 yaşında");
+    
+// }else {
+//     console.log("18 yaşından büyük");
+// }
 
 
 
-
-// let x = 10; y = 20;  z = 2;
+// let x = 10, y = 20,  z = 2;
 
 // if (x%2 > y%2) {console.log("x tek y ise çifttir.");} 
 // else if(x%2 < y%2) {console.log("x çift y ise tektir.");} 
@@ -91,23 +121,32 @@ console.log("--if/else if/else kullanımı--");
 
 
 
-console.log("--iç içe if kullanımı--");
+// console.log("--iç içe if kullanımı--");
 
 
-/*
-if (koşul) {
-    if (koşul)
-    console.log()
-}
-else {
-    console.log()
-}
-*/
+// /*
+// if (koşul) {
+//     if (koşul) {
+//     console.log()
+// }
+// else {
+//     console.log()
+// }
+// */
+// const school = 'high';
+// if (age>=18) {
+//     if (school === 'univercity') {
+//         console.log("Tebrikler, Ehliyet alabilirsiniz");
+//     } else {
+//         console.log('Eğitim durumu yetersiz');
+//     }
+// } else {
+//     console.log("Ehliyet alamazsınız");
+// }
 
 
 
-
-// let sayi1 = 10, sayi2 = 20;
+// let sayi1 = 35, sayi2 = 25;
 // if (sayi1 > sayi2) {
 
 //     if (sayi2 > 20)
@@ -119,26 +158,48 @@ else {
 
 
 
-// ilave koşul ekleme,
+// // ilave koşul ekleme,
+// if (age>=25){
+// if(school === "univercity" || school === "high" )
+// { console.log("ehliyet alabilirsin"); }
+// else{console.log("eğitim durumu yetersiz");}} 
+// else {console.log("ehliyet alanmazsın");}
+
+
+// // koşul arttırma ve else if ekleme
+// if (age > 0 && age<12) {
+//     console.log("Çocuk");
+// } else if (age >= 13 && age <= 19) {
+//     console.log("Ergen");
+// } else {console.log("Yetişkin");}
 
 
 
-// koşul arttırma ve else if ekleme
+// console.log("--undefined kullanımı--");
+let id;
+console.log(typeof id);
 
-
-
-
-console.log("--undefined kullanımı--");
-
-
-
+if (typeof id != undefined){
+    console.log("id :" + id);
+} else {
+    console.log("No id ");
+}
 
 
 console.log("--Ternary ile kullanım--");
 
-
+let a = 10, b = 5, c = 0;
+if (a > b) {        //  burası true olduğundan
+    c = a + b;      //  bu kod çalışır 10+5=15
+} else {
+    c = a - b;
+}
+console.log("c değeri : " + c);
 
 // TERNARY YAPI ile aynısının yazılması
+c = (a > b) ? (a + b) : (a -b);
+console.log("c değeri : " + c);
+
 
 // (a>b ise) ? (true) : (false)
 // bunun okunuşu, eğer a>b ise(?) c=a+b olsun, değilse(:) c=a-b olsun demektir.
@@ -148,8 +209,35 @@ console.log("--Ternary ile kullanım--");
 console.log("--SWITCH CASE KULLANIMI--" );
 
 console.log("-----iç içe if else if kullanımı-----" );
+let haftaninKacinciGunu = 3;
 
+if (haftaninKacinciGunu == 1) {
+    console.log("Pazartesi" );
+} else if (haftaninKacinciGunu == 2) {
+    console.log("Salı" );
+} else if (haftaninKacinciGunu == 3) {
+    console.log("Çarşamba" );
+} else if (haftaninKacinciGunu == 4) {
+    console.log("Perşembe" );
+} else if (haftaninKacinciGunu == 5) {
+    console.log("Cuma" ); 
+} else {
+    console.log("Haftasonu" ); 
+}
 
+console.log("----switch case ile------" );
+
+let haftaninGunu = 5; 
+switch(haftaninGunu){
+    case 1 : console.log("Pazartesi"); // break;
+    case 2 : console.log("Salı");  // break;
+    case 3 : console.log("Çarşamba"); // break;
+    case 4 : console.log("Perşembe"); break;
+    case 5 : console.log("Cuma"); break;
+    case 6 : console.log("Cumartesi"); break;
+    case 7 : console.log("Pazar"); break;
+    default : console.log("Hatalı gün girdin");
+}
 
 
 console.log("----switch case ile------" );
@@ -161,4 +249,6 @@ console.log("----switch case ile------" );
 
  
 // ternary gösterimi,
-
+let gün;
+gün = (haftaninGunu === 6 || haftaninGunu === 7) ? ("Haftasonu") : ("Haftaiçi");
+console.log(gün);
