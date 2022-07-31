@@ -6,7 +6,7 @@
 // Primitive Tipler; Number, String, Boolen, Undefined, Null, Symbol
 // Referans  Tipler - Object ;  Array, Map
 
-// 1-Number (Tamsayi, ondalık, negatif hepsi aynı tiptir.)
+// 1-Number (Tamsayi, ondalık, negatif hepsi aynı tiptir. )
 
 let sayi = 50
 console.log(sayi)
