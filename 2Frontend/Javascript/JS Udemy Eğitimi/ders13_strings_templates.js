@@ -87,6 +87,40 @@ str = `I'm ${(2022-yearOfBirth>=18) ? 'over 18' : 'under 18'} years old` // bura
 console.log(str);
 
 
+
+console.log('-- Escape Sequences in Strings --');
+
+/* Quotes are not the only characters that can be escaped inside a string. There are two reasons to use escaping characters:
+
+To allow you to use characters you may not otherwise be able to type out, such as a carriage return.
+To allow you to represent multiple quotes in a string without JavaScript misinterpreting what you mean.
+We learned this in the previous challenge.
+
+Code	Output
+\'	single quote
+\"	double quote
+\\	backslash
+\n	newline
+\r	carriage return
+\t	tab
+\b	word boundary
+\f	form feed
+Note that the backslash itself must be escaped in order to display as a backslash. */
+
+const doubleQuoteStr = "This is a string"; 
+const singleQuoteStr = 'This is also a string';
+const conversation = 'Finn exclaims to Jake, "Algebraic!"';
+const goodStr = 'Jake asks Finn, "Hey, let\'s go on an adventure?"'; 
+// const badStr = 'Finn responds, "Let's go!"';  hata verir
+const myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+/*
+FirstLine
+    \SecondLine
+ThirdLine
+*/
+
+
+
 console.log('-- string alıştırmaları --');
 
 var sentence = " Modern java-script dersleri serimizin bu bölümünde javascript string veri tipi uygulamalarını yapıyoruz.  "
