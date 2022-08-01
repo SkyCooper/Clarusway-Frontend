@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta nam e="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intersecting Codes</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,15 +23,75 @@
                 <li><a href="#">İletişim</a></li>
             </ul>
         </div>
+        <form class="form1" action="http://www.clarusway.com/action_page.php" method="post">
+            <h4 id="welcome">Welcome Intersecting Codes Page</h4>
+            Username:
+            <input type="text" name="Username">
+            Student Number:
+            <input type="number" name="Username">
+            Password:
+            <input type="password" name="Password">
+            <input type="submit" value="submit">
+            <h4 id="gender" action="" method="">Gender</h4>
+            <div class="buttons">
+                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="Male"> Male
+            </div>
+        </form>
+        <form class="form2" action="" method="get">
+            <p id="language">Which language do you know?</p>
+            <input type="checkbox" name="languages" id="">Python
+            <input type="checkbox" name="languages" id="">Javascript
+            <input type="checkbox" name="languages" id="">C#
+            <input type="checkbox" name="languages" id="">React
+            <input type="checkbox" name="languages" id="">Django
+            <input type="checkbox" name="languages" id="">C++
+            <input type="checkbox" name="languages" id="">Pascal <br>
+            <input type="reset" value="reset">
+        </form>
+        <form action="http://www.clarusway.com/action_page.php">
+            <div class="form-group">
+                <h2>Welcome Clarusway - select</h2>
+                <p>Please select a lesson.</p>
+                <select name="lessons">
+                    <option value="Java">Java</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS" selected>CSS</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Git">Git</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+        </form>
+        <form action="http://www.clarusway.com/action_page.php">
+            <div class="selectbutton">
+                <h2>Welcome Clarusway - datalist</h2>
+                <p>Please select a lesson.</p>
+                <input type="text" list="lessons" name="lesson">
+                <datalist id="lessons">
+                    <option value="java">
+                    <option value="html">
+                    <option value="css">
+                    <option value="js">
+                    <option value="git">
+                    <option value="maven">
+                </datalist>
+            </div>
+        </form>
         <div class="center">
             <h1>Intersecting Codes</h1>
             <h2>Fullstack Developers </h2>
             <div class="buttons">
+                <button>ITF</button>
                 <button>Frontend</button>
                 <button>Backend</button>
             </div>
         </div>
     </div>
+    <form action="">
+        <h4>Please, enter your comments.</h4>
+        <textarea name="comments" id="" cols="150" rows="10">Enter your comments</textarea>
+    </form>
 
 
 
