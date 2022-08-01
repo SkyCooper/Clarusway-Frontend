@@ -82,7 +82,8 @@
 }
 
 .center .buttons {
-  margin: 35px 280px;
+  margin: 35px 10px;
+  text-align: center;
 }
 
 .buttons button {
@@ -97,7 +98,51 @@
   outline: none;
   border-radius: 25px;
   transition: 0.5s;
+  text-align: center;
 }
 .buttons button:hover {
   background-color: cadetblue;
+}
+
+.form1 {
+  color: #ff6e00;
+  font-size: 20px;
+  font-weight: bold;
+  width: 885px;
+  margin-top: 10px;
+  text-align: center;
+}
+.form2 {
+  margin: 10px;
+  color: #ff6e00;
+  font-size: 20px;
+  font-weight: bold;
+  width: 885px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+#welcome,
+#gender,
+#language {
+  color: black;
+  text-align: left;
+  margin: 10px;
+  padding: 5px;
+}
+
+.buttons {
+  margin: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.form-group {
+  margin: 10px;
+  padding: 5px;
+}
+
+.selectbutton {
+  margin: 10px;
+  padding: 5px;
 }
