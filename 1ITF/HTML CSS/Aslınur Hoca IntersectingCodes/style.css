@@ -96,8 +96,52 @@
     outline: none;
     border-radius: 25px;
     transition: .5s;
+    text-align: center; 
 }
 .buttons button:hover{
     background-color:cadetblue ;
 
 }
+
+.form1{
+    color: #ff6e00;
+    font-size: 20px;
+    font-weight: bold;
+    width: 885px;
+    margin-top: 10px;
+    text-align: center;  
+}
+.form2{
+    color: #ff6e00;
+    font-size: 20px;
+    font-weight: bold;
+    width: 885px;
+    margin-top: 10px;
+    text-align: center;  
+}
+
+#welcome, #gender, #language {
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
