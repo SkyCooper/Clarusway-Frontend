@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formlar</title>
+</head>
+
+<body>
+    <h1>Welcome Cooper Page</h1>
+    <form action="result.html" method="get">
+        <!-- method yazılmazsa default get olur , diğeri post metodudur. get metodu 3000 karakteri url ile birlikte gönderir, hassa bilgiler gönderilirken kullanılmaz.-->
+        <div>
+
+            <label for="name">Adınızı giriniz:</label>
+            <!-- name mutlaka yazılmalı, yoksa bachend tarafında anlamsız olur, karşılık vermez. -->
+            <input type="text" name="isim" id="name" placeholder="İsminizi yazın">
+            <!-- placeholder ile kutu içine açıklama vs yazılabilir. -->
+            <!-- value ile kutu içine default değer yazılabilr. -->
+            <!-- size ile kutu boyutu değiştirilebilir. -->
+            <!-- input kapanış tag yok. -->
+            <br>
+            <!-- label kullanınca label içindeki yazıya tıklayınca giriş alanı aktif olsun diye yaptık. input id = label for olması gerekli.  -->
+            <label for="lastname">Soyadınızı girin:</label>
+            <input type="text" name="soyisim" id="lastname" placeholder="Soyadınızı yazın">
+            <!-- inputlar isim , soyisim olduğu için input type text aldık. -->
+
+        </div>
+        <br>
+
+
+        <div>
+            <label for="sifre">Parolanızı giriniz:</label>
+            <input type="password" name="Girilen Parola" id="sifre" placeholder="parola giriniz">
+            <!-- required yazılırsa mutlaka girilmesi gerekir, boş geçilemez -->
+
+        </div>
+
+
+        <!-- tek seçim yapılacaksa radio, çoklu seçim yapılacaksa checkbox kullanılmalı -->
+        <div>
+            <h1>Radio</h1>
+            <p>Cinsiyetinizi Giriniz:</p>
+            <label for="cinsiyet1">Erkek</label>
+            <input type="radio" name="cinsiyet" id="cinsiyet1" value="Erkek">
+            <!-- value girilmezse on çıktısı veriyor true/false gibi çalışıyor. -->
+
+            <label for="cinsiyet2">Kadın</label>
+            <input type="radio" name="cinsiyet" id="cinsiyet2" value="Kadın" checked="Kadın">
+            <!-- kadın/erkek labeldeki name aynı olmalı = cinsiyet DİKKAT!!!  aynı olamazsa tek değil çoklu seçim yapılır.-->
+            <!-- checked ile default seçili gelmesi sağlanır. Ama değiştirilebilir seçimler. -->
+        </div>
+
+        <br>
+
+        <div>
+            <h1>Checkbox</h1>
+            <p>Seçmeli Derslerinizi İşaretleyiniz</p>
+            <input type="checkbox" name="ders1" id="Python" value="Python" checked>
+            <label for="Python">Python</label>
+            <!-- label for ile input id aynı olmalı, checked olan seçili gelir. -->
+            <input type="checkbox" name="ders2" id="Javascript" value="Javascript">
+            <label for="Javascript">Javascript</label>
+
+            <input type="checkbox" name="ders3" id="SQL" value="SQL">
+            <label for="SQL">SQL</label>
+
+        </div>
+
+        <br>
+
+
+        <div>
+            <h1>Number</h1>
+            <label for="age">Yaş:</label>
+            <input type="number" name="Girilen Yaş" id="age" step="5" min="18" max="65" placeholder="yaşınız">
+            <!-- input name backend tarafında naıl kayıt edileceğini sylemk için yazılır. -->
+            <!-- step ile girilen sayı kadar arttırma/azaltma yapılır. -->
+            <!-- min ile girilen değerden büyük sayı irilmesi sağlanır. 0 girilirse eksi yazılamaz gibi. -->
+            <!-- max da aynı şekilde girilen sayıya üst limit koymak için kullanılır. -->
+        </div>
+        <br>
+
+        <div>
+            <h1>Search</h1>
+            <label for="mercek">Ara:</label>
+            <input type="search" name="Aranan Kelime" id="mercek" maxlength="8" minlength="1" placeholder="aranan kelimeyi girin">
+            <!-- maxlength minlength ençok/enaz girilen sayı kadar karakter yazılmalı -->
+
+        </div>
+
+        <div>
+            <h1>Color</h1>
+        
+            <label for="renk">Lütfen bir renk seçimi yapınız</label>
+            <input type="color" name="Seçilen_renk" id="renk">
+            <!-- name veya başka birşey için boşluksuz yazın dedi harvey hoca -->
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <br>
+        <h1>Submit</h1>
+    <input type="submit" value="Gönder">
+    <!-- submit mutlaka form içinde olması gerekir. -->
+    
+    <br>
+    <h1>Reset</h1>
+    <input type="reset" value="Sıfırla">
+    <!-- reset mutlaka form içinde olması gerekir. Girilen formu temizler, checked olanlar default değerine döner. -->
+
+    </form>
+
+
+
+
+</body>
+
+</html>
