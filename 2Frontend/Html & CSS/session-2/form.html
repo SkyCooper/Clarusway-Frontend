@@ -6,6 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formlar</title>
+    <style>
+        #kurs {
+            width: 50%;
+            border: 5px solid darkorange;
+        }
+
+        #kurs2 {
+            width: 50%;
+            border: 5px solid darkorange;
+        }
+
+        #yorum{
+            resize: none;
+            width: 300px;
+            height: 100px;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,7 +45,6 @@
             <!-- inputlar isim , soyisim olduğu için input type text aldık. -->
 
         </div>
-        <br>
 
 
         <div>
@@ -53,7 +69,6 @@
             <!-- checked ile default seçili gelmesi sağlanır. Ama değiştirilebilir seçimler. -->
         </div>
 
-        <br>
 
         <div>
             <h1>Checkbox</h1>
@@ -69,8 +84,6 @@
 
         </div>
 
-        <br>
-
 
         <div>
             <h1>Number</h1>
@@ -81,19 +94,19 @@
             <!-- min ile girilen değerden büyük sayı irilmesi sağlanır. 0 girilirse eksi yazılamaz gibi. -->
             <!-- max da aynı şekilde girilen sayıya üst limit koymak için kullanılır. -->
         </div>
-        <br>
 
         <div>
             <h1>Search</h1>
             <label for="mercek">Ara:</label>
-            <input type="search" name="Aranan Kelime" id="mercek" maxlength="8" minlength="1" placeholder="aranan kelimeyi girin">
+            <input type="search" name="Aranan Kelime" id="mercek" maxlength="8" minlength="1"
+                placeholder="aranan kelimeyi girin">
             <!-- maxlength minlength ençok/enaz girilen sayı kadar karakter yazılmalı -->
 
         </div>
 
         <div>
             <h1>Color</h1>
-        
+
             <label for="renk">Lütfen bir renk seçimi yapınız</label>
             <input type="color" name="Seçilen_renk" id="renk">
             <!-- name veya başka birşey için boşluksuz yaz, TR karakter kullanma -->
@@ -107,6 +120,115 @@
             <!-- max bugün yani 02 Ağustos 2022,  ve min 5 kasım 2012 tarihlerini al demek -->
         </div>
 
+        <div>
+            <h1>Email</h1>
+            <label for="posta">Email adresinizi girin:</label>
+            <input type="email" name="girilenEmail" id="posta">
+            <!-- email formatında giriş ister -->
+        </div>
+
+        <div>
+            <h1>File</h1>
+            <label for="dosya">Dosya Seç:</label>
+            <input type="file" name="secilenDosya" id="dosya">
+        </div>
+
+        <div>
+            <h1>Tel</h1>
+            <label for="no">Telefon Numarası :</label>
+            <input type="tel" name="telNo" id="no" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                placeholder="xxx-xxx-xx-xx">
+            <!-- pattern ile istenen format seçilir, placeholder ön gösterim yapar. -->
+            <!-- value ile default giriş yapılır, ülke kodu gibi  value="+90"-->
+        </div>
+
+        <div>
+            <h1>Select</h1>
+            <!-- dropdown menü deniyor buna -->
+            <label for="kurs">Lütfen Kurs seçimi yapın</label>
+            <select name="kursAdi" id="kurs" size="3" multiple>
+                <!-- seçenekler optionlar select arasına yazılır. -->
+                <!-- multiple ile çoklu seçim yapılır. -->
+                <!-- size ile kaç tanesi görünecek-->
+                <option value="Python">Python</option>
+                <option value="Javascript">Javascript</option>
+                <option value="React">React</option>
+                <option value="Django">Django</option>
+                <option value="Bootstrap">Bootstrap</option>
+                <option value="Linux">Linux</option>
+                <option value="Java">Java</option>
+                <!-- istenilen sayıda option eklenebilir. -->
+            </select>
+
+        </div>
+
+        <div>
+
+            <h1>OptSelect</h1>
+            <!-- dropdown menü deniyor buna -->
+            <label for="kurs2">Lütfen Kurs seçimi yapın</label>
+            <select name="kursAdi" id="kurs2" size="3" multiple>
+                <!-- seçenekler optionlar select arasına yazılır. -->
+                <!-- multiple ile çoklu seçim yapılır. -->
+                <!-- size ile kaç tanesi görünecek-->
+                <optgroup label="Backend">
+                    <option value="Python">Python</option>
+                    <option value="Django">Django</option>
+                </optgroup>
+
+                <optgroup label="Frontend">
+                    <option value="Javascript">Javascript</option>
+                    <option value="React">React</option>
+                </optgroup>
+
+                <optgroup label="ITF">
+                    <option value="Bootstrap">Bootstrap</option>
+                    <option value="Linux">Linux</option>
+                    <option value="Java">Java</option>
+                </optgroup>
+                <!-- istenilen sayıda option eklenebilir. -->
+            </select>
+
+        </div>
+
+        <div>
+            <h1>Textarea</h1>
+            <label for="yorum">Yorum</label>
+            <textarea name="girilenYorum" id="yorum" placeholder="Yorumlarınız değerlidir."></textarea>
+            <!-- default olarak boyutu kenarından çekip değişir olarak gelir. -->
+            <!-- cols="30" rows="10" default geldi, silip css verdik  ve kutu boyutu ayarlanır olmaktan çıktı. -->
+
+        </div>
+
+        <div>
+            <h1>Datalist</h1>
+            <label for="tarayıcı">Browsers</label>
+            <input type="text" name="kullanılanBrowser" id="trayıcı" list="browsers">
+            <!-- birbirine bğlamak için input/list ile datalist/id aynı olmalı FARKLI diğerlerinden DİKKAT! -->
+            <datalist id="browsers">
+                <option value="Firefox"></option>
+                <option value="Chrome"></option>
+                <option value="Edge"></option>
+                <option value="Bravo"></option>
+                <!-- yazılmayan option sonradan kuyuta elle girilebilir. -->
+            </datalist>
+        </div>
+
+        <div>
+            <h1>Fieldset</h1>
+            <!-- girdilerin gruplanması için güzel bir görüntü yakalamak için kullanılır. -->
+
+            <fieldset>
+                <legend>Kişisel Bilgiler</legend>
+                <!-- legend ile çerveve yapılır -->
+                <label for="fname">İsim</label>
+                <input type="text" name="isim" id="fname">
+                <br>
+                <label for="sname">Soyisim</label>
+                <input type="text" name="soyisim" id="sname">
+                <!-- harvey hrv ile hizalama yaptı. -->
+            </fieldset>
+        </div>
 
 
 
@@ -125,13 +247,13 @@
 
         <br>
         <h1>Submit</h1>
-    <input type="submit" value="Gönder">
-    <!-- submit mutlaka form içinde olması gerekir. -->
-    
-    <br>
-    <h1>Reset</h1>
-    <input type="reset" value="Sıfırla">
-    <!-- reset mutlaka form içinde olması gerekir. Girilen formu temizler, checked olanlar default değerine döner. -->
+        <input type="submit" value="Gönder">
+        <!-- submit mutlaka form içinde olması gerekir. -->
+
+        <br>
+        <h1>Reset</h1>
+        <input type="reset" value="Sıfırla">
+        <!-- reset mutlaka form içinde olması gerekir. Girilen formu temizler, checked olanlar default değerine döner. -->
 
     </form>
 
