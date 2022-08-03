@@ -1,0 +1,38 @@
+*{ /* margin sıfırlanınca  gövde arka planı görünmez,
+    diğerlerine margin verdikçe ortaya çıkar*/
+    margin: 0;
+}
+
+.container{
+    background-color: darkorange;
+    margin: 50px;
+}
+
+.box1{
+    background-color: aqua;
+    margin: 20px;
+    /* altındakide 20 olduğundan fark etmez  */
+}
+
+.box2{
+    background-color: bisque;
+    border: 3px solid red;
+    margin: 20px 50px 30px;
+}
+
+.box3{
+    background-color: rgb(255, 232, 196);
+    width: 100px;
+    margin: auto;
+    /* margin: 20px auto;  olabilir yatay ortalar*/
+    /* margin: auto 20px;  olmaz dikey ortalamaz*/
+    /* margin auto yapabilmek için MUTLAKA genişlik vermek gerekir.
+    yoksa ortalayamaz. */
+}
+
+.box4{
+    background-color: purple;
+    margin: inherit;
+    /* bir üstteki yani parent'tan kullanır, 
+    container 50px olduğundan aynısı alır. */
+}

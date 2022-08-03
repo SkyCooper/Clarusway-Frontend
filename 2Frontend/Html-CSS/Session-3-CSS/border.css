@@ -1,0 +1,50 @@
+.p1{
+    border-width: 3px 8px;
+    border-style: solid;
+    border-color: red blue;
+/* üst-sağ-alt-sol sırasıyla gider 4 lü*/
+/* üst-sağ/sol-alt sırasıyla gider 3 lü*/
+/* üst/alt - sağ/sol sırasıyla gider 2 li*/
+}
+
+.p2{
+    border: 5px dashed red;
+    /* tek satırda yapma */
+}
+
+.p3{
+    border: 10px solid green;
+    border-radius: 20px; /* yuvarlak için */
+
+    /* border-radius: 50%;  
+    width: 100px;
+    height: 100px; 
+    bir kareyi %50 yuvarlarsak daire olur. */
+
+}
+
+.p4{
+    border: 20px double blue;
+}
+
+/* devamını al.... */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
