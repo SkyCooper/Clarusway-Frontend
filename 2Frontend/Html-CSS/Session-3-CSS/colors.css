@@ -1,0 +1,35 @@
+.box1{
+    /* background-color: tomato; */
+    /* background-color: #ff0000; */
+    background-color: hsl(120, 100%, 50%);
+}
+.box2{
+    /* background-color: limegreen; */
+    /* background-color: #00ff00; */
+    background-color: hsl(120, 100%, 25%);
+}
+.box3{
+    /* background-color: darkgoldenrod; */
+    /* background-color: #592c55; */
+    background-color: hsl(120, 100%, 0%);
+    
+}
+.box4{
+    /* background-color:red; */
+    /* background-color: rgb(255, 155, 66); */
+    background-color: hsl(120, 100%, 75%);
+}
+.box5{
+    /* background-color:olive; */
+    /* background-color: #888806; */
+    background-color: hsl(120, 100%, 100%);
+}
+.box6{
+    /* background-color: magenta; */
+    background-color: rgba(140, 30, 60, 0.7);
+}
+
+/* renkler hem ismen,
+hem hexa decimal
+hem rgb / rgba
+hemde hsl / hsla ile gösterilebilir. */

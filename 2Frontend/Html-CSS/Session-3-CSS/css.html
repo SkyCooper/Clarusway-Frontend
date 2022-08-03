@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3 CSS</title>
+    
+    <link rel="stylesheet" href="styles.css">     <!-- head içine link verilerek ayrı bie css uzantılı dosya ile yapılmasına External CSS denir. -->
+    <style>
+        h2{color: aqua;}
+        p{color: blueviolet;} 
+    </style>  <!-- head içine style attiribute yazılarak yapılmasına internal CSS denir. -->
+</head>
+<body>
+    <!-- CSS can be added to HTML documents in 3 ways:
+
+Inline - by using the style attribute inside HTML elements
+Internal - by using a <style> element in the <head> section
+External - by using a <link> element to link to an external CSS file -->
+
+<h1>Inline CSS</h1>
+<!-- açılış tagı içine yazılarak yapılmasına inline CSS denir. -->
+
+<h1 style="color:blue; font-family: Arial, Helvetica, sans-serif;">A Blue Heading</h1> 
+<p style="color:red;">A red paragraph.</p>
+
+<h1>Internal CSS</h1>
+<!-- head içine style attiribute yazılarak yapılmasına internal CSS denir. -->
+
+<h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+
+<h1>External CSS</h1>
+<!-- head içine link verilerek ayrı bie css uzantılı dosya ile yapılmasına External CSS denir. -->
+<!-- Tip: With an external style sheet, you can change the look of an entire web site, by changing one file! -->
+
+<h1> <b><i>Lorem ih1sum</i>dolor </b> <strong>sit amet.</strong> </h1>
+<p style="font-size: larger; font-family: 'Times New Roman', Times, serif; font-display: ; color: blue;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum voluptatum inventore voluptatibus!</p>
+
+ 
+<h1> HTML Colors </h1>
+<p> rgb()  red green blue </p>
+<!-- rgb(red, green, blue) (0 ve 255 arasında) -->
+<!-- 256 x 256 x 256 = 16777216 possible colors! -->
+<!-- rgb(0,0,0) siyah -->
+<!-- rgb(255, 255, 255) beyaz -->
+
+<p>rgba() red, green, blue, alpha </p>
+    <!-- The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all) -->
+<!-- rgba(255, 99, 71, 0.5) yarı saydam/şeffaf/tranparan -->
+
+<p>HEX Color Values</p>
+<p>#rrggbb hexadecimal values between 00 and ff </p>
+
+<!-- To display black, like this: #000000.
+    To display white like this: #ffffff. -->
+
+    <p>HSL Color Values</p>
+    <p>hsl(hue, saturation, lightness)  hsl(0, 100%, 50%) kırmızı </p>
+    <p>Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.</p>
+    <p>Saturation can be described as the intensity of a color.</p>
+    <p>The lightness of a color can be described as how much light you want to give the color, where 0% means no light (black)</p>
+    
+<!-- Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+    Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
+    Lightness is also a percentage value, 0% is black, and 100% is white. -->
+
+    <p>HSLA Color Values</p>
+    <p>hsla(hue, saturation, lightness, alpha) --> hsla(9, 100%, 64%, 0.2)</p>
+    <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
