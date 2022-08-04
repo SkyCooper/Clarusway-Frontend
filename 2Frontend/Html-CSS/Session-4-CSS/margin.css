@@ -1,0 +1,41 @@
+*{
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* default seçilir.*/
+}
+
+.container{
+    border: 2px solid red;
+    margin: 20px;
+    background-color: blueviolet;
+    padding: 5px;
+}
+
+h1{
+    border: 2px solid blue;
+    background-color: aquamarine;
+    /* margin-bottom: 0; */
+    padding: 20px 40px;
+    margin-top: 5px; /* margin collapse; ikiside sıfıra sıfı iken parent olanda padding veya border yoksa child'e verilen margin işlemez beraber hareket ederler. */
+}
+
+#par1{
+    box-sizing: border-box;
+    /* border: 2px solid blue; */
+    background-color: coral;
+    /* margin-top: 0; */
+    width: 250px;
+    height: 150px;
+    margin: 50px auto;
+    /* padding: 20px; */
+
+}
+
+#par2{
+    border: 2px solid blue;
+    background-color: yellow;
+    margin: inherit;  /* parent olan div den alır margini*/
+    /* padding-left: 20px;
+    padding-top: 20px; */
+}
