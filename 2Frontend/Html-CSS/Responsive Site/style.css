@@ -18,8 +18,24 @@ html {
 
 body{
     background-color: var(--main-color); /*yukarıda tanımlanan ren kullnıldı */
-    height: 200vh;
+    /* height: 200vh; sayfa scroll yapsın diye ilk başta, koyup sonra sildi */
 }
+
+section{
+    padding: 3.5rem 7%; /* bütün sectionları aynı hizaya aldı. */
+}
+
+.btn{
+    margin-top:1rem ;
+    display: inline-block;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: #0e0e0e;
+
+}
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -76,3 +92,90 @@ border-bottom: 0.1rem solid transparent; /* altlarına çizgi şeffaf */
 }
 
 /* header end */
+
+/* home start */
+.home{
+    min-height: 100vh; /* tarayıca görünen yer kadar alanı kapla */
+    background: url(./images/home.jpg) no-repeat; /*resmi ekledi  */
+    background-size: cover; /* 100vh alanı kaplayacak */
+    background-position: center; /* ortaladı */
+    margin-top: -145px; /* resmi headerın altına attı */
+    display: flex;
+    align-items: center;
+
+
+}
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+   font-size: 6rem;
+   color: white;
+
+}
+
+.home .content p{
+   font-size: 2rem;
+   font-weight: 300;
+   line-height: 1.8;
+   padding: 1rem 0;
+   color: #ccc;
+
+}
+
+/* home end */
+
+/* menü start */
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    /* fotoğrafları yanyana alabilmek için kullandı*/
+    gap: 1.5rem; /* aralarına boşluk koydu */
+}
+
+.menu .box-container .box {
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.menu .box-container .box img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu .box-container .box .menu-category{
+   font-size: 1.2rem;
+}
+.menu .box-container .box h3{
+   font-size: 3rem;
+   padding: 0;
+}
+.menu .box-container .box .price{
+   font-size: 2.5rem;
+   padding: 0.5rem 0;
+}
+.menu .box-container .box .price span{
+text-decoration:line-through ; /* üstünü çizmek için  */
+font-size: 1.5rem;
+font-weight: 300;
+}
+
+
+
+
+
+
+
+
+/* menü end */
+/*  start */
+/*  end */
