@@ -34,14 +34,19 @@
         /* Multi-line
         comment */
 
-        .box-one{
+        .box-one {
             background-color: yellow;
             border: 25px solid blue;
             padding: 10px;
             margin: 40px;
-            
+            position: -webkit-sticky; /* Safari */
+  position:;
+  top: 20px;
+  z-index: -1;
+
         }
-        .box-two{
+
+        .box-two {
             background-color: green;
             border: solid red;
             padding: 2rem;
@@ -60,7 +65,7 @@
             font-style: ;
             font-size: medium;
             font-weight: bolder;
-    
+
 
         }
 
@@ -69,14 +74,37 @@
             line-height: normal;
             word-spacing: normal;
 
-  letter-spacing: 3px;
-}
+            letter-spacing: 3px;
+        }
 
-h2 {
-  letter-spacing: -3px;
-}
+        h2 {
+            letter-spacing: -3px;
+        }
+
+        ul {
+            list-style-type: decimal;
+            list-style-image: ;
+        }
 
 
+        table, th,td {
+            border: 3px solid red;
+            text-align: center;
+            vertical-align:middle;
+            padding: 10px 20px 30px;
+        }
+        th{
+            background-color: aqua;
+            color: blueviolet;
+        }
+        tr:hover{
+            background-color: #e61d1d;
+        }
+
+        #tablo{
+            /* visibility: hidden; */
+            display: inline;
+        }
     </style>
 </head>
 
@@ -95,9 +123,64 @@ h2 {
     <h2>The Universal Selector
         The universal selector * selects all HTML elements on the page.</h2>
 
-        <p class="box-one">Box One</p>
-        
-        <p class="box-two">Box Two</p>
+    <p class="box-one">Box One</p>
+
+    <p class="box-two">Box Two</p>
+    <h2>isimler</h2>
+    <ul>
+        <li>ali</li>
+        <li>ali</li>
+        <li>ali</li>
+        <li>ali</li>
+        <li>ali</li>
+    </ul>
+
+    <h1 id="tablo">Tablolar</h1>
+    <hr>
+    <table border="1" width="100%">
+
+        <caption style="">İsim-Soyisim Tablosu</caption>
+
+        <thead>
+            <tr>
+                <th>Adı</th>
+                <th>Soyadı</th>
+                <th>Yaş</th>
+            </tr>
+        </thead>
+
+
+
+        <tbody>
+            <tr>
+                <td>Cooper</td>
+                <td>Sky</td>
+                <td>41</td>
+            </tr>
+            <tr>
+                <td colspan="3">Sheldon</td>
+                <!-- <td>Fawler</td>
+                <td>23</td> -->
+            </tr>
+            <tr>
+                <td>Sbastian</td>
+                <td rowspan="2">King</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Micheal</td>
+                <!-- <td>King</td> -->
+                <td>33</td>
+            </tr>
+
+
+
+
+
+        </tbody>
+
+
+    </table>
 
 
 </body>
