@@ -1,0 +1,40 @@
+/*linkler inline elementdir. */
+
+/* font awsome  dan cdn linkini htmlde dead yapıştır
+siteden istediğin ikonu seç, kodunu link içine yapıştır.*/
+
+body{
+    padding: 50px;
+    border: 1px solid red;
+}
+
+a{
+    border: 1px solid red;
+    padding: 5px;
+    /* margin: 10px;  işlemez inline olduğundan, */
+    margin-right: 30px;
+    text-decoration: none; /* çigilerini kaldırır */
+    background-color: coral;
+    border-radius: 20px;
+    color: white;
+
+}
+
+a:hover{
+    background-color: grey;
+    color: antiquewhite;
+}
+
+a:visited{
+    color: blue; /* ziyaret edilince bu renk olsun */
+}
+
+a:active{
+    background-color: red; /* tıklandığı sürece bu renk olsun */
+}
+
+
+
+
+
+

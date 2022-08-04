@@ -1,0 +1,49 @@
+
+h2 {
+    text-align: center;
+    text-decoration: dotted;
+}
+
+#par1 {
+    color: blue;
+    text-align: left;
+    text-decoration: double;
+    text-transform: capitalize;
+    text-indent: 2rem; /* girinti */
+    letter-spacing: 3px;  /* harler arası boşluk */
+    word-spacing: 4px;  /* kelimeler arası boşluk */
+    line-height: 2rem; /* satırlar arası boşluk */
+    text-shadow: 3px 3px 2px red;  /* gölge verir */
+    column-count: 3;  /* 3 lü sütun yaptı */
+    column-rule: 3px solid green; /* sütun arasına çizgi yaptı */
+
+}
+
+#par2 {
+    color: rgba(255, 0, 0, 1);
+    text-align: right;
+    text-transform: lowercase;
+    letter-spacing: 1px;  /* harler arası boşluk */
+    direction: rtl;  /* sağdan sola  arapça için kullanılabilir. */
+    unicode-bidi: bidi-override;  /* ters çevirdi, ayna görüntüsü gibi (belki mülakatta sorarlar dedi) */
+    text-shadow: 3px 3px 2px red;  /* gölge verir */
+}
+
+#par3 {
+    color: #850;
+    text-align: justify;
+    /* iki yana yasla */
+    text-decoration: line-through;
+    text-transform: uppercase;
+    letter-spacing: 5px;  /* harler arası boşluk */
+}
+
+#par4 {
+    color: hsl(0, 100%, 50%);
+    text-decoration: wavy blue;
+}
+
+#par5 {
+    color: blueviolet;
+    font-family: 'Poppins', sans-serif;  /* google fonts tan aldı */
+}
