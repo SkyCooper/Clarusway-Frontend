@@ -10,11 +10,12 @@
 </head>
 
 <body>
+<main>
 
-    <h1>NET <span>FLIX</span> </h1>
-    <p>Thank you for signing up at Netflix. Tell us about yourself</p>
-
-    <div class="info">
+    <h1 id="title">NET <span id="flix">FLIX</span> </h1>
+    <p id="thanks">Thank you for signing up at Netflix. Tell us about yourself.</p>
+    
+    <div class="container">
         <form action="#" method="get">
             <div class="name">
                 <label for="name">Name</label>
@@ -46,21 +47,17 @@
                     <option value="series">Series</option>
                 </select>
             </div>
-
+            
             <div class="movie">
                 <p>Movie Type</p>
                 <input type="checkbox" name="Comedy" id="m1">
                 <label for="m1">Comedy</label>
-                <br>
                 <input type="checkbox" name="Action" id="m2">
                 <label for="m2">Action</label>
-                <br>
                 <input type="checkbox" name="Romance" id="m3">
                 <label for="m3">Romance</label>
-                <br>
                 <input type="checkbox" name="Family" id="m4">
                 <label for="m4">Family</label>
-                <br>
                 <input type="checkbox" name="Kids" id="m5">
                 <label for="m5">Kids</label>
             </div>
@@ -77,18 +74,19 @@
                 <label for="other">Other</label>
                 <br>
             </div>
-
+            
             <div class="feedback">
                 <label for="comment">Feed back</label>
                 <br>
                 <textarea name="girilenYorum" id="comment" placeholder="Any comment"></textarea>
             </div>
-            <input type="submit" value="Submit" id="submit">
-
+            <input type="submit" value="Send" id="submit">
+            
         </form>
-
+        
     </div>
-
+</main>
+    
 </body>
 
 </html>

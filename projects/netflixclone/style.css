@@ -1,11 +1,99 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: black; */
+  color: white;
 }
 
-#feedback {
-    resize: none;
-    width: 700px;
-    height: 100px;
+body {
+  background-image: url(./image/background_image.jpg);
+  background-size: cover; /* 100vh alanı kaplayacak */
+  background-position: center;
+}
+
+main {
+  width: 85%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.338);
+  padding-top: 50px;
+}
+
+.container {
+  /* border: 1px solid red; */
+  width: 500px;
+  margin: auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.829);
+}
+
+#title {
+  /* border: solid 1px red; */
+  text-align: center;
+  font-family: Bowlby One SC;
+  letter-spacing: 0.05em;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+#flix {
+  color: red;
+  font-family: Bowlby One SC;
+  letter-spacing: 0.05em;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+
+#thanks {
+  font-family: Sorts Mill Goudy;
+  font-size: 23px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: auto;
+  padding: 15px 15px;
+}
+
+form {
+  margin: 20px 40px;
+}
+
+.name input,
+.surname input,
+.email input,
+.age input,
+select {
+  width: 380px;
+  height: 50px;
+}
+
+.movie {
+  width: 50px;
+}
+
+.movie p {
+  display: inline;
+}
+
+.feedback {
+  margin-top: 20px;
+}
+
+#comment {
+  resize: none;
+  width: 400px;
+  height: 100px;
+}
+
+#submit {
+  width: 150px;
+  height: 3rem;
+  background-color: red;
+  border-radius: 20px;
+  margin-left: 100px;
+  margin-top: 20px;
 }
