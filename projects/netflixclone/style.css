@@ -71,8 +71,12 @@ select {
   height: 50px;
 }
 
+.name{
+    margin-top: 1rem;;
+}
+
 .movie {
-  width: 50px;
+  /* width: 50px; */
 }
 
 .movie p {
@@ -96,4 +100,5 @@ select {
   border-radius: 20px;
   margin-left: 100px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
