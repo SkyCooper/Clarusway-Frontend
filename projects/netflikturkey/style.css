@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+
+}
+
+body{
+    background-image: url(../netflixclone/image/background_image.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    border: 5px solid red;
+    /* display: flex; */
+}
+.blo{
+    /* display: flex; */
+    float: right;
+    /* margin-right: 20px; */
+}
+.logo{
+    display:block;
+    margin-left: 30px;
+    
+}
+#lang{
+    padding: 7px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: Helvetica, "FontAwesome";
+    border: 1px solid #aaa;
+    color: #fff;
+    font-size: 13px;
+    height: 100%;
+    width: 94px;
+    outline-style: none;
+}
+.btn{
+    background: #e50914;
+    padding: 0.45rem;
+    width: 75px;
+    border-radius: 3px;
+    color: #000;
+    margin-left: 1rem;
+    border-style: none;
+    cursor: pointer;
+    font-size: 15px; 
+}
+main{
+    
+    border: 5px solid green;
+}
+.title h1{
+    text-align: center;
+    font-size: 60px;
+}
+.title h6{
+    text-align: center;
+    font-size: 30px;
+}
