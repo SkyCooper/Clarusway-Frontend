@@ -1,0 +1,38 @@
+/* genel alan ve body başlangıç */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: white; */
+}
+
+/* genel alan ve body bitiş */
+
+/* header başlangıç */
+
+#logo1{
+    width: 120px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 5%;
+}
+
+/* header bitiş */
+
+
+/* main başlangıç */
+
+
+/* main bitiş */
+
+
+/* article başlangıç */
+
+
+/* article bitiş */
+
+
+/* footer başlangıç */
+
+
+/* footer bitiş */

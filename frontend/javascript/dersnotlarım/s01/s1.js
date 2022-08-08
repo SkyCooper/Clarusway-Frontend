@@ -20,8 +20,9 @@ let v1 = 55;
 console.log(v1);
 
 /* 
-fvkslfvk
+yukarıda myNumber1 tanımlandı
 arada bir sürü kod yazıldı
+ve sonra yine aynı değişkene atama yapılırsa
 */
 
 var myNumber1 = 22;
@@ -32,7 +33,7 @@ console.log(myNumber1);
 // console.log(v1);
 // let buna izin vermez, hat verir, Identifier 'v1' has already been declared
 
-// const;
+// ! const;
 
 const student = {
     name : "cooper",
