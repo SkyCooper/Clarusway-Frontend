@@ -1,11 +1,12 @@
+// todo 9 Ağustos 2022, Salı @mark-hoca
 // Primitive ve Referans olmak üzere 2 çeşit veri tipi mevcuttur.
 // Primitive, değerin kendisinin değişken içinde tutulması demektir.
 
 
 
-// Primitive Tipler; Number, String, Boolen, Undefined, Null, Symbol, BigInt
-// Referans  Tipler - Object ;  Object, Array, Map, Set
-// Fonksiyonlar
+//? Primitive Tipler; Number, String, Boolen, Undefined, Null, Symbol, BigInt
+//* Referans  Tipler - Object ;  Object, Array, Map, Set
+//! Fonksiyonlar
 
 let aValue;
 console.log("1. " + typeof aValue);
@@ -27,8 +28,25 @@ console.log("7. " + typeof aValue);
 aValue = { firstName: "John", lastName: "Doe" };
 console.log("8. " + typeof aValue);
 
+console.log(0);
+console.log(typeof 0);
+console.log(3.14);
+console.log(typeof 3.14);
+console.log('Hello');
+console.log(typeof 'Hello');
+console.log((8>10));
+console.log(typeof (8>10));
 
-/* //! Undefined
+// let girdi1 = prompt('Bir ifade giriniz')
+// console.log(girdi1, typeof girdi1);
+
+// let girdi2 = +prompt('Bir ifade giriniz') //todo +prompt
+//! prompt başına + koyunca type casting olur ve string number olur
+// console.log(girdi2, typeof girdi2);
+// console.log(typeof typeof girdi2); //? (number) ın tipi stringdir
+
+
+/* //! Undefined --> tanımlama var, değeri yok   tanımsız
 ➤ undefined means that a variable is declared but no value is assigned. On the other hand, "is not defined" means the variable is not declared.
 
 ➤ The meaning of undefined is “value is not assigned”.
@@ -36,10 +54,17 @@ console.log("8. " + typeof aValue);
 ➤ If a variable is declared, but not assigned, then its value is undefined: */
 
 let age;
-console.log(age); // output: "undefined"
+console.log(age); //*output: "undefined"
 //? console.log(userName); // userName is not defined
 
-// ! Null
+console.log(myAge);
+var myAge = 40;  //* var-undefined verir, let ile tanımlama yapılsa hata verir.
+console.log('Merhaba Undefined');
+
+//! consola window + enter yapıp tanımlanan değişken isimlerine bakılabilir. Burası steak, bu örneği hoisting nedir açıklamak için gösterdi ve var kullanmayın, const/let kullanın dedi @mark hoca
+
+console.log("----Null---");
+// ! Null --> Boşluk/Yokluk anlamına gelir.
 /* ➤ The special null value does not belong to any of the types described above.
 
 null is a special keyword to indicate intentional absence of an object value, null is a primitive type.
@@ -51,14 +76,21 @@ null is a special keyword to indicate intentional absence of an object value, nu
 ➤ The code above states that age is unknown. */
 
 let ages = null;
-console.log(typeof ages); // ! tipi objecttir.
+console.log(typeof ages); // ! tipi objecttir.(primitive olmasına rağmen tipi obje oluyor)
+//todo -->biz bir değişkene bilerek kasıtlı olarak yok değeri vermek istiyorsak "null" kullanabiliriz. değeri verilmemiş değişkenlere bilerek kasıtlı olarak "undefined" KULLANANMAYINIZ
 
-// ! Numbers
+/* null+3 = 3 (0+3 gibi davranır)
+undefined+3 = NaN  */
+
+console.log("----Numbers---");
+// ! Numbers --> bütün sayılar number'dır. 
 /* ➤ Unlike many other programming languages, JavaScript does not define different types of numbers, like integers, short, long, floating-point etc. JavaScript has only one type of number.
 
 ➤ A number literal like 42 in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript now has a BigInt type, but it was not designed to replace Number for everyday uses. 42 is still a Number, not a BigInt.) */
 
 let x = 7;
+console.log(x);
+console.log({x}); //? böyle yazınca x:7 diye yazar
 let pi = 3.14159;
 
 // ! Some Useful Constants
@@ -70,8 +102,10 @@ typeof NaN; // "number"
 /* //!⚠️Warning! :
 When comparing a value whether it is a number or not, use global function`isNaN()`
 Be careful when working with string and number conversions, since it is a common error issue. */
-Number.MAX_VALUE; // 1.7976931348623157e+308
+Number.MAX_VALUE; // 1.7976931348623157e+308 
+//! .noktadan sonra 17 basamak alır  (max doğruluk sınırı)
 Number.MAX_SAFE_INTEGER; // 9007199254740991
+//!15 basmaklı sayıyı doğru gösterir. 
 Number.MIN_VALUE; // 5e-324
 Number.MIN_SAFE_INTEGER; // -9007199254740991
 Number.EPSILON; // 0.0000000000000002220446049250313
@@ -91,12 +125,14 @@ console.log( 7.3e9 );  // 7.3 billions (same as 7300000000 or 7_300_000_000)
 
 let xx = 999999999999999;     
 let yy = 9999999999999999;
-console.log(xx);   // output = 999999999999999
-console.log(yy);   // output = 10000000000000000
+console.log(xx);   //? output = 999999999999999
+console.log(yy);   //? output = 10000000000000000 basamak sayısı 15ten fazla olduğu için
 
 // ➤ The maximum number of decimals is 17, but floating point arithmetic is not always 100% accurate:
 var xa = 0.2 + 0.1;
-console.log(xa);   // output =  0.30000000000000004
+console.log(xa);   //! output =  0.30000000000000004
+console.log(xa.toFixed(2));   //! output =  0.30 ama STRING tip
+console.log(+xa.toFixed(2));   //! output =  0.30 + dan dolayı number
 
 // ➤ To solve the problem above, it helps to multiply and divide:
 let xxa = 0.2 + 0.1;
@@ -137,7 +173,7 @@ console.log(myNumber);
 // myNumber equals to 157 in decimal
 // To write a number in binary, prepend 0b to the number, like 0b101. Please note that digits in the number can only contain 0 and 1.
 
-// !➤ Thousand Separator
+// !➤ Thousand Separator --> okunabilirlik için
 let binary1= 0b1001_1101_0001_1100_0101;
 let decimal1 = 123_456_789_000;
 let octal1 = 0o123_4567;
@@ -145,13 +181,13 @@ let hexa1 = 0xAF12_0108_FD5D;
 // For the sake of readibility, we can use _ in between digits of a number, base 2, 10, 16. Example:
 
 
-
+console.log("----String---");
 /* //! Strings
 ➤ Scripts are defined as the sequence of characters.
 ➤ In JavaScript, strings are used for storing and manipulating text.
 ➤ A string can be any content that shows up inside quotation marks.
 
-We can use backticks ,double or single-quotes */
+We can use backticks(template literal) ,double or single-quotes */
 
 let firstName = `John`;
 let lastName = "Doe";
@@ -162,19 +198,30 @@ console.log("I'm " + firstName + " " + lastName + ". I live in " + myCity);
 // We can use quotes inside a string unless they don't match the quotes encompassing the string.
 let text1 = "I'm John";
 let text2 = `She said, "Go ahead"`;
+let text3 = `Altgr ve virgülden çıkıyor`
+console.log(text3);
+console.log(typeof text3);
 
-// If we need to use quotes inside the string, we can use backslash ( \ ) escape character.
+// If we need to use quotes inside the string, we can use backslash ( \ ) //! escape character.
 let text = "He said, \"I am a new programmer.\"";
 console.log(text);    // output : He said, "I am a new programmer."
+
+let userName = 'Cooper';
+console.log('Merhaba', userName, 'normal');
+console.log(`Merhaba, ${userName} backtick`);
+console.log(`2 + 3 = , ${2+3} içinde işlem yapılır.`);
+console.log(userName.length); // 6 uzunluğu --> property
+console.log(userName.concat(` Sky`)); // Cooper Sky diye concat eder --> method
 
 /* //! Breaking Long Code Lines
 ➤ For best readability, programmers often like to avoid code lines longer than 80 characters.
 ➤ If a JavaScript statement does not fit on one line, the best place to break it is after an operator: */
 
-// document.getElementById("demo").innerHTML =  // Break a code line after 
+// document.getElementById("demo").innerHTML =  //! Break a code line after 
 // "Hello Dolly!"; 
 
 
+console.log("----Boolen---");
 // ! Booleans
 // ➤ A JavaScript Boolean can have one of two values, either true or false.
 
@@ -192,12 +239,14 @@ Boolean("Hello World");
 Boolean(5);
 Boolean(-5);
 Boolean("false");
+Boolean(" ");
 Boolean('0');
 Boolean(3.14 + 8);   //All of these values return true
 
 // ➤ The Boolean value of everything without a "value" is false.
 // ➤ The Boolean value of 0, null, empty string, undefined, is false.
 Boolean("");
+Boolean(``);
 Boolean(0);
 Boolean(-0);
 Boolean(null);
@@ -247,7 +296,7 @@ console.log(Sym1 === Sym2); // returns "false"
 
 
 
-// ! Objects
+// ! Objects --> non-primitive
 // ➤ Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life. The concept of objects in JavaScript can be understood with real life, tangible objects.
 
 // ➤ In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. In the same way, JavaScript objects can have properties, which define their characteristics.
@@ -263,14 +312,28 @@ myCar.year = 1969;
 const myCars = {
   make: 'Ford',
   model: 'Mustang',
-  year: 1969
+  year: 1969,
+  color: 'Black'
 }; 
+console.log(myCars); //? çıktısı aynı sıra ile olmayabilir, tarayıcı konsolu alfabetik yazdırır.
 
 // ➤ Properties of JavaScript objects can also be accessed or set using a bracket notation
-myCars['make'] = 'Ford';
+myCars['make'] = 'Ford';  // make key'in valuesi
 myCars.model = "Mustang";
 myCars.color = 'Red';
 console.log(myCars.color); //Red 
+console.log(myCars); //! rengi Red oldu.
+myCars.sunroof = false;
+console.log(myCars); //! sunroof:false eklendi.
+
+// objelere fonksiyon ekleme, burada araba yaşını hesaplayan fonsiyon ekledi
+
+myCars.age = function(current){
+  console.log(current - this.year);  //* ikiside çalışır
+  console.log(current - myCars.year);
+}
+
+myCars.age(2022); // 2022-1969 = 53 verir.
 
 
 

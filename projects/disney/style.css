@@ -58,8 +58,10 @@ main {
 }
 .container {
   display: flex;
-  padding-left: 200px;
-  padding-right: 200px;
+  /* padding-left: 200px; */
+  /* padding-right: 200px; */
+  width: 1600px;
+  margin: auto;
 }
 #boxleft,
 #boxright {
@@ -116,17 +118,21 @@ article {
 footer {
   /* border: solid 3px black; */
   /* background-color: rgba(0, 0, 0, 0.72); */
+  width: 100%;
+  margin: auto;
 }
 .alt {
   background-color: rgb(3, 12, 64);
-  width: 1600px;
-  margin-left: 200px;
+  width: 100%;
+  /* margin-left: 200px; */
   text-align: center;
+  margin: auto;
 }
 #enaltresim {
   width: 300px;
   height: auto;
-  margin-right: 200px;
+  /* margin-right: 200px; */
+  margin: auto;
   padding: 50px;
 }
 .uyeol p {

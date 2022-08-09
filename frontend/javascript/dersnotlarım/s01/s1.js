@@ -68,3 +68,16 @@ num1 = num2;  // 501 değil artk 467 oldu
 // num2 = num2 + 3;
 
 console.log(num1, num2);
+
+// !var  ve let farkı
+var a = 5;
+console.log(a);
+
+{
+  var a = 3;
+  console.log(a);
+}
+var a = 3;
+console.log(a);
+
+// çıktısı 533
