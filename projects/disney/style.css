@@ -55,6 +55,8 @@ header {
 main {
   /* border: solid 3px blue; */
   /* background-color: rgba(0, 0, 255, 0.288); */
+  width: 100%;
+  margin: auto;
 }
 .container {
   display: flex;
@@ -152,6 +154,9 @@ footer {
 #üyeol1:hover {
   background-color: white;
   color: #016bf8;
+}
+.sosyal a{
+  font-size: 1.7rem;
 }
 .sosyal p {
   color: black;
