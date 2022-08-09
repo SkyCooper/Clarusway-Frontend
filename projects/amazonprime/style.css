@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header{
+  border: 2px solid red;
+  background-color: rgba(165, 42, 42, 0.27);
+}
+.bolum1{
+  border: 2px solid red;
+  background-color: rgba(159, 165, 42, 0.27);
+}
+.bolum2{
+  border: 2px solid red;
+  /* background-color: rgba(46, 42, 165, 0.27); */
+}
+.bolum3{
+  border: 2px solid red;
+  background-color: rgba(42, 165, 71, 0.27);
+}
+.bolum4{
+  border: 2px solid red;
+  background-color: rgba(165, 42, 161, 0.27);
+}
+.footer{
+  border: 2px solid red;
+  background-color: rgb(0, 0, 0);
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+
+}
+.container{
+  max-width: 2200px;
+  margin: 0 auto;
+}
+
+#logo img{
+width: 120px;
+height: 40px;
+margin-left: 100px;
+margin-top: 10px;
+}
+
+
+#world{
+  width: 20px;
+  height: auto;
+}
+#menu{
+  display: flex;
+  margin-right: 100px;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.bolum1{
+  background-image: url(./images/En_ust.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 565px;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+}
+
+.icerik1{
+  width: 550px;
+  margin-right: 250px;
+}
+
+.bolum2{
+  display: flex;
+  background-color: #b0e5f7;
+}
+
+.icerik2{
+ margin-left: -300px;
+ margin-top:200px;
+}
+
+.bolum3{
+  background-image: url(./images/ucuncu.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 565px;
+  background-size: cover;
+  /* display: flex;
+  justify-content: flex-end;
+  align-items: center; */
+  padding-left: 55%;
+  
+  color: white;
+}
+
+.icerik3{
+width: 550px;
+ margin-right: 250px;
+ padding-top: 250px;
+ font-size: 24px;
+}
+
+.bolum4{
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.column{
+  display:inline-block;
+  float: left;
+  width: 33.33%;
+}
+
+.clear{
+  clear: both;
+}
+
+.footer {
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+#link a{
+  color: #b0e5f7;
+}

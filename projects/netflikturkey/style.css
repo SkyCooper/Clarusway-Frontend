@@ -120,6 +120,7 @@ footer {
   background-color: rgb(0, 0, 0);
   height: 30vh;
   margin-bottom: 0cm;
+  overflow: auto;
 }
 .alttaraf {
   display: flex;

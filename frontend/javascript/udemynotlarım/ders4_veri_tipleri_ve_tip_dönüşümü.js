@@ -3,8 +3,9 @@
 
 
 
-// Primitive Tipler; Number, String, Boolen, Undefined, Null, Symbol
-// Referans  Tipler - Object ;  Array, Map
+// Primitive Tipler; Number, String, Boolen, Undefined, Null, Symbol, BigInt
+// Referans  Tipler - Object ;  Object, Array, Map, Set
+// Fonksiyonlar
 
 // 1-Number (Tamsayi, ondalık, negatif hepsi aynı tiptir. )
 
