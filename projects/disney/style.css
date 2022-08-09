@@ -4,9 +4,12 @@
   padding: 0;
   box-sizing: border-box;
   /* background-color: white; */
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
+.ekran {
+  max-width: 1800px;
+  margin: 0 auto;
+}
 /* genel alan ve body bitiş */
 
 /* header başlangıç */
@@ -34,15 +37,16 @@ header {
   border: none;
 }
 .menu2 {
-    display: inline-block;
+  display: inline-block;
 }
 #menu22 {
-    width: 150px;
-    height: 50px;
-    border: none;
+  width: 150px;
+  height: 50px;
+  border: none;
 }
-#bold1, #bold2{
-  font-size:larger;
+#bold1,
+#bold2 {
+  font-size: larger;
 }
 
 /* header bitiş */
@@ -52,32 +56,40 @@ main {
   /* border: solid 3px blue; */
   /* background-color: rgba(0, 0, 255, 0.288); */
 }
-.container{
-    display: flex;
-    padding-left: 200px;
-    padding-right: 200px;
+.container {
+  display: flex;
+  padding-left: 200px;
+  padding-right: 200px;
 }
-#boxleft, #boxright{
-    width: 800px;
-    height: 600px;
+#boxleft,
+#boxright {
+  width: 800px;
+  height: 600px;
 }
-.yazilar1{
-    color: white;
-    margin-top: -150px;
-    text-align: center;
+.yazilar1 {
+  color: white;
+  margin-top: -150px;
+  text-align: center;
 }
-#kesfet1{
-    width: 350px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: #016BF8;
-    color: white;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
+#kesfet1 {
+  width: 250px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #016bf8;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
 }
-.uyelik a{
-    color: white;
+#kesfet1:hover {
+  background-color: white;
+  color: #016bf8;
+}
+.uyelik a {
+  color: white;
+  text-decoration: none;
+  padding-left: 50px;
+  padding-top: 5px;
 }
 /* main bitiş */
 
@@ -85,18 +97,18 @@ main {
 article {
   /* border: solid 3px greenyellow; */
   /* background-color: rgba(255, 255, 0, 0.215); */
-  color:black;
+  color: black;
 }
 
-.yazilar2{
-    text-align: left;
-    padding-left: 400px;
-    /* font-size: 30px; */
-    width: 1200px;
+.yazilar2 {
+  text-align: left;
+  padding-left: 400px;
+  /* font-size: 30px; */
+  width: 1200px;
 }
-.yazilar2 ul{
-    line-height: 25px;
-    list-style-type: circle;
+.yazilar2 ul {
+  line-height: 25px;
+  list-style-type: circle;
 }
 /* article bitiş */
 
@@ -105,50 +117,58 @@ footer {
   /* border: solid 3px black; */
   /* background-color: rgba(0, 0, 0, 0.72); */
 }
-.alt{
-    background-color: rgb(3, 12, 64);
-    width: 1600px;
-    margin-left: 200px;
-    text-align: center;
+.alt {
+  background-color: rgb(3, 12, 64);
+  width: 1600px;
+  margin-left: 200px;
+  text-align: center;
 }
-#enaltresim{
-    width: 300px;
-    height:auto;
-    margin-right: 200px;
-    padding: 50px;
+#enaltresim {
+  width: 300px;
+  height: auto;
+  margin-right: 200px;
+  padding: 50px;
+}
+.uyeol p {
+  color: white;
+}
+#üyeol1 {
+  width: 450px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #016bf8;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#üyeol1:hover {
+  background-color: white;
+  color: #016bf8;
+}
+.sosyal p {
+  color: black;
+  text-align: center;
+  margin: 30px;
+  font-size: larger;
+}
+.baglantılar a {
+  color: black;
+  word-spacing: 10px;
+}
+.baglantılar p {
+  text-align: center;
+  margin-bottom: 20px;
+  word-spacing: 15px;
+}
 
-}
-.uyeol p{
-    color: white;
-}
-#üyeol1{
-    width: 450px;
-    height: 40px;
-    border-radius: 20px;
-    background-color:#016BF8;
-    color: white;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-.sosyal p{
-    color: black;
-    text-align: center;
-    margin: 30px;
-    font-size: larger;
-}
-.baglantılar a{
-    color: black;
-    word-spacing: 10px;
-}
-.baglantılar p{
-    text-align: center;
-    margin-bottom: 20px;
-    word-spacing: 15px;
-}
-
-#siteharitası, #gizlilik, #kişiye, #hakkımızda, #thewalt, #kullanma {
+#siteharitası,
+#gizlilik,
+#kişiye,
+#hakkımızda,
+#thewalt,
+#kullanma {
   word-spacing: 1px;
 }
 
