@@ -17,7 +17,7 @@ header {
   /* border: solid 3px red; */
   /* background-color: rgba(255, 0, 0, 0.277); */
   display: flex;
-  padding-left: 200px;
+  padding-left: 110px;
   margin-top: 30px;
 }
 
@@ -32,17 +32,20 @@ header {
 }
 #menu11 {
   margin-left: 50px;
-  width: 150px;
+  width: 110px;
   height: 50px;
   border: none;
+  font-weight: 800;
 }
 .menu2 {
   display: inline-block;
 }
 #menu22 {
-  width: 150px;
+  width: 110px;
   height: 50px;
   border: none;
+  font-weight:800;
+  margin-left: 40px;
 }
 #bold1,
 #bold2 {
@@ -95,6 +98,9 @@ main {
   padding-left: 50px;
   padding-top: 5px;
 }
+.uyelik a:hover{
+  text-decoration: underline;
+}
 /* main bitiş */
 
 /* article başlangıç */
@@ -106,13 +112,17 @@ article {
 
 .yazilar2 {
   text-align: left;
-  padding-left: 400px;
+  padding-left: 465px;
   /* font-size: 30px; */
-  width: 1200px;
+  width: 1350px;
+  line-height: 25px;
 }
 .yazilar2 ul {
   line-height: 25px;
   list-style-type: circle;
+}
+.yazilar2 ul li {
+  line-height: 35px;
 }
 /* article bitiş */
 
