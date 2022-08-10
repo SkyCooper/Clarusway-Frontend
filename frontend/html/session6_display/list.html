@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">  
+    <!-- sayfanın dili değişti -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+</head>
+<body>
+    <ul>
+        <li class="item item1">item1</li>
+        <li class="item item2">item2</li>
+        <li class="item item3">item3</li>
+        <li class="item item4">item4</li>
+        <li class="item item5">item5</li>
+    </ul>
+
+    <ol>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ol>
+
+    <style>
+        ul{
+            /* padding-left: 5px; */
+            /* default olarak paddingi vardır. azalttı */
+        }
+    .item{
+        list-style-type: "😻";
+        list-style-position: inside;
+        /* default olarak outside gelir. ve paddingi vardır. */
+        list-style-type: "\2764";
+        /*renk siyah gelir.*/
+        list-style-image: url(./rocket.png);
+    }
+
+    li::before{
+        /* content: "\2764";
+        color: tomato;
+        padding-left: 10px; */
+        /*renk değiştirmek için */
+    }
+
+    ol{
+        list-style-type: none;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    ol li{
+        border: 1px solid red;
+        border-radius: 25px;
+        margin: 10px;
+        padding-left: 1rem;
+        border-left: 7px solid grey;
+        background-color: aquamarine;
+        width: 15rem;
+        /* display: inline-block; */
+    }
+
+    ol li:hover{
+        background-color: bisque;
+        /* width: 100px;
+        margin: 200px; */
+        cursor: pointer;
+    }
+
+    ol li::before{
+        content: "🤩";
+    }
+    </style>
+</body>
+</html>

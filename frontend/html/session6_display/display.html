@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            background-color: aqua;
+            display: block;
+            padding: 10px;
+        }
+        span{
+            background-color: orange;
+            margin: 10px; /* inline margin kullanmaz */
+            padding: 20px; /* yapınca yukarı kaçar */
+            display: block; 
+            /* block yapınca ayarlar yerine oturur. */
+            display: inline;
+        }
+        button{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            /*kendi yerini kaplar ama width/height verilebilir.  */
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: forestgreen;
+            border: 2px solid yellow;
+            margin-top: 5px;
+            /* display: inline;  */
+            /* boyutlar küçülür, çünkü inline olunca width / height verilmez */
+            /* display: inline-block; */
+            display: inline-block;
+        }
+
+        #box2{
+            background-color: blueviolet;
+            /* display: none; */
+            /* kaybolur yer tutmaz */
+            /* visibility: hidden; */
+             /* kaybolur ama yeri durur */
+        }
+    </style>
+</head>
+<body>
+ 
+    <!-- inline elementler -->
+    <a href="">Link</a>
+    <button>Buton</button>
+    <span>My name is Span</span>
+
+
+
+    <!-- block elementler -->
+    <div class="box">div1</div>
+    <div class="box" id="box2">div2</div>
+    <div class="box">div3</div>
+
+</body>
+</html>
