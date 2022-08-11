@@ -1,4 +1,5 @@
 // todo 9 Ağustos 2022, Salı @mark-hoca
+
 // Primitive ve Referans olmak üzere 2 çeşit veri tipi mevcuttur.
 // Primitive, değerin kendisinin değişken içinde tutulması demektir.
 
@@ -46,6 +47,7 @@ console.log(typeof (8>10));
 // console.log(typeof typeof girdi2); //? (number) ın tipi stringdir
 
 
+console.log("----Undefined---");
 /* //! Undefined --> tanımlama var, değeri yok   tanımsız
 ➤ undefined means that a variable is declared but no value is assigned. On the other hand, "is not defined" means the variable is not declared.
 
@@ -63,8 +65,12 @@ console.log('Merhaba Undefined');
 
 //! consola window + enter yapıp tanımlanan değişken isimlerine bakılabilir. Burası steak, bu örneği hoisting nedir açıklamak için gösterdi ve var kullanmayın, const/let kullanın dedi @mark hoca
 
-console.log("----Null---");
+
+
+
+
 // ! Null --> Boşluk/Yokluk anlamına gelir.
+console.log("----Null---");
 /* ➤ The special null value does not belong to any of the types described above.
 
 null is a special keyword to indicate intentional absence of an object value, null is a primitive type.
@@ -82,8 +88,12 @@ console.log(typeof ages); // ! tipi objecttir.(primitive olmasına rağmen tipi 
 /* null+3 = 3 (0+3 gibi davranır)
 undefined+3 = NaN  */
 
-console.log("----Numbers---");
+
+
+
+
 // ! Numbers --> bütün sayılar number'dır. 
+console.log("----Numbers---");
 /* ➤ Unlike many other programming languages, JavaScript does not define different types of numbers, like integers, short, long, floating-point etc. JavaScript has only one type of number.
 
 ➤ A number literal like 42 in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript now has a BigInt type, but it was not designed to replace Number for everyday uses. 42 is still a Number, not a BigInt.) */
@@ -181,8 +191,12 @@ let hexa1 = 0xAF12_0108_FD5D;
 // For the sake of readibility, we can use _ in between digits of a number, base 2, 10, 16. Example:
 
 
-console.log("----String---");
+
+
+
+
 /* //! Strings
+console.log("----String---");
 ➤ Scripts are defined as the sequence of characters.
 ➤ In JavaScript, strings are used for storing and manipulating text.
 ➤ A string can be any content that shows up inside quotation marks.
@@ -221,8 +235,12 @@ console.log(userName.concat(` Sky`)); // Cooper Sky diye concat eder --> method
 // "Hello Dolly!"; 
 
 
-console.log("----Boolen---");
+
+
+
+
 // ! Booleans
+console.log("----Boolen---");
 // ➤ A JavaScript Boolean can have one of two values, either true or false.
 
 // ➤ Boolean data type is useful when we need to have one of two values, such as true/false, yes/no, etc.
@@ -254,7 +272,12 @@ let f; //undefined
 Boolean(f);   //All of these values return false
 
 
+
+
+
+
 // ! BigInt
+console.log("----BigInt---");
 // ➤ The BigInt type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. With BigInts, you can safely store and operate on large integers even beyond the safe integer limit for Numbers.
 
 // ➤ A BigInt is created by appending n to the end of an integer or by calling the constructor.
@@ -278,6 +301,7 @@ console.log(typeof yq, yq);
 
 
 // ! Symbol
+console.log("----Symbol---");
 // ➤ Symbol is a primitive value.
 
 // ➤ A value having the data type Symbol can be referred to as a "Symbol value". In a JavaScript runtime environment, a symbol value is created by invoking the function Symbol, which dynamically produces an anonymous, unique value. A symbol may be used as an object property.
@@ -296,7 +320,10 @@ console.log(Sym1 === Sym2); // returns "false"
 
 
 
+
+
 // ! Objects --> non-primitive
+console.log("----Objects---");
 // ➤ Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life. The concept of objects in JavaScript can be understood with real life, tangible objects.
 
 // ➤ In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. In the same way, JavaScript objects can have properties, which define their characteristics.
