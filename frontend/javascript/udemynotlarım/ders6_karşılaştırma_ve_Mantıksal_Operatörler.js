@@ -33,12 +33,12 @@ const c = 5;
 let d = 3;
 
 
-val = a==b; // a b'ye eşit mi ---> false
-val = b==c; // a b'ye eşit olduğundan ---> true
-val = b===c; // true, hem değeri hem tipi eşit
-val = b==='5'; // değer eşit fakat tip eşit değil ---> false
-val = b=='5'; // değer eşit, tipine bakmadı --> true
-val = c!=b; // eşit değil mi? false çünkü eşit
+val = a == b; // a b'ye eşit mi ---> false
+val = b == c; // b c'ye eşit olduğundan ---> true
+val = b === c; // true, hem değeri hem tipi eşit
+val = b ==='5'; // değer eşit fakat tip eşit değil ---> false
+val = b =='5'; // değer eşit, tipine bakmadı --> true
+val = c != b; // eşit değil mi? false çünkü eşit
 
 
 console.log(val); // çıktısı konsolda mavi görünür.

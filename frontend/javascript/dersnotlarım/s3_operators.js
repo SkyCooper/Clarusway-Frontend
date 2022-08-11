@@ -97,31 +97,121 @@ a = 2;
 b = 3;
 console.log("a ** b = ", a** b);  // 8 
 
+//todo SORU-1 in-class sorusu; kullanıcan iki sayı alın ve çarpma ve bölme yapın
+let num1 = +prompt('Enter first number');
+let num2 = +prompt('Enter second number');
+console.log(`${num1} x ${num2} is ${num1 * num2}, \n${num1} / ${num2} is ${num1 / num2}`);
+
+
+
+//todo SORU-2 in-class sorusu; kenar uzunlukları verilen üçgenin alanının bulunması
+let side1 = +prompt('Enter first side');
+let side2 = +prompt('Enter second side');
+let side3 = +prompt('Enter third side');
+
+const perimeter = (side1 + side2 + side3) / 2;
+const area = Math.sqrt(
+  perimeter * ((perimeter - side1) * (perimeter - side2) * (perimeter - side3)),
+  );
+
+console.log(`Area of triangle is ${area}, perimeter is ${perimeter}.`);
+
+
+
+//todo SORU-3 in-class sorusu; dikdörgen alanını kullanıcıdan kenar uzunluğu alarak hesaplayın
+side1 = +prompt('Enter first number');
+side2 = +prompt('Enter second number');
+console.log(`Rectangle area is ${(side1 + side1)*2}`);
+
+
+
+//todo SORU-4 in-class sorusu; dairenin alanını bulun
+let radius = +prompt('Enter first number');
+console.log(`Circle alan is ${(radius**2)*Math.PI}`);
+
+
+
+//todo SORU-5 in-class sorusu; dairenin çevresini bulun
+console.log(`Circle çevre is ${radius*2*Math.PI}`);
+
+
+
+//todo SORU-6 in-class sorusu; fahrenayt/celcius dönüşümü yapın
+//! 1nci çözüm
+const celcius = +prompt("Give me celcius :");
+const fahrenheit = +prompt("Give me fahrenheit :");
+console.log(`${celcius} °C is ${(celcius * 1.8 + 32)} °F`);
+console.log(`${fahrenheit}  °F is ${((fahrenheit - 32) / 1.8)} °C`);
+
+
+//! 2nci çözüm @matthew
+let cTemp = +prompt('Enter celcius temperature');
+const cToFahr = (cTemp * 9) / 5 + 32;
+console.log(`${cTemp}°C equals ${cToFahr.toFixed(2)}°F`);
+
+let fTemp = +prompt('Enter fahrenheit temperature');
+const fToCel = ((fTemp - 32) * 5) / 9;
+console.log(`${fTemp}°F equals  ${fToCel.toFixed(2)}°C`);
+
+
+//todo SORU-7 in-class sorusu; bugünün tarihinin yıl, ay, ve gününü yazdırın
+const today = new Date();
+console.log(today);
+console.log(today.getFullYear()); // 2022
+console.log(today.getMonth()); // 7nci index +1 eklemek gerekir.
+console.log(today.getDate()); // Ayın kaçıncı günü,
+console.log(today.getDay()); // haftanın kaçıncı günü 3ncü index +1 eklemek gerekir
+console.log(today.getHours());
+console.log(`Day of month ${today.getDate()},month of year ${today.getMonth()+1}, year is ${today.getFullYear()}`);
+
+console.log(`day of month is ${today.getDate()}`);
+console.log(`month of year is ${today.getMonth() + 1}`);
+console.log(`year is ${today.getFullYear()}`);
+
+
+
+//todo SORU-7 in-class sorusu; 3 sayı alın kullanıcıdan
+let number1 = +prompt('Enter first number');
+let number2 = +prompt('Enter second number');
+let number3 = +prompt('Enter third number');
+console.log(`${number1%10 == number2%10} , ${number2%10 == number3%10} , ${number3%10 == number1%10}`);
+
+const answer = number1%10 == number2%10 || number2%10 == number3%10 ||number3%10 == number1%10;  // === ile yapılması daha doğru olur.
+console.log(`There are at least 2 numbers having same first digit: ${answer}`);
+
+
+//! 2nci çözüm @matthew
+let p = +prompt('Enter first number');
+let q = +prompt('Enter second number');
+let r = +prompt('Enter third number');
+const result = p % 10 === q % 10 || p % 10 === r % 10 || q % 10 === r % 10;
+console.log(`There are at least 2 numbers having same first digit: ${result}`);
+
 // ➤ Postfix/prefix increment and postfix/prefix decrement operators.
 // ?When you use the ++ operator as a prefix, such as ++var, the value of var is increased by one and then returned.
 // ?When you use the ++ operator as a postfix, such as var++, the original value of var is returned first, then var is incremented by 1.
 
 // A++ Postfix increment operator.
 a = 34;
-b = a++;
+b = a++; //todo a'nın ilk değerini b'ye atadı, sonra a'yı arttırdı
 console.log (b); //34
 console.log (a); //35
 
 // A-- Postfix decrement operator.
 a = 8;
-b = a--;
+b = a--; //todo a'nın ilk değerini b'ye atadı, sonra a'yı azalttı
 console.log (b); //8
 console.log (a); //7
 
 // ++A Prefix increment operator.
 a = 12;
-b = ++a;
+b = ++a; //todo a'nın değerini arttırıp b'ye atadı, sonra a'da arttı.
 console.log (b); //13
 console.log (a); //13
 
 // --A Prefix decrement operator.
 a = 23;
-b = --a;
+b = --a; //todo a'nın değerini azaltıp b'ye atadı, sonra a'da azaldı.
 console.log (b); //22
 console.log (a); //22
 
@@ -279,6 +369,7 @@ console.log("----Nullish Coalescing Operator----");
 
 // ➤The nullish coalescing operator returns the first value (value1) if the second one (value2) is null or undefined. Technically, the nullish coalescing operator is equivalent to the following block:
 
+//!
 // const result = value1;
 // if (result === null || result === undefined) {
 //   result = value2;
@@ -298,6 +389,9 @@ count = 0;
 result = count || 1;
 console.log(result); // 1
 // desired result should be 0, therefore using coalescing operator is a better choice
+
+//! ?? solundaki count2 null/undefined ise sağındaki değeri ver yani 1
+//! ?? solundaki count2 null/undefined değilse count2 değerini ver yani 0
 let count2 = 0;
 let result2 = count2 ?? 1;
 console.log(result2); // 0
