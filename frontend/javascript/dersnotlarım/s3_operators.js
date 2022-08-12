@@ -179,13 +179,15 @@ console.log(`${number1%10 == number2%10} , ${number2%10 == number3%10} , ${numbe
 const answer = number1%10 == number2%10 || number2%10 == number3%10 ||number3%10 == number1%10;  // === ile yapılması daha doğru olur.
 console.log(`There are at least 2 numbers having same first digit: ${answer}`);
 
-
 //! 2nci çözüm @matthew
 let p = +prompt('Enter first number');
 let q = +prompt('Enter second number');
 let r = +prompt('Enter third number');
 const result = p % 10 === q % 10 || p % 10 === r % 10 || q % 10 === r % 10;
 console.log(`There are at least 2 numbers having same first digit: ${result}`);
+
+
+
 
 // ➤ Postfix/prefix increment and postfix/prefix decrement operators.
 // ?When you use the ++ operator as a prefix, such as ++var, the value of var is increased by one and then returned.
