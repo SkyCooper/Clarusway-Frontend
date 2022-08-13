@@ -1,0 +1,65 @@
+
+*{
+    margin:0;
+}
+
+html{
+    /* font-size: 10px;   */
+    /*artık 1 rem 10px oldu*/
+}
+
+body{
+    height: 100vh;
+    /* background-color: yellow; */
+    /* border: 1px solid red; */
+}
+.abs{
+    background-color: aqua;
+    width: 10cm;
+}
+.div2{
+background-color: orange;
+width:50%;
+height: 50%;
+}
+
+.div3{
+    background-color: antiquewhite;
+    width:50%;
+    /* height: 50%; */
+    height: 20vh;
+}
+
+.div4{
+    background-color: purple;
+    width: 50vw;
+}
+
+/* em parent'dan alıyor */
+
+.div5{
+    font-size: 1em;  /* 16px */
+}
+
+.div6{
+    font-size: 2em; /* 16px * 2 = 32 */
+}
+
+.div7{
+    font-size: 3em; /* 32px * 3 = 96px */
+    
+}
+
+
+/* root em  REM kökten yani html'den alıyor */
+.div8{
+    font-size: 1rem;  /* 16px */
+}
+
+.div9{
+    font-size: 2rem; /* 16px * 2 = 32 */
+}
+
+.div10{
+    font-size: 3rem; /* 16px * 3 = 48px */
+}

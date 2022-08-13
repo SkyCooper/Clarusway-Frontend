@@ -1,0 +1,39 @@
+
+
+.box{
+    border: 2px solid salmon;
+    margin-bottom: 4rem;
+    width: 20rem;
+    height: 5rem;
+    background-color: bisque;
+}
+
+.box1{
+    overflow: visible;
+    /* default */
+    
+}
+
+.box2{
+    overflow: hidden;
+    /* taşan kısmı gizler */
+
+}
+
+.box3{
+overflow: auto;
+/*scrol ihtiyacı varsa koyar */
+
+}
+
+.box4{
+overflow: scroll;
+/*her halükarde koya, gerek yoksa da koyar. */
+/* overflow-y: scroll; */
+/* overflow-x: scroll; */
+}
+
+.box5{
+overflow-x: scroll;
+/* x e verildi ama yapmadı sadece y scrol yaptı */
+}

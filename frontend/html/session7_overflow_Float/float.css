@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+
+}
+
+.img-float{
+    width: 40%;
+    float: left;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.par1{
+    background-color: orange;
+    text-align: justify;
+}
+
+.clear{
+    clear: both;
+    /*akışın bozan float temizlendi */
+}
+
+.box{
+    float: left;
+    font-size: 2rem;
+}
+.box1{
+    background-color: blueviolet;
+    width: 10%;
+    
+}
+.box2{
+    background-color: darkcyan;
+    width: 30%;
+    
+}
+.box3{
+    background-color: olivedrab;
+    width: 50%;
+
+}
