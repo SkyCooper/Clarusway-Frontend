@@ -382,7 +382,7 @@ console.log("----Nullish Coalescing Operator----");
 // Why nullish coalescing operator? When assigning a default value to a variable, you often use the logical OR operator (||). For example:
 
 let count;
-let result = count || 1;
+result = count || 1;
 console.log(result); // 1
 
 // ➤However, the logical OR operator (||) sometimes confuses if you consider 0 or empty strings '' as a valid value like this:
