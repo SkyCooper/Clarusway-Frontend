@@ -118,7 +118,7 @@ console.log(`Area of triangle is ${area}, perimeter is ${perimeter}.`);
 
 
 
-//todo SORU-3 in-class sorusu; dikdörgen alanını kullanıcıdan kenar uzunluğu alarak hesaplayın
+//todo SORU-3 in-class sorusu; dikdörgen çevresini kullanıcıdan kenar uzunluğu alarak hesaplayın
 side1 = +prompt('Enter first number');
 side2 = +prompt('Enter second number');
 console.log(`Rectangle area is ${(side1 + side1)*2}`);
