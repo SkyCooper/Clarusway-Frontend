@@ -158,10 +158,70 @@ console.log("Switch case bitti")
 
 
 
+let category = 'telsiz';
+
+switch (category) {
+    case 'telefon':
+        console.log('telefon kategorisi');
+        break;
+
+    case 'bilgisayar':
+        console.log('bilgisayar kategorisi');
+        break;
+        
+    default:
+        console.log('yanlış kategori');
+        break;
+}
+
+
+let day;
+
+switch (new Date().getDay()) {
+    case 0:
+    case 6:
+        day ='Haftasonu';
+        break;
+
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        day ='Hafta içi';
+        break;
+}
+
+console.log(`Bugün ${day}`);
 
 
 
+const age = 29;
 
+if(age>0 && age<12){
+    console.log(`${age} is child age`);
+} else if (age >=13 && age <= 19){
+    console.log(`${age} is teenager age`);
+} else {
+    console.log(`${age} is an adult age`);
+}
+
+
+//? switch ile yapılması
+
+switch (true) {
+    case age>=0 && age<=12:
+        console.log(`${age} is child age`);
+    break;
+
+    case age >=13 && age <= 19:
+        console.log(`${age} is teenager age`);
+    break;
+    
+    default:
+        console.log(`${age} is an adult age`);
+    break;
+}
 
 
 
