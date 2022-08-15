@@ -6,6 +6,7 @@
 // if else statement
 // ternary if statement
 // switch statement
+//* short circut
 
 
 
@@ -44,7 +45,6 @@ if (number > 0) {
 console.log("The if statement is easy");
 
 
-
 //? If .. else statement
 // If the same condition is false, Use else to specify a code block to be executed. Now we have else option on the table:
 
@@ -75,6 +75,38 @@ if (number > 0) {
   console.log("The number is negative");
 }
 console.log("The if...else if...else statement is easy");
+
+
+//3 tamsayı alıp en büyüğünü bulun
+//*1nci çözüm yöntemi
+const numa = +prompt('sayı1:');
+const numb = +prompt('sayı2:');
+const numc = +prompt('sayı3:');
+
+if (numa>numb && numa>numc){
+  bigNum = numa;
+}else if (numb>numa && numb>numc){
+  bigNum = numb;
+}else{
+  bigNum = numc;
+}
+console.log(`En buyuk sayı : ${bigNum}`);
+
+
+
+//* 2'nci çözüm yöntemi
+let enBuyuk = numa;
+
+if (numb>=enBuyuk) {
+  enBuyuk = numb;
+}
+if (numc>=enBuyuk) {
+  enBuyuk = numc;
+}
+//!birbirinden bağımsız if blokları ile yapıldı, else/if çalışmadı bunda
+console.log(`${enBuyuk} en büyük sayıdır.`);
+
+
 
 
 
@@ -130,7 +162,10 @@ console.log("---Ternary Statements---");
 let grade = prompt('Enter your score :');
 // check the condition
 let result = (grade >= 50) ? 'passed' : 'failed';
-console.log(`You ${result} the exam. Ternary`);
+console.log(`You ${result} the exam. Ternary1`);
+//! değişkene atamadan log içinde işlem yapılabilir.S
+console.log(`You ${(grade >= 50) ? 'passed' : 'failed'} the exam. Ternary2 log içinde`);
+
 
 
 // Example: determine legal status
@@ -259,3 +294,4 @@ switch (a) {
     break;
 }
 console.log(`The value is ${a}`);
+
