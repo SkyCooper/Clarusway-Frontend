@@ -14,7 +14,7 @@ main{
     background-color: aqua;
     padding: 10px;
     /* height: 350px; */
-    /* sabit yükseklik düzeltir kaymayı ama kabul edilmez */
+    /* sabit yükseklik kaymayı düzeltir  ama kabul edilmez */
     /* overflow: auto; */
     /* owerflow düzeltir kaymayı ama bu da uygun değil */
     /* clear both en doğru yoldur. */

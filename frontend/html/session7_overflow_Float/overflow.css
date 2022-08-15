@@ -10,13 +10,13 @@
 
 .box1{
     overflow: visible;
-    /* default */
+    /* default, taşmalar görünsün */
     
 }
 
 .box2{
     overflow: hidden;
-    /* taşan kısmı gizler */
+    /* taşan kısmı gizler, yüksekliğin bittiği yerden */
 
 }
 
@@ -28,7 +28,7 @@ overflow: auto;
 
 .box4{
 overflow: scroll;
-/*her halükarde koya, gerek yoksa da koyar. */
+/*her halükarde scroll koyar, gerek yoksa da koyar. */
 /* overflow-y: scroll; */
 /* overflow-x: scroll; */
 }
