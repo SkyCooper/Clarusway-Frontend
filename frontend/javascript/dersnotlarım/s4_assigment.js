@@ -18,6 +18,53 @@ if (operator === "*") {
 console.log(`Answer is : ${execute}`);
 
 
+/* //!değişkenlerin + ile number yapılması
+*Two number calculator
+
+let a = prompt("First number: ");
+let operator = prompt("Operator: ");
+let b = prompt("Second number: ");
+
+if (operator === "+") {
+  console.log(+a + +b);
+} else if (operator === "-") {
+  console.log(+a - +b);
+} else if (operator === "*") {
+  console.log(+a * +b);
+} else if (operator === "/") {
+  console.log(+a / +b);
+} else {
+  console.log("Wrong input!!!");500
+}
+ */
+
+
+/* //! buitin function kullanmış,
+let numX = +prompt("Enter first number...")
+let numY = +prompt("Enter second number...")
+let result = null;
+let calcTypes = {
+  add(){
+    return result = numX + numY
+  },
+  subt(){
+    return result = numX - numY
+  },
+  mult(){
+    return result = numX * numY
+  },
+  divi(){
+    return result = numX / numY
+  }
+}
+let processType= +prompt("Enter process type...\n1- Add\n2- Subtract\n3- Multiply\n4- Divide")
+if(processType === 1) calcTypes.add() && alert(result)
+if(processType === 2) calcTypes.subt() && alert(result)
+if(processType === 3) calcTypes.mult() && alert(result)
+if(processType === 4) calcTypes.divi() && alert(result)
+*/
+
+
 //? 2nci çözüm
 switch (operator) {
   case "*":
@@ -38,6 +85,29 @@ switch (operator) {
 console.log(
   `Switch Answer is : ${numberOne} ${operator} ${numberTwo} = ${execute}`
 );
+
+
+// const calc = +prompt("Choose one of them and enter the relevant number: 1.Sum , 2.Subtract , 3. Multiply , 4.Divide");
+// let result;   //! operatör yerine girişte sayı girin demiş.
+// switch(calc){
+//     case 1:
+//         result= num1 + num2;
+//         break;
+//     case 2:
+//         result = num1 - num2;
+//         break;
+//     case 3:
+//         result = num1 * num2;
+//         break;
+//     case 4:
+//         result = num1 / num2;
+//         break;
+//     default:
+//         console.log(`${calc} is not valid option💥`)
+//         break;
+// }
+// console.log(`The calculation result is ${result}`)
+
 
 
 //! ODEV2 :Clarusway’deki haftalık ders ve etkinlik programınızı, console’dan girilen gün değerine göre çıktı veren kodu switch-case yapısı ile yazınız.
@@ -211,6 +281,49 @@ switch (ay){
 console.log(`Giriline ay ismi ${ay} : sıra numarası ${ayNUmarasi}`);
 
 
+// const nowDate = new Date();  //!geçerli tarihten ayı bulmuş, indexine 1 eklemiş ve o sayıya karşılık gelen ay ismini çağırmış.
+// let thisMonth = nowDate.getMonth()+1;
+// switch(thisMonth){
+//     case 1:
+//        console.log(`${thisMonth}st month is January`);
+//        break;
+//     case 2:
+//         console.log(`${thisMonth}nd month is February`);
+//         break;
+//     case 3:
+//         console.log(`${thisMonth}rd month is March`);
+//         break;
+//     case 4:
+//         console.log(`${thisMonth}th month is April`);
+//         break;
+//     case 5:
+//         console.log(`${thisMonth}th month is May`);
+//         break;
+//     case 6:
+//         console.log(`${thisMonth}th month is June`);
+//         break; 
+//     case 7:
+//         console.log(`${thisMonth}th month is July`);
+//         break;
+//     case 8:
+//         console.log(`${thisMonth}th month is August`);
+//         break;
+//     case 9:
+//         console.log(`${thisMonth}th month is September`);
+//         break;
+//     case 10:
+//         console.log(`${thisMonth}th month is October`);
+//         break;
+//     case 11:
+//         console.log(`${thisMonth}th month is November`);
+//         break;
+//     case 12:
+//         console.log(`${thisMonth}th month is December`);
+//         break;
+// }
+
+
+
 //! Soru 3 Girilen farklı 3 tamsayının toplamını çarpımını en küçüğünü ve en büyüğünü yazdıran programı yazınız
 const n1 = +prompt("Tam sayı-1:", 12);
 const n2 = Number(prompt("Tam sayı-2:", 8));
@@ -239,6 +352,11 @@ if(n1<n2 && n1<n3){
 console.log(`Girilen sayılar : ${n1} ${n2} ${n3}`);
 console.log(`Toplamları : ${toplami}, çarpımları : ${carpimi}`);
 console.log(`En büyük sayı : ${enBuyuk}, En küçük sayı : ${enKucuk}`);
+
+
+
+// const numbers = [a, b, c]; //!aldığı sayılardan bir liste yapmış ve max/min ile sonucu bulmuş
+// console.log(`Sum of the numbers: ${a+b+c}, Multiplication of the numbers: ${a*b*c}, Min of the numbers ${Math.min(...numbers)}, Max of the numbers ${Math.max(...numbers)}`)
 
 
 
