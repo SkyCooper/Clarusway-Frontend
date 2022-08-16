@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-body{
-    font-family: "Open Sans";
-    /* eklediğimiz font */
+body {
+  font-family: "Open Sans";
+  /* eklediğimiz font */
 }
 
 nav.nav-top {
@@ -15,10 +15,14 @@ nav.nav-top {
     rgb(119, 99, 99),
     rgba(207, 46, 207, 0.805)
   );
+  padding: 10px;
 }
 
 nav.nav-top img {
   width: 50px;
+  border: 1px solid darkred;
+  outline: 3px solid red;
+  outline-offset: 3px;
 }
 
 .sign-in {
@@ -34,13 +38,67 @@ nav.nav-top img {
   text-decoration: none;
 }
 .sign-in a:hover {
-  color:black;
-
+  color: black;
 }
 
 .clearfix {
-    clear: both;
+  clear: both;
 }
 
 /* nav-main */
 
+nav.nav-main {
+  background-color: #ffaa53;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: "DynaPuff", cursive;
+}
+
+nav.nav-main a {
+  text-decoration: none;
+  color: black;
+  font-family: ;
+  display: inline-block;
+  margin-right: 2rem;
+
+}
+nav.nav-main a:hover {
+color: white;
+  
+  }
+
+
+main{
+    padding: 30px;
+    text-align: justify;
+    font-weight: 700;
+}
+
+div.slack {
+    background-color: red;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    vertical-align: middle;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    font-size: 2rem;
+    text-align: center;
+    padding: 8px;
+    color: white;
+}
+
+div.slack:hover{
+    color: black;
+}
+
+span{
+    color: red;
+    font-size: large;
+}
