@@ -1,0 +1,66 @@
+body{
+    font-family: 'Open Sans', sans-serif;   
+}
+
+h1{
+    text-align: center;
+    color: cadetblue;
+
+}
+nav.yatay-menu ul li a{
+    text-decoration: none;
+    color:white;
+}
+
+nav.yatay-menu ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav.yatay-menu ul li{
+    display: inline-block;
+    background-color: olivedrab;
+    padding: 1rem 2rem;
+    margin-right: 1rem;
+    width: 8rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+nav.yatay-menu ul li:hover{
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+nav.yatay-menu ul li:hover a{
+    color: black;
+}
+
+
+
+
+
+nav.acilir-menu {
+   width: 14rem;
+   border: 1px solid red;
+}
+
+h2{
+    background-color: chocolate;
+    width: 20rem;
+    height: 5rem;
+    text-align: center;
+    padding: 10px;
+}
+
+nav.acilir-menu ul {
+    display: none;
+}
+
+nav.acilir-menu .fa-bars:active {
+    opacity: 0.5;
+}
+
+nav.acilir-menu:hover ul {
+    display: block;
+}

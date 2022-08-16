@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: "Open Sans";
+    /* eklediğimiz font */
+}
+
+nav.nav-top {
+  background-image: linear-gradient(
+    to right,
+    rgb(119, 99, 99),
+    rgba(207, 46, 207, 0.805)
+  );
+}
+
+nav.nav-top img {
+  width: 50px;
+}
+
+.sign-in {
+  float: right;
+  margin: 1.5rem 1rem;
+  color: white;
+  /* aradaki pipe rengi için */
+  font-size: 700;
+}
+
+.sign-in a {
+  color: white;
+  text-decoration: none;
+}
+.sign-in a:hover {
+  color:black;
+
+}
+
+.clearfix {
+    clear: both;
+}
+
+/* nav-main */
+
