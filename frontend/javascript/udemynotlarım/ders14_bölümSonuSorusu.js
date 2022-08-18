@@ -110,4 +110,39 @@
 //!Soru9
 // Çarpım tablosu oluşturan kodu yaz
 
+//? alt alta yazan çözüm
+// let result;
+// for (let i = 1; i<=10; i++) {
+//     for (let j = 1; j<=10; j++){
+//         result = i * j;
+//         console.log(`${i} x ${j} = ${result}`);
+//         if(j===10) {console.log("------");}
+//     }
+// }
 
+//? yan yana yazan çözüm;
+// let yazilacakislem = "";
+// for (let i = 1; i<=10; i++) {
+//     for (let j = 1; j<=10; j++){
+//         yazilacakislem += (`${i} x ${j} = ${i*j}`); 
+//         if(j===10) {console.log("------");}  //?çıkarılabilir.
+//     }
+//     console.log(yazilacakislem);
+    
+//     yazilacakislem = "";
+// }
+
+
+
+//!Soru10
+// Sayı tahmin oyunu (1-100 arasında)
+ let uretilenSayi = Math.round(Math.random()*101);
+ console.log("Üretilen Sayı : " + uretilenSayi);
+
+
+ let tahmin = -1;
+ while (tahmin != uretilenSayi) {
+
+   tahmin = parseInt(prompt("Bir sayi girin:"));
+
+ }
