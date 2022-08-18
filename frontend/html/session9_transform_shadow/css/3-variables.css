@@ -1,0 +1,27 @@
+@import "theme.css";
+
+body{
+    font-family: var(--ff-open-sans);
+}
+
+h1{
+    font-family: var(--ff-dyna);
+    color: var(--mor);
+}
+
+div{
+    box-shadow: var(--koyu-golge);
+    width: 50vw;
+    margin: 1rem auto;
+    max-width: 600px;
+    min-width: 400px;
+}
+
+p{
+    background-color: var(--mavi4);
+    font-family: var(--ff-nunito);
+    font-weight: 400;
+    font-size: larger;
+    box-shadow: var(--acik-golge);
+    border: 2px dashed var(--mavi1);
+}
