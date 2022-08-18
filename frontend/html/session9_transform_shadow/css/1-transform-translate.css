@@ -1,0 +1,108 @@
+.yazi {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem auto;
+  width: 50vw;
+}
+
+/************ ROTATE **************/
+.yazi1 {
+  background-color: greenyellow;
+  transform: rotateX(180deg);
+  /*! 90 ve 270 derecelerde yazılar tam dik olduklarından ve
+    /*! 3-boyutlu olarak bakamadığımız için gözükmezler */
+}
+.yazi2 {
+  background-color: tomato;
+  transform: rotateY(180deg);
+}
+
+.yazi3 {
+  background-color: hotpink;
+  transform: rotate(-45deg);
+  /* transform: rotateZ(45deg); */
+}
+
+/*************** SCALE ************/
+
+.yazi4 {
+  background-color: indianred;
+}
+.yazi4:hover {
+  transform: scaleX(1.5) scaleY(3);
+}
+
+.yazi5 {
+  background-color: fuchsia;
+}
+
+.yazi5:active {
+  /* transform: scale(1.1, 1.2); */
+  transform: scale(98%);
+}
+
+/*************** TRANSLATE - TRANSITION ************/
+
+.translate {
+  background-color: gold;
+  color: black;
+  font-weight: 800;
+  font-size: 2rem;
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+  text-align: center;
+  /* transition, arata virgül ile yazılır.*/
+  transition: background-color 1s, transform 1s;
+  /* herşeyi takip et demek all */
+  /* transition: all 1s; */
+}
+
+
+
+
+.x:hover {
+    /* transform: translateX(150px) rotate(1800deg) scale(10%, 10%); */
+    /*transform virgülsüz yazılır */
+    transform: translateX(50px) scale(50%) rotate(360deg);
+    background-color: red;
+}
+
+.y:active {
+  transform: translateX(-50px);
+  transform: translateY(50px);
+  background-color: brown;
+}
+
+.xy:hover {
+  transform: translate(50px, 50px);
+  background-color: olivedrab;
+}
+
+
+.btn-div{
+    text-align: center;
+}
+
+
+.btn{
+    padding: 1rem;
+    width: 10rem;
+    background-color: grey;
+    color: bisque;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: background-color 0.5s, color 1s;
+    /* önce arkaplan sonra yazı rengi değir */
+}
+
+
+.btn:hover{
+    background-color: cornflowerblue;
+    color: blue;
+}
+
+.btn:active{
+    transform: scale(98%);
+}
