@@ -19,7 +19,7 @@
 
 .yazi3 {
   background-color: hotpink;
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
   /* transform: rotateZ(45deg); */
 }
 
@@ -52,7 +52,7 @@
   height: 50px;
   margin: 10px;
   text-align: center;
-  /* transition, arata virgül ile yazılır.*/
+  /* transition, araya virgül ile yazılır.*/
   transition: background-color 1s, transform 1s;
   /* herşeyi takip et demek all */
   /* transition: all 1s; */

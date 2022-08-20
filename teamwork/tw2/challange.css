@@ -1,0 +1,49 @@
+/*! margin ve padding ile */
+
+/* .container{
+    margin-left: 200px;
+    padding: 10px;
+}
+.logo{
+    margin-bottom: -70px;
+    margin-left: 350px;
+} */
+
+/*! position ile */
+
+/* .container{
+    position: absolute;
+}
+
+.box{
+    position: relative;
+    top: 50px;
+    left: 300px;
+
+}
+
+.logo{
+    display: inline-block;
+    background-color: #DC6C5E;
+    position: relative;
+    top: 120px;
+    left: 600px;
+    z-index: 1;
+} */
+
+/*! flex ile yapılması */
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  margin: 100px;
+  padding: 1px;
+  border: 1px solid red;
+  align-items: center;
+}
+
+.logo {
+  margin-bottom: -80px;
+  border: 1px solid red;
+  z-index: 1;
+} */
