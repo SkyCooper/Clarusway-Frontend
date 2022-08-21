@@ -1,39 +1,43 @@
 /*! margin ve padding ile */
 
-/* .container{
+.container{
     margin-left: 200px;
     padding: 10px;
 }
-.logo{
-    margin-bottom: -70px;
+
+img{
+    margin-bottom: -80px;
     margin-left: 350px;
-} */
+}
 
 /*! position ile */
 
 /* .container{
-    position: absolute;
+    position: relative;
 }
 
 .box{
-    position: relative;
+    position: absolute;
     top: 50px;
-    left: 300px;
-
+    left: 50%;
+    transform: translate(-50%);
+    
 }
 
 .logo{
+    position: absolute;
     display: inline-block;
     background-color: #DC6C5E;
-    position: relative;
-    top: 120px;
-    left: 600px;
+    top: 1px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
     z-index: 1;
 } */
 
 /*! flex ile yapılması */
-
-/* .container {
+/* 
+.container {
   display: flex;
   flex-direction: column;
   margin: 100px;
@@ -42,8 +46,21 @@
   align-items: center;
 }
 
-.logo {
+img {
   margin-bottom: -80px;
   border: 1px solid red;
   z-index: 1;
+  border-radius: 50%;
+} */
+
+/*! float ile yapılması */
+
+/* img{
+    float: left;
+    margin-left: 430px;
+    margin-top: 50px;
+}
+
+.box{
+    margin: 100px;
 } */
