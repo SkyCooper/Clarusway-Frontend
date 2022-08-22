@@ -24,27 +24,27 @@ const hesapMakinesi = function (n1, n2, opretator) {
   let sonuc = 0;
   if (opretator == "+") {
     sonuc = topla(n1, n2);
-    return sonuc;
+    // return sonuc;
   } else if (opretator == "-") {
     sonuc = cikar(n1, n2);
-    return sonuc;
+    // return sonuc;
   } else if (opretator == "*") {
     sonuc = carp(n1, n2);
-    return sonuc;
+    // return sonuc;
   } else if (opretator == "/") {
     sonuc = bol(n1, n2);
-    return sonuc;
+    // return sonuc;
   } else {
     sonuc = "Hatalı operator secimi";
-    return sonuc;
+    // return sonuc;
   }
   console.log("İşlem Sonucu: ", sonuc);
   return sonuc;
 };
 
-hesapMakinesi(5, 35, "+");
-console.log(hesapMakinesi(4, 20, "p"));
-console.log(hesapMakinesi(5, 35, "+"));
+// hesapMakinesi(5, 35, "+");
+console.log(hesapMakinesi(4, 20, "*"));
+// console.log(hesapMakinesi(5, 35, "-"));
 
 console.log("---SwitchCase---");
 
@@ -73,5 +73,36 @@ const hesapla = function (s1, s2, islem) {
   return sonuc;
 };
 
-hesapla(3, 5, "p");
+hesapla(3, 5, "+");
 console.log(hesapla(4, 3, "/"));
+
+
+
+
+
+function sum1(n1, n2){
+  return n1+n2;
+}
+
+let sum2 = function(n1,n2){
+  return n1+n2;
+}
+
+sum3 = (n1, n2) => n1+n2;
+
+console.log(sum1(4,5));
+console.log(sum2(4,6));
+console.log(sum3(4,7));
+
+let a1 = sum1(3,2);
+let a2 = sum2(3,2);
+let a3 = sum3(3,2);
+
+console.log(a1, a2, a2);
+
+
+var num = [7, 12, 143, 54, 37];
+num.sort(function (a, b) {
+  return b - a;
+});
+console.log(num);
