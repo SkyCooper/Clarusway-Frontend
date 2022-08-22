@@ -159,3 +159,96 @@ const school = {
 console.log(school.availableQuota());
 
 // Arrow functions do not have their own this context.
+
+//todo, inclass
+
+//todo, ÖRNEK-1 silindir hacmini hesaplayan kod.
+// const r = +prompt("yarıçap giriniz:");
+// const h = Number(prompt("yükseklik giriniz:"));
+
+// const hacimHesapla = (r, h) => Math.PI * r * r * h;
+
+// console.log(`${r} , ${h} => Hacmi : ${hacimHesapla(r, h).toFixed(2)}`);
+
+//todo, ÖRNEK-2 Doğum tarihini parametre olarak alan ve ana programa yaşı hesaplayıp döndüren fonksiyonu yazınız
+
+// const tarih = Number(prompt("Doğum tarihin giriniz:"));
+
+// //!Arrow func
+// const yasHesapla = (tarih) => {
+//   const yas = new Date().getFullYear() - tarih;
+//   return yas;
+// };
+
+// // kısa yazılmış syntax
+// const yasHesaplaKisa = (tarih) => new Date().getFullYear() - tarih;
+
+// console.log(`Doğum tarihi : ${tarih} , Yaşınız: ${yasHesapla(tarih)}`);
+// //? console.log("YASINIZ:" + yasHesapla2(tarih));
+// //Funct expression ve arrow func yontemlerinde
+// // Once fonks tanimlanmalidir sonra cagrilmalidir.
+// // Aksi takdirde hata alrsiniz.
+
+// //?-----------------------------------------
+
+// //!Function Expression --> syntax tek satırlık değilse çok benziyor.
+// const yasHesapla2 = function(tarih){
+//   const yas = new Date().getFullYear() - tarih;
+//   return yas;
+// };
+
+// //?-----------------------------------------
+
+// console.log("YASINIZ:" + yasHesapla3(tarih));
+// // taımlamadan önce çağırmada hata vermez.
+
+// //! Func Declaration yontemi ile tanimlama
+// function yasHesapla3(tarih) {
+//   const yas = new Date().getFullYear() - tarih;
+//   return yas;
+// }
+
+//todo, ÖRNEK-3
+//? FIBONACCI terimleri:  0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+// fibonacci →  [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+//*  Girilen n. terime kadar Fibonacci sayılarının toplamini hesaplayarak yazdiran fonksiyonu Donguler ile kodlayiniz.
+
+const fibo = (n) => {
+  let fib1 = 1;
+  let fib2 = 1;
+  let toplam = 0;
+
+  for (let i = 2; i < n; i++) {
+    toplam = fib1 + fib2;
+    fib1 = fib2;
+    fib2 = toplam;
+    // çözümde değişkenleri güncelleyerek yaptı, //!shifting yaptı.
+    console.log(toplam);
+    // bütün toplamları konsolda tek tek ygörmek için
+  }
+  return fib2;
+};
+
+// let stringResult = "1,1";
+// // f(n) = f(n-1) + f(n-2)
+// const fibo = (n) => {
+//   let fib1 = 1;
+//   let fib2 = 1;
+//   let toplam = 0;
+
+//   for (let i = 2; i < n; i++) {
+//     toplam = fib1 + fib2;
+//     fib1 = fib2;
+//     fib2 = toplam;
+//     stringResult += "," + fib2;
+//   }
+
+//   return fib2;
+// };
+
+const n = +prompt("n sayısını girin");
+if (n <= 0) {
+  console.log("Sıfırdan büyük bir sayı giriniz");
+} else {
+  console.log(`FIBO(${n}) = ${fibo(n)}`);
+}
