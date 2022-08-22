@@ -127,6 +127,9 @@ function greet() {
 // Output: // Uncaught ReferenceError: greet is not defined
 // In your program, hoisting can have unfavorable consequences. Also, to avoid hoisting, define variables and functions first before calling them. When dealing with variables, let is preferable to var.
 
+
+
+
 //todo, örnek1
 selamYaz(); //*invoke, call, çağırma
 
@@ -139,8 +142,11 @@ selamYaz(); //*invoke, call, çağırma
 
 //? yukarı aşağı fark etmeden 3 kere fonksiyon çalışır.
 
-//todo, örnek2
 
+
+
+
+//todo, örnek2
 // (ad, soyad= "noname"); default parametre ayarlandı.
 function selamSoyle(ad, soyad = "") {
   console.log(`Merhaba ${ad} ${soyad}`);
@@ -155,6 +161,9 @@ selamSoyle("Recep"); //? eksik argüman olursa çıktısı undefined olur./defau
 //! yerine default parametre atayabiliriz. Ornekteki lastName
 //! parametresi icin default değer olarak '' atanmistir.
 
+
+
+
 //todo, örnek3 yas hesaplaması 3 farklı metod ile yapılması
 
 function yasHesapla(isim, dogumTarihi) {
@@ -167,6 +176,10 @@ function yasHesapla(isim, dogumTarihi) {
 const mesaj1 = yasHesapla("Elif Can", 1990);
 console.log(mesaj1);
 console.log(yasHesapla("Murat Erden", 1999)); //kullanılabilir ama esas amaç DOM'a yani ekrana yazmak
+
+
+
+
 
 //todo, örnek4 tek/çift hesaplama
 
