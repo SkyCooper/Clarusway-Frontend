@@ -1,9 +1,14 @@
+@import "theme.css";
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1rem;
   text-align: center;
+  color: white;
+  font-family: var(--ff-roboto);
+
 }
 
 .container {
@@ -64,36 +69,37 @@
 }
 
 .logo {
-  background-color: aqua;
+  background-color: var(--tropikal-sari);
   padding: 1rem;
-  border: 2px solid black;
+  border: 1px solid var(--gri-3);
 }
 
 .menu {
-  background-color: bisque;
+  background-color: var(--mavi-6);
   padding: 1rem;
-  border: 2px solid black;
+  border: 1px solid var(--gri-3);
 }
 
 .banner {
-  background-color: aquamarine;
+  background-color: var(--acik-kirmizi);
   padding: 4rem;
 }
 
 .row .bolum123 {
-  background-color: blue;
-  color: white;
-  /* padding: 12rem; */
-  border: 2px solid black;
+  background-color: var(--tropikal-yesil3);
+  height: calc(100vh - 330px);
+  border: 1px solid var(--gri-3);
 }
 
 .row .bolum456 {
-  background-color: tomato;
+  background-color: var(--turuncu);
   padding: 1rem;
-  border: 2px solid black;
+  border: 1px solid var(--gri-3);
 }
 
 .footer {
-  background-color: hotpink;
+  background-color: var(--mor);
   padding: 2rem;
+  border: 1px solid var(--gri-3);
+
 }
