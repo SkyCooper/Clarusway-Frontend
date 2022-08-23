@@ -1,0 +1,132 @@
+* {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.container {
+  background-color: fuchsia;
+  display: flex;
+  /*! Elemanların diziliş yönü : column, row, row-reverse, column-reverse*/
+  flex-direction: row; /*! default => row*/
+
+  /*? sıkıştırma veya alt satıra geçebilme:flex-wrap: wrap, nowrap, wrap-reverse*/
+  flex-wrap: wrap;
+
+  /*! Yatay Hizalama: justify-content
+  /** flex-start, flex-end,center, space-around,space-evenly, space-between*/
+  justify-content: space-evenly;
+
+  /* justify-content: space-around; */
+  /*burada default olarak olmamasına rağmen left ve right flex-end flex-start gibi çalışıyor */
+
+  /*?gap, flex içerisindeki elemanların dikey ve yatay boşluklarını belirlemek için kullanılabilir. ilk yazılan yatay (satırlar arası) boşluk, 2. yazılan ise dikey (sutunlar arası) boşluktur */
+  gap: 100px 20px;
+  /*birincisi satırlar arasını ikincisi itemler-sütunlar arasını açıyyor. */
+}
+
+.container div {
+  background-color: gold;
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+  /* overflow: auto; */
+  /* taşmaları önlemek için */
+}
+
+/** DİKEY HİZALAMA */
+
+/*flex direction row'dan column olursa eksen değişmiş olur ve justify-content ve align-items yer değiştiri */
+
+.container1 {
+  display: flex;
+  height: 20rem;
+  background-color: greenyellow;
+  padding: 0.5rem;
+  gap: 20px 10px;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  /*yatay*/
+
+  align-items: center;
+  /*dikey*/
+  /*nowrap olunca bunu kullanmak daha mantıklı */
+
+  align-content: flex-end;
+  /* blok olarak hepsini hareket ettiriyor. wrap açıksa kullanmak mantıklı */
+
+  overflow: auto;
+  /*taşma olursa scrol çıksın diye */
+}
+
+.container1 div {
+  background-color: tomato;
+  height: 5rem;
+  /* strech çalışması için height kapalı olmamlı */
+  width: 5rem;
+}
+
+/** FLEX - GROW */
+
+.container2 {
+  background-color: hotpink;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.container2 div {
+  background-color: khaki;
+  width: 5rem;
+  flex-grow: 1;
+
+    /*! flex-basis item'lara ihtiyacı kadar yer tahsis ediyor veya sadece icerigin buyuklugu kadar bir uzunluk veriyor (flex-basis:0); */
+  flex-basis: 0;
+}
+
+div.grow2 {
+    flex-grow:2;
+}
+div.grow3 {
+    flex-grow:3;
+}
+
+div.nogrow {
+    flex-grow: 0;
+}
+
+
+
+/** FLEX - GROW - WİDTH */
+
+.container3 {
+  background-color:rgb(154, 126, 178);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  width: 50vw;
+}
+
+.container3 div {
+  background-color: lightcyan;
+
+}
+
+
+div.div1{
+    width: 10%;
+    /* width: 25%;  4 tane ise hepsini eşit yapar.*/
+}
+div.div2{
+    width: 20%;
+}
+div.div3{
+    width: 30%;
+}
+div.div4{
+    /* width: 40%; */
+}
