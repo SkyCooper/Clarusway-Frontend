@@ -5,6 +5,7 @@
   font-size: 1.4rem;
   text-align: left;
   font-family: var(--ff-roboto);
+  color: white;
 }
 
 .container {
@@ -65,9 +66,9 @@
 }
 
 .header {
-  background-color: aqua;
   margin: 15px;
   padding: 2rem;
+  background-color: blue;
   /* height: 100px; */
 }
 
@@ -98,12 +99,12 @@
 
 .main {
   padding: 4rem;
+  background-color: blue;
   margin: 15px 15px 0 15px;
-  background-color: bisque;
 }
 
 .footer {
   padding: 2rem;
+  background-color: blue;
   margin: 15px;
-  background-color: aquamarine;
 }
