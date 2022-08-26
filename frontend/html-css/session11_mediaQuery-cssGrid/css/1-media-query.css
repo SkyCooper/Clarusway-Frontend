@@ -1,4 +1,5 @@
 @import "theme.css";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -78,6 +79,9 @@ h1 {
   width: 15%;
   background-color: var(--gri-8);
 }
+
+/* media query */
+
 @media screen and (min-width: 600px) and (max-width: 992px) {
   body {
     color: var(--beyaz);
@@ -92,6 +96,7 @@ h1 {
     font-size: 1.5rem;
   }
 }
+
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
   body {
