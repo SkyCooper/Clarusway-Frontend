@@ -50,23 +50,25 @@ console.log("url ve kursAdi birleşmiş hali: ", sonuc);
 
 // 6- verilen stringi boşluklardan parçalayıp tersten yazdıralım.
 
-// let x = "Merhaba Ali Veli";
-// let y = x.split(" ");
-// let sonuc1 = "";
+let x = "Merhaba Ali Veli";
+let y = x.split(" ");
+console.log(y);  //!["Merhaba", "Ali", "Veli"];
+let sonuc1 = "";
 
-// for (let i = y.length - 1; i >= 0; i--) {
-//   sonuc1 += y[i] + " ";
-//   console.log(sonuc1);
-// }
+for (let i = y.length - 1; i >= 0; i--) {
+  sonuc1 += y[i] + " ";
+}
+console.log(sonuc1);
+console.log(sonuc1.length, x.length); // sonundaki bir boşlukktan dolayı karakter sayısı fazla çıkar.
 
 // 7- Stringin tamamını tersten yazdıran fonksiyonu yazalım.
 
-let x = "Merhaba Ali Veli";
-let reverse = (x) => {
+let xx = "Merhaba Ali Veli";
+let reverse = (xx) => {
   let sonuc1 = "";
 
-  for (let i = x.length - 1; i >= 0; --i) {
-    sonuc1 += x[i];
+  for (let i = xx.length - 1; i >= 0; --i) {
+    sonuc1 += xx[i];
   }
   return sonuc1;
 };
