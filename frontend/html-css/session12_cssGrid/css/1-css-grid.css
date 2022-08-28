@@ -16,8 +16,10 @@
 
   /*! Tum gridleri kendi grid alanlarina gore dikey olarak hizalar */
   /*? center'da itemlar auto height alir*/
-  /* align-items: flex-end; */
+  /* align-items3: flex-end; */
 }
+
+
 .content {
   background-color: wheat;
   border: 2px solid black;
@@ -33,6 +35,8 @@
   background-size: cover;
   background-position: center;
 }
+
+
 .content5 {
   background-color: cadetblue;
 }

@@ -44,12 +44,16 @@ iframe {
 
 .c1 {
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 3;  /*exculisive */
+  /*  start dahil end dahil değil */
+
   background-color: coral;
 }
 .c4 {
   grid-row-start: 2;
   grid-row-end: 4;
+  /*dikey olarak birleştirdi */
+
   background-color: crimson;
 }
 
@@ -67,4 +71,6 @@ iframe {
 .c2 {
   background-color: darkkhaki;
   grid-area: 1 / 3 / span 2 / span 2;
+  
+  /*? row 1 den başa 2 tanes birleştir, col 3 ten başla 2 tane birşelştir demek */
 }
