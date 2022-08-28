@@ -70,7 +70,7 @@ iframe {
 
 .c2 {
   background-color: darkkhaki;
-  grid-area: 1 / 3 / span 2 / span 2;
-  
+
+    grid-area: 1 / 3 / span 2 / span 2;
   /*? row 1 den başa 2 tanes birleştir, col 3 ten başla 2 tane birşelştir demek */
 }
