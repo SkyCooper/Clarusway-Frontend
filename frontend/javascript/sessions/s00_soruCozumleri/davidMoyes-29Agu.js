@@ -15,6 +15,34 @@
 //   girilenYil % 400 == 0 || (girilenYil % 4 == 0 && girilenYil % 100 != 0);
 // console.log("Girilen " + girilenYil + " yılı artık yıl mı? :" + artikYilMi);
 
+
+// first way:
+// const isLeapYear = (year) => {
+//     if (year % 100 === 0) {
+//         if (year % 400 === 0) {
+//             console.log(`${year} is a leap year.`);
+//         } else {
+//             console.log(`${year} is not a leap year.`);
+//         }
+//     } else {
+//         if (year % 4 === 0) {
+//             console.log(`${year} is a leap year.`);
+//         } else {
+//             console.log(`${year} is not a leap year.`);
+//         }
+//     }
+// }
+
+// isLeapYear(64);
+// isLeapYear(1900);
+// isLeapYear(2000);
+// isLeapYear(1912);
+
+// second way:
+// function leapYear(year) {
+//     return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+// }
+
 //! Assignment-JS-2: Write a JavaScript program to determine a year is a leap year in the Gregorian calendar.
 
 // let side1 = +prompt("Enter first side");35
