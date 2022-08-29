@@ -5,6 +5,9 @@
 // reverse("Happy") ➞ yppaH
 
 let clarusRock = "Clarusway Rocks!";
+let ters11 = clarusRock.split("").reverse().join("");
+console.log("ters11",ters11);
+
 
 // let ters2 = "";
 // for (let i = deneme.length-1; i >= 0; i--) {
