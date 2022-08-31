@@ -4,7 +4,6 @@
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-
 console.log("***** ARRAYS ******");
 
 //! array'ler non-primitive dir. içindeki veriler nispeten daha yavaş olan HEAP alanında tutulurken, array adresi daha hızlı çalışan STACK alanında tutulur.
@@ -43,7 +42,6 @@ console.log(veriler);
 const veriler1 = Array.of("deneme");
 console.log(veriler1);
 
-
 //* Diziden Veri Okuma-Yazma (indisleme)
 //* ---------------------------------------------------------
 //! Diziden veri okuma
@@ -57,23 +55,19 @@ console.log(isimler[isimler.length - 1]);
 //? at() negatif index kullanılan nadir yerlerden bir tanesi
 console.log(isimler.at(-1));
 
-
 //! Diziye veri yazma;
 // const isimler = ["Ahmet", "İsmet", "Can", "canan", "Cooper"];
 
 isimler[1] = "Saffet"; //İsmet olan isim Saffet olarak güncellendi.
 
-
 //!Uncaught TypeError: Assignment to constant variable.
 // isimler = ["Ali", "Veli"];
 //* non-pimitive alanda değişiklik yapılmaz, HEAP'te tutulan primitive alanda değişiklik yapılabilir. let ile tanımlanırsa hata vermezdi.
 
-
 //? number'ın son elementinin değerini 1 arttır.
-console.log(numbers[numbers.length-1]);  // 1
-numbers[numbers.length-1]++;
+console.log(numbers[numbers.length - 1]); // 1
+numbers[numbers.length - 1]++;
 console.log(numbers); // [3, 2, 2] oldu.
-
 
 const yaslar = [22, 44, 55];
 const kisiler = ["Ahmet", "Can", 2022, 2022 - 1990, true, yaslar];
@@ -87,13 +81,11 @@ console.log(kisiler[5][2]);
 kisiler[5][1]--;
 console.log(kisiler[5][1]); //43
 
-
 //! JS HAZIR DIZI METOTLARI
 // JS’de diziler, Array prototype nesnesinden türemektedir ve içerisinde hazır bir çok metot tanımlanmıştır.
 // • Diziyi değiştiren (mutator) metotlar
 // • Dizi erişim metotları
 // • Dizi iterasyon metotları
-
 
 //? ===========================================================
 //?  DIZIYI DEGISTIREN (MUTATOR) METOTLAR -- esas diziyi değiştirir.
@@ -167,29 +159,51 @@ const sayilar1 = [3, 5, 2, "2", "üc", 2, "3", "bes", "5"];
 
 //* includes()
 //*-----------------------------------------------------------
-console.log(sayilar1.includes(5));  //?true
+console.log(sayilar1.includes(5)); //?true
 console.log(sayilar1.includes("5")); //?false
 
 //* indexOf(),  lastIndexOf();
 //*-----------------------------------------------------------
 //* ilk eslesen indeksi dondurur.
 
-console.log(sayilar1.indexOf(2));      //? 2
-console.log(sayilar1.lastIndexOf(2));  //? 5
-console.log(sayilar1.lastIndexOf(4));  //? -1 bulamzsa, yoksa 
+console.log(sayilar1.indexOf(2)); //? 2
+console.log(sayilar1.lastIndexOf(2)); //? 5
+console.log(sayilar1.lastIndexOf(4)); //? -1 bulamzsa, yoksa
 
 //! Odev: prompt ile konsoldan bir sayi istenmeli (string veya number
 //! olarak) eger bu girilen sayi, dizi icerisinde bulunuyorsa indisi
 //! (string ve number olarak ayri) yazdirilmalidir. Eger bulunamadiysa
 //! Aranilan bulunamamistir yazidirilmalidir.
 //!-----------------------------------------------------------
+// const sayilar1 = [3, 5, 2, "2", "üc", 2, "3", "bes", "5"];
+let enterNum1 = prompt("Sayı gir1 :");
+// let enterNum2 = Number(prompt("Sayı gir2 :"));
+
+if (sayilar1.indexOf(enterNum1) >= 0) {
+  console.log(
+    `${enterNum1} sayısının tipi ${typeof enterNum1} ve index numarası ${sayilar1.indexOf(
+      enterNum1
+    )} ayrıca number ${enterNum1} nin index numrası ${sayilar1.indexOf(
+      Number(enterNum1)
+    )}`
+  );
+  // console.log(
+  //   `${enterNum2} nin tipi ${typeof enterNum2} ve index numarası ${sayilar1.indexOf(
+  //     enterNum2
+  //   )} ayrıca string ${enterNum2} nin index numrası ${sayilar1.indexOf(
+  //     String(enterNum2)
+  //   )}`
+  // );
+} else {
+  console.log("Aranan değer bulunamamıştır.");
+}
 
 //* join()
 //*-----------------------------------------------------------
 //? join, dizinin elamanlari birlestirip string hale cevirir.
-console.log(sayilar1.join("-"));  // 3-5-2-2-üc-2-3-bes-5
+console.log(sayilar1.join("-")); // 3-5-2-2-üc-2-3-bes-5
 //* parantez içinde ne varsa onu arasına koyar, hiçbirşey yoksa default virgül koyar.
-console.log(sayilar1.join());  //3,5,2,2,üc,2,3,bes,5
+console.log(sayilar1.join()); //3,5,2,2,üc,2,3,bes,5
 
 //* toString()
 //*-----------------------------------------------------------
@@ -201,20 +215,22 @@ console.log(sayilar1.toString());
 //*-----------------------------------------------------------
 const arabalar1 = ["BMW", "Mercedes", "Fiat", "Anadol"];
 
-const yeniArabalar = arabalar1.slice(2); // 2den başla sona kadar bütün elemanları al 
+const yeniArabalar = arabalar1.slice(2); // 2den başla sona kadar bütün elemanları al
 console.log(yeniArabalar);
-const yeniArabalar1 = arabalar1.slice(1, 3); // 1den başla 3e kadar(dahil değil) elemanları al 
+const yeniArabalar1 = arabalar1.slice(1, 3); // 1den başla 3e kadar(dahil değil) elemanları al
 console.log(yeniArabalar1);
 
 //* concat()
 //*-----------------------------------------------------------
 const yazilar = ["Bugün", "hava", "cok", "guzel"];
-const numbersArr = [1,2,5,7];
-const combinedArr = yazilar.concat(true,  numbersArr,  ["aslinda", "cok", "sicak"],
+const numbersArr = [1, 2, 5, 7];
+const combinedArr = yazilar.concat(
+  true,
+  numbersArr,
+  ["aslinda", "cok", "sicak"],
   [["x", "y"]]
 );
 console.log(combinedArr); // sadece dizi değil, içindeki herşeyi concat eder.
-
 
 //* every()
 //*-----------------------------------------------------------
@@ -223,7 +239,7 @@ console.log(combinedArr); // sadece dizi değil, içindeki herşeyi concat eder.
 //? true aksi takdirde false deger dondurur.
 
 const yasArray = [18, 22, 34, 78, 81];
-const check = yasArray.every((yas) => yas >=18);
+const check = yasArray.every((yas) => yas >= 18);
 //* yas dizisi içinde doloş (iterate et) tek tek 18 den büyük mü diye bak, eğer hepsi büyükse (hepsi şartı sağlıyorsa) true döndür, eğer bir tane bile büyük değilse (şartı sağlamıyorsa) false döndür.
 
 console.log(check);
@@ -235,7 +251,7 @@ check ? console.log("Herkes 18'den büyük") : console.log("18 yaş altında var
 //? En az bir eleman icin bile test basarili ise true aksi
 //? takdirde false deger dondurur.
 
-const buyuk80 = yasArray.some((yas)=> yas >= 80);
+const buyuk80 = yasArray.some((yas) => yas >= 80);
 console.log(buyuk80);
 
 //todo, burada arrow function yerine klasik fonksiyon tanımlayıp sonra onu some içinde çağırsak da olur.
@@ -248,11 +264,10 @@ console.log(buyuk80);
 
 //! yaşı 30'dan büyük olan ilk / son elementi yazdıran kod
 // const yasArray = [18, 22, 34, 78, 81];
-const buyukIlk30 = yasArray.find((yas)=> yas >= 30);  //*34
-const buyukSon30 = yasArray.findLast((yas)=> yas >= 30); //*81
+const buyukIlk30 = yasArray.find((yas) => yas >= 30); //*34
+const buyukSon30 = yasArray.findLast((yas) => yas >= 30); //*81
 
 console.log(buyukIlk30, buyukSon30);
-
 
 //* findIndex()
 //*-----------------------------------------------------------
@@ -262,5 +277,5 @@ console.log(buyukIlk30, buyukSon30);
 
 //! yaşı 30'dan büyük olan ilk indisi yazdıran kod
 
-const foundIndex = yasArray.findIndex((yas) => yas >=30);
+const foundIndex = yasArray.findIndex((yas) => yas >= 30);
 console.log(foundIndex); // 2 --> 2nci indexteki 34
