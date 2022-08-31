@@ -24,8 +24,10 @@ const topla = (arr) => {
       pozitif += arr[i];
     }
   }
-  console.log(`Negatif sayılar toplamı : ${negatif}, pozitif sayılar toplamı : ${pozitif}`);
-}
+  console.log(
+    `Negatif sayılar toplamı : ${negatif}, pozitif sayılar toplamı : ${pozitif}`
+  );
+};
 
 topla(dizi);
 
@@ -33,18 +35,17 @@ topla(dizi);
 
 //* for ile;
 let toplam = 0;
-for(let i=0; i<dizi.length; i++){
-toplam += dizi[i];
+for (let i = 0; i < dizi.length; i++) {
+  toplam += dizi[i];
 }
-console.log(`Toplam for: `,toplam);
+console.log(`Toplam for: `, toplam);
 
 //* for in ile;
 toplam = 0;
-for(let i in dizi){
-toplam += dizi[i];
+for (let i in dizi) {
+  toplam += dizi[i];
 }
-console.log(`Toplam for IN : `,toplam);
-
+console.log(`Toplam for IN : `, toplam);
 
 //! İki ayrı dizideki eşleşen indis elemanları birleştirerek ayrı bir diziye saklayan uygulamayı FOR IN ile yazınız
 
@@ -52,18 +53,28 @@ const adlar = ["Ahmet", "Can", "Mustafa", "Ayşe", "Elif"];
 const soyAdlar = ["Öztürk", "Yılmaz", "Arı", "Çalı", "Yazı"];
 
 let adSoyad = [];
-for (let i in adlar){
-    adSoyad[i] = adlar[i]+" "+soyAdlar[i];
+for (let i in adlar) {
+  adSoyad[i] = adlar[i] + " " + soyAdlar[i];
 }
-console.log(`Ad Soyad birleşimi : `,adSoyad);
-
+console.log(`Ad Soyad birleşimi : `, adSoyad);
 
 const birlestir = (arr1, arr2) => {
-    let adSoyad = [];
-    for (let i in arr1) {
-      adSoyad[i] = arr1[i] + arr2[i];
-    }
-console.log(`Ad Soyad birleşim fonksiyon ile : `, adSoyad);
-}
+  let adSoyad = [];
+  for (let i in arr1) {
+    adSoyad[i] = arr1[i] + arr2[i];
+  }
+  console.log(`Ad Soyad birleşim fonksiyon ile : `, adSoyad);
+};
 
 birlestir(adlar, soyAdlar);
+
+//! Dizideki elemanları birleştirerek tek bir String haline getiren uygulamayı FOR OF ile yazınız
+
+let arabalar = ["BMW", "Volvo", "Mini"];
+
+let yazi = "";
+
+for (let item of arabalar) {
+  yazi += item + " ";
+}
+console.log(yazi);
