@@ -1,0 +1,284 @@
+/*! Introduction */
+SASS was written by Hamilton Catlin in 2006 to develop CSS3 with a structure similar to the Ruby language.
+
+SASS is a CSS plugin that is one of the popular, stable and professional level CSS preprocessors.
+
+SASS: Syntactically Awesome Style Sheets
+
+/*! Why use SASS? */
+Writing code in CSS is fun, but as stylesheets grow, the situation becomes increasingly complex.
+
+That's where preprocessors can help. SASS offers features that make CSS organized, such as variables, nested structures, mixed build, inheritance, and other nifty goodies that are not in CSS.
+
+Thanks to SASS, we can write fast and orderly with less code, thus it enables to convert CSS from static to dynamic structure.
+
+However, when we link the styling pages to the HTML page, we must link to the CSS file instead of the SASS file.
+
+Because HTML can only be styled externally by CSS files, not styled by SASS or any other kind of files
+
+
+/*! Difference Between SASS & SCSS Syntax */
+
+As the popularity of SASS has increased over time, its usage has become widespread. 
+
+Then, SCSS was created, carrying the SASS properties and the syntax format of CSS, and it was more liked by the developers. Because the syntax of SCSS has with curly braces { } and semicolons (;) was a habit of front-end developers coming from CSS. 
+
+That is why nowadays, SCSS is more common than SASS.  
+
+Let's see some differences:
+
+- When using SASS, semicolons (;) and curly braces { } are not used as in CSS, 
+
+- In SCSS, expressions are separated by semicolons(;). It is a very easy and nice syntax to get used to because of its similarity to CSS,
+
+- When you type curly brackets in CSS and SCSS, it means that is indented one level lower,
+
+- Unlike CSS, when an invalid SASS-SCSS syntax is encountered, the location and reason for the error are presented,
+
+- SCSS syntax uses the .scss file extension, SASS syntax uses the .sass file extension.
+
+For its wide range of usage and popularity, In the software world, "SASS" generally used to describe the SCSS.
+
+/*! Installation & Preprocessing */
+
+When you start writing with SASS, it will save and present it as a CSS file that you can use on your website. 
+
+You can perform these operations by compiling your SASS files into CSS file on your terminal. 
+
+For example, you can do this by taking the output.css file from your terminal and compiling it into input.css. 
+
+You can process individual files and directories with the --watch flag command.
+
+Sass - watch input.css output.css
+
+Sass - watch app / sass: public / stylesheets
+
+
+
+/*! Variables */
+Variables allow us to store the values (font, colors, size, etc.) that we want to reuse in our style sheet.
+
+Variables provide math operations, library formation, and reduce duplication.
+
+For these reasons it is one of the most useful tools in SASS.
+
+
+
+/*! Making Variable */
+After you assign a value to an object, you make it a variable by placing a dollar sign ($) in front of it. 
+
+You can store the following data types as variables:
+
+     - Strings (text), 
+
+     - Number (numbers), 
+
+     - Boolean (condition-true and false), 
+
+     - Null (empty).
+
+
+For Example:
+
+$ variable name:value;
+
+$myColor: #ff0034;
+
+$myHeight: 250px; 
+
+
+/* !Use of Variable */
+You can then use the variable you assigned at any time. 
+
+SASS variables can only be used at the level of nesting they define. 
+
+If it is written with an exclamation mark (!) at the beginning of the variable, it changes all values.
+
+Therefore, to define global variables outside of any rule, it is necessary to define "_global.scss" in its own file.
+
+( _global.scss will be shown at Partial)
+
+
+/*! Nesting */
+
+The ability to write the codes nested in a hierarchical structure as in HTML is not valid in CSS.
+
+In CSS, rules are written one by one without being nested.
+
+SASS allows us to place CSS selectors in the same way as HTML. (But we shouldn't use excessively nested code blocks.)
+
+This way, you can write code that is cleaner and easier to read than CSS.
+
+You can write simpler code by nesting the font property, size, and weight of CSS prefixes, and properties such as text alignment, transformation, and movement.
+
+div {
+  background-color: lightblue;
+  margin-top: 100px;
+
+  ul {
+      display: flex;
+      justify-content: space-around;
+    li {
+      list-style-type: none;
+      padding: 20px;
+
+      a {
+        color: blue;
+        text-decoration: none;
+        font-size: 1.4rem;
+
+      }
+    }
+  }
+}
+
+
+
+/*! Partials and @import */
+
+/** Partials */
+
+With the increase in the codes on the formatting page, it becomes difficult to read and protect.
+
+SASS allows us to write the CSS code as DRY (Do Not Repeat Yourself).
+
+One way to provide the DRY code is to store the related code in separate files.
+
+In this case, it would be very useful to shred large formatting pages and create small SASS files.
+
+Partial (fragment) files created in SASS do not affect performance.
+
+We can create partial files by putting an underscore ( _ ) at the beginning of the file.
+
+This partial scss file is then written as @import "filename" on the top line of the main SASS file (without the extension).
+
+The @import directive allows you to add the contents of a partial file to the main SASS file.
+
+For example:
+_partial.scss
+@import "partial";
+
+
+/*! Mixins and @include */
+
+/** Mixin */
+
+Another convenience that SASS provides us is the @mixin feature.
+
+With this feature, we get rid of code repetitions.
+
+In SASS, you can easily reuse it by grouping with @mixin instead of rewriting many lines like in CSS.
+
+You can type @mixin "name" to define a @mixin.
+
+We can use the code groups that we previously defined with the @mixin directive wherever we want by typing the @include "name" directive.
+
+Also, one of the biggest features of @mixin is that it can take arguments like functions.
+
+We can assign a value ($) to the @mixin directive that we created as a parameter when grouping codes for later use.
+
+
+/*! Inheritance and @extend */
+
+Inheritance/@extend is one of the most important features of SASS that keep your codes simple.
+
+This feature allows you to share one CSS property with another.
+
+We can use the @extend directive if you have elements that are similarly shaped but have little difference between them.
+
+So we can inherit the values of one class and use it in another class, whether we want the same, including small inclusions.
+
+So what is the difference between @extend and @mixin, which look alike?
+
+/** These two directives are actually very similar, but @mixin is more comprehensive. */
+
+The @extend directive doesn't support variables like @mixin, so they don't take arguments.
+
+We only include the properties of the specified class with @extend without any arguments.
+
+The @extend directive is useful for using style elements we created earlier by adding small additions.
+
+
+/*! Operators */
+
+We can do mathematical basic 4 operations very quickly with SASS.
+
+We can use the + - * / operators for this.
+
+
+/*! Control Directives and Expressions */
+/** Control Assessment */
+Sass is an extension of CSS, but not a programming language like JavaScript.
+
+However, it has some limited condition assessment capabilities through control directives.
+
+We provide the ability to make decisions or make multiple loops with SASS styles based on the evaluation of only certain situations
+
+/** @if Conditional Expressions */
+The @if / @else if / @else, which is used for status query in programming languages, is also used in the same logic in SASS scripting language.
+
+@if ; conditional statements allow us to add Sass code to the CSS output when certain conditions are met.
+
+@else if ; passes to another query if the @if condition is not met,
+
+@else ; is the code block that happens if all conditions are not met.
+
+
+/** @for Loop */
+With the @for loop, we make an operation run in the range between the specified start and end values.
+
+Syntax:
+
+@for $var from <start> through <end>
+
+Integer value loop to run from start value to end value (including end value)
+
+@for $var from <start> to <end>
+
+Integer value loop to run from start value to end value (not including end value)
+
+$var: variable that such as $i
+
+
+/** @while Loop */
+You can use the @ while directive if you want to run statements multiple times but still control their execution according to a condition.
+
+The @ while directive will continue to output the CSS generated by statements while returning the condition true.
+
+We run nested styles recursively until the specified loop in the expression returns false
+
+After each iteration, the Counter changes the value by increasing or decreasing it.
+
+$i:10;
+@while $i > 0{
+  .border -#{$i} {
+    border: 5px * $i;
+  }
+  $i : $i-2;
+}
+
+
+/** @array Loop */
+We can define multiple variables as arrays.
+
+We can access these variables with the help of loops and change their properties and values.
+
+We use commas between variables when creating arrays, and we use the array "nth ($ array, $ variables) " to get the variable we want.
+
+$ array: $ variable1, $ variable2, $ variable3, $ variable4;
+
+nth ($ array, $ variable)
+
+Loops are needed to use arrays.
+
+for $ i from 1 through lenght ($ array)
+
+/** @each Loop */
+It creates a loop like @for, but the only difference is that it allows you to access all of your array variables with a single code.
+
+It passes all the value in the array to the variable $ i and includes it in the loop incrementally.
+
+Syntax:
+
+@each $var in <list or map> 
+

@@ -43,9 +43,9 @@
 //     return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
 // }
 
-//! Assignment-JS-2: Write a JavaScript program to determine a year is a leap year in the Gregorian calendar.
+//! Assignment-JS-2: Write a JavaScript code to find the area of a triangle.
 
-// let side1 = +prompt("Enter first side");35
+// let side1 = +prompt("Enter first side");
 // let side2 = +prompt("Enter second side");
 // let side3 = +prompt("Enter third side");
 
@@ -70,6 +70,19 @@
 //     ? console.log(`Result : ${20 - num1}`)
 //     : console.log(`Result : ${(num1 - 20) * 2}`);
 
+
+
+// const absoluteResult = (num) => {
+//     if (num < 20) {
+//         return 20 - num;
+//     } else {
+//         return Math.abs((20-num) * 2);
+//     }
+// };
+// 
+// console.log(absoluteResult(15));
+// console.log(absoluteResult(35));
+
 //! Write a JavaScript program that takes 3 integers from a user and displays the largest.
 
 // let number1 = +prompt("Enter first number");
@@ -83,6 +96,25 @@
 // } else {
 //   console.log(`Largest number is ${number3}`);
 // }
+
+
+
+// const largestNumOfThree = (number1, number2, number3) => {  // array ise spread ile açmak gerekir
+//     // return Math.max(...[number1, number2, number3]);
+//     let largest;
+//     if (number1 > number2 && number1 > number3) {
+//         largest = number1;
+//     }
+//     else if (number2 > number1 && number2 > number3) {
+//         largest = number2;
+//     }
+//     else {
+//         largest = number3;
+//     }
+//     return `${largest} is the largest`;
+// };
+
+// console.log(largestNumOfThree(2, 6, 9));
 
 //! Write a JavaScript program that takes 3 integers from a user, multiplies all these numbers, and displays the sign of the product.
 
@@ -159,6 +191,33 @@
 //     console.log(`Today is ${day} and it's Weekend 😁`);
 // }
 
+
+
+// const isWeekday = (day) => {
+//     let res;
+//     switch (day.toLowerCase()) {
+//         case "monday":
+//         case "tuesday":
+//         case "wednesday":
+//         case "thursday":
+//         case "friday":
+//             res = `${day} is a weekday`;
+
+//             break;
+//         case "saturday":
+//         case "sunday":
+//             res = `${day} is NOT a weekday`;
+//             break;
+//         default:
+//             return 'invalid process';
+//     };
+//     return res;
+// };
+
+// console.log(isWeekday('MONDAY'));
+// console.log(isWeekday('Saturday'));
+// console.log(isWeekday('osman'));
+
 //! Write a JavaScript program that tells the user provided number is odd or even.
 
 // const num1 = Number(prompt("Enter number:"));
@@ -166,3 +225,21 @@
 // console.log(`Number is ${num1} and ${check}`);
 
 //! Write a JavaScript program to find a value that is nearest to 100 from two different given integer values.
+
+
+// const nearestNum = (y, z) => {
+//     let diffY = Math.abs(100 - y);
+//     let diffZ = Math.abs(100 - z);
+
+//     if (diffY > diffZ) {
+//         return `${z} is the nearest to 100`;
+//     } else if (diffY === diffZ) {
+//         return `they are equally close`;
+//     } else {
+//         return `${y} is the nearest to 100`;
+//     }
+// };
+
+// console.log(nearestNum(25, -96));
+// console.log(nearestNum(95, 105));
+// console.log(nearestNum(98, 99));
