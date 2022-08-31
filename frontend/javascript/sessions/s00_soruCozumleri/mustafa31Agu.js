@@ -4,31 +4,101 @@
 //? Ask the user to input a number. Check the input of the user, if it is not a valid number
 //? then keep getting input from the user until provides a valid number.
 
-// const val = prompt("number:");
-// console.log(typeof val);
-// console.log(typeof Number(val));
+// const validNumber = () => {
+//   let num = prompt("Enter a valid number");
 
-// while (typeof val )
+//   if (Number(num)) {
+//     console.log("It's a valid number");
+//   } else {
+//     return validNumber();
+//   }
+// };
+
+// console.log(validNumber());
 
 //! Q-2
 //? Write a JavaScript program to compute the greatest common divisor (GCD) (OBEB) of two positive integers.
 
-// const obeb = (n1, n2) =>{
-//     if (n1, Math.
+// let sayi1 = Number(prompt("Birinci sayı : "));
+// let sayi2 = Number(prompt("İkinci sayı : "));
 
+// let ebob = 1;
+// let kontrol = 2;
+
+// while (kontrol <= sayi1 && kontrol <= sayi2) {
+//   if (sayi1 % kontrol == 0 && sayi2 % kontrol == 0) {
+//     ebob = kontrol;
+//   }
+//   kontrol++;
+// }
+
+// if (ebob == 1) {
+//   console.log("Girilen sayıların ortak böleni yoktur.");
+// } else {
+//   console.log(`Girilen sayıların ebob'u ${ebob}`);
 // }
 
 //! Q-3
 //? Write a code that displays the factors (tam bolen) of a number entered by the user.
 
+// const factor = (num) => {
+//   let arr = [];
+
+//   for (let i = 1; i <= num; i++) {
+//     if (num % i == 0) {
+//       arr.push(i);
+//     }
+//   }
+//   return arr;
+// };
+
+// console.log(factor(12));
+
 //! Q-4
 //? Write a code to calculate the factorial of a number entered by the user.
+
+// const factorial = (num) => {
+//   if (num < 0) {
+//     return -1;
+//   } else if (num == 0) {
+//     return 1;
+//   } else {
+//     return num * factorial(num - 1);
+//   }
+// };
+
+// console.log(factorial(5));
 
 //! Q-5
 //? Write a code to find numbers that are divisible by 3 and 5, between 100 and 1000.
 
+// const divisible = () => {
+//   let arr = [];
+//   for (let i = 100; i <= 1000; i++) {
+//     if (i % 3 == 0 && i % 5 == 0) {
+//       arr.push(i);
+//     }
+//   }
+//   return arr;
+// };
+
+// console.log(divisible());
+
 //! Q-6
 //? Write a code that prints a multiplication table of numbers 1 to 10.
+
+const multiTable = () => {
+  let arr = [];
+  for (let i = 1; i <= 10; i++) {
+    arr.push(`multiplication table of ${i}`);
+    for (let j = 1; j <= 10; j++) {
+      arr.push(`${i} x ${j} = ${i * j}`);
+    }
+  }
+  return arr;
+};
+
+console.log(multiTable());
 
 //! Q-7
 //? Write a code to draw Whiteball and Powerball numbers for the Powerball lottery game.
