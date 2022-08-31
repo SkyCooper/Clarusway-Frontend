@@ -1,13 +1,22 @@
-1. Bölüm Loops
+//* 1. Bölüm Loops
 
 //! Q-1
 //? Ask the user to input a number. Check the input of the user, if it is not a valid number
 //? then keep getting input from the user until provides a valid number.
 
+// const val = prompt("number:");
+// console.log(typeof val);
+// console.log(typeof Number(val));
+
+// while (typeof val )
 
 //! Q-2
 //? Write a JavaScript program to compute the greatest common divisor (GCD) (OBEB) of two positive integers.
 
+// const obeb = (n1, n2) =>{
+//     if (n1, Math.
+
+// }
 
 //! Q-3
 //? Write a code that displays the factors (tam bolen) of a number entered by the user.
@@ -18,18 +27,14 @@
 //! Q-5
 //? Write a code to find numbers that are divisible by 3 and 5, between 100 and 1000.
 
-
 //! Q-6
 //? Write a code that prints a multiplication table of numbers 1 to 10.
 
-
 //! Q-7
-//? Write a code to draw Whiteball and Powerball numbers for the Powerball lottery game. 
+//? Write a code to draw Whiteball and Powerball numbers for the Powerball lottery game.
 //? 5 Whiteball numbers are chosen from 01 to 69 and 1 Powerball number is chosen from 1 to 26.
 
-
-
-2. Bölüm Functions
+//* 2. Bölüm Functions
 
 //! Q-1
 //? Write a Function that takes 2 parameters (amount and rate) to convert currency.
@@ -47,7 +52,6 @@
 //? Write a JS code to display Perfect Numbers from 1 to 1000.
 //? A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself.
 //? For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number.
-
 
 //! Q-5
 //? Develop a guessing game. Randomly generate a number between 0-100. Ask the user to guess that number.
