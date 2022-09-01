@@ -1,0 +1,23 @@
+//** cards */
+
+@use "../abstract/mixins" as m;
+//* as *  yapılmaz ise kullanılacak yere isim verilmeli.
+
+.cards {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  .card1 {
+    @include m.myBox(green, white) //* mixin calling
+;
+  }
+  .card2 {
+    @include m.myBox(brown, white);
+  }
+  .card3 {
+    @include m.myBox(yellow, black);
+  }
+  .card4 {
+    @include m.myBox(rgb(10, 33, 56), white);
+  }
+}

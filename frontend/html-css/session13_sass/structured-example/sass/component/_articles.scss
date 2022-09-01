@@ -1,0 +1,31 @@
+
+//*******  ARTICLES *********/
+
+//*****************
+//! @EXTEND
+//*****************
+
+//? ortak klas yazmadan aktarmaya yarıyor, miras alıyor, farklı olanlar sonradan tanımlanıyor.
+
+@use "../abstract/variables" as *;
+
+.articles {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  .article1 {
+    background-color: grey;
+    width: 50%;
+    border: $myBorder;
+    border-radius: 10px;
+    height: 10rem;
+    // margin-right: 1rem;
+  }
+
+  .article2 {
+    @extend .article1; //* article1 den herşeyi miras aldı, farklı olanı değiştirdik.
+    background-color: hotpink;
+    color: black;
+    border-color: blue;
+  }
+}

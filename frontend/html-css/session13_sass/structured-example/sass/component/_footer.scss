@@ -1,0 +1,46 @@
+
+//*******  Footer *********/
+
+//*****************
+//! IF-ELSE
+//*****************
+
+$dark: 2;
+//* değer değiştikçe if koşuluna göre p özellikleri değişir.
+
+footer {
+  p {
+    padding: 1rem;
+
+    @if $dark == 1 {
+      background-color: grey;
+    } @else if $dark==2 {
+      background-color: lightgreen;
+    } @else {
+      background-color: lightsalmon;
+    }
+  }
+  span {
+    color: red;
+  }
+  .social {
+    display: flex;
+    height: 10rem;
+    $textColor: #990000, #55004e, #0fa8a1, #121456, #64c217;
+    //*renklerde oluşan bir dizi oluşturduk.
+
+    //* içinde 5 klas var, bunu for döngüsü ile yapıyoruz.
+    @for $i from 1 to 6 {
+      //* from 1 to through 5 inclusive olur.
+      .social#{$i} {
+        //* social1-2-3-4-5 demek,
+        width: 20%;
+        background-color: lighten($color: blue, $amount: $i * 6);
+        //* darken koyu yapar.
+        font-size: $i * 1rem;
+        color: nth($list: $textColor, $n: $i);
+      }
+    }
+  }
+}
+

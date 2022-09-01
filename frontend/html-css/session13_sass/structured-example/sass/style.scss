@@ -1,0 +1,29 @@
+
+
+// @import "./abstract/variables";
+// @import "./abstract/colors";   //* bgColor çakıştığı için en son import edileni aldı.
+
+
+// body {
+//   font-family: $fontFamily;
+//   background-color: $bgColor;
+//   font-size: $fontSize;
+//   color: $fontColor;
+// }
+
+
+@use "./base/reset";
+@use "./abstract/variables" as v; 
+@use "./abstract/colors" as c;    
+//* isim uzayı oluştu, artık aynı değişken ismini kullanabiliriz ve nereden kullandığımızı seçeriz.
+
+@use "./component/index" as *;
+//* forwardla birleşnlerde index yazmasakta default alır
+
+
+body {
+  font-family: v.$fontFamily;
+  background-color: c.$bgColor; //* colors daki bgColor
+  font-size: v.$fontSize;
+  color: v.$fontColor;
+}

@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.articles {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+.articles .article1, .articles .article2 {
+  background-color: grey;
+  width: 50%;
+  border: 2px solid brown;
+  border-radius: 10px;
+  height: 10rem;
+}
+.articles .article2 {
+  background-color: hotpink;
+  color: black;
+  border-color: blue;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: hotpink;
+  line-height: 2rem;
+  letter-spacing: 2px;
+}
+.banner aside button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #30a7c3;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+.banner aside button:hover {
+  background-color: pink;
+  cursor: pointer;
+}
+.banner img {
+  width: 35%;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+header {
+  background-color: #30a7c3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header img {
+  width: 80px;
+  border: 2px solid brown;
+  border-radius: 10px;
+}
+header ul {
+  list-style-type: none;
+}
+header ul li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+header ul li:hover {
+  text-decoration: underline;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+footer p {
+  padding: 1rem;
+  background-color: lightgreen;
+}
+footer span {
+  color: red;
+}
+footer .social {
+  display: flex;
+  height: 10rem;
+}
+footer .social .social1 {
+  width: 20%;
+  background-color: #1f1fff;
+  font-size: 1rem;
+  color: #990000;
+}
+footer .social .social2 {
+  width: 20%;
+  background-color: #3d3dff;
+  font-size: 2rem;
+  color: #55004e;
+}
+footer .social .social3 {
+  width: 20%;
+  background-color: #5c5cff;
+  font-size: 3rem;
+  color: #0fa8a1;
+}
+footer .social .social4 {
+  width: 20%;
+  background-color: #7a7aff;
+  font-size: 4rem;
+  color: #121456;
+}
+footer .social .social5 {
+  width: 20%;
+  background-color: #9999ff;
+  font-size: 5rem;
+  color: #64c217;
+}
+
+.cards {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.8rem;
+}
+.cards .card1 {
+  background-color: green;
+  color: white;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+.cards .card2 {
+  background-color: brown;
+  color: white;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+.cards .card3 {
+  background-color: yellow;
+  color: black;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+.cards .card4 {
+  background-color: rgb(10, 33, 56);
+  color: white;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: yellowgreen;
+  font-size: 1.2rem;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,14 @@
+//*****************
+//! @MIXIN declaration
+//*****************
+
+@use "variables" as *;  //* isim yazarken underscor koymaya gerek yok başına
+
+@mixin myBox($bgColor, $fontColor) {
+  background-color: $bgColor;  //*local
+  color: $fontColor;  //*local
+  width: 25%;
+  height: 15rem;
+  border: $myBorder;  //*variableden geliyor, onun için import etmek lazım
+  border-radius: 5px;
+}
