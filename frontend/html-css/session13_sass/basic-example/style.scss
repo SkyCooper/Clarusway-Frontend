@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+//** Variable Declaration;
+
+$fontSize: 1.2rem;
+$fontColor: white;
+$navBgColor: #30a7c3;
+$fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$bgColor: pink;
+$bannerBgColor: hotpink;
+$myBorder: 2px solid brown;
+
+body {
+  font-family: $fontFamily;
+  background-color: $bgColor;
+  font-size: $fontSize;
+  color: $fontColor;
+}
+//** header  */
+
+header {
+  background-color: $navBgColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  img {
+    width: 80px;
+    border: $myBorder;
+    border-radius: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      padding: 0.5rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  a {
+    color: $fontColor;
+    text-decoration: none;
+  }
+}
+
+//** banner  */
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: $bannerBgColor;
+  line-height: 2rem;
+  letter-spacing: 2px;
+  aside {
+    button {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      background-color: $navBgColor;
+      margin-top: 1rem;
+      margin-right: 1rem;
+      &:hover{
+        background-color: pink;
+        cursor: pointer;
+      }
+    }
+  }
+  img {
+    width: 35%;
+    max-width:400px ;
+    min-width: 200px;
+  }
+}
+
+//** cards */
+//*****************
+//! @MIXIN declaration
+//*****************
+
+@mixin myBox($bgColor, $fontColor) {
+    background-color: $bgColor;
+    color: $fontColor;
+    width: 25%;
+    height: 15rem;
+    border: $myBorder;
+    border-radius: 5px;
+}
+
+.cards{
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    .card1{
+        @include myBox(green,white)  //* mixin calling
+    }
+    .card2{
+        @include myBox(brown,white)
+    }
+    .card3{
+        @include myBox(yellow,black)
+    }
+    .card4{
+        @include myBox(rgb(10,33,56),white)
+    }
+}
+
+//*******  ARTICLES *********/
+
+//*****************
+//! @EXTEND
+//*****************
+
+//? ortak klas yazmadan aktarmaya yarıyor, miras alıyor, farklı olanlar sonradan tanımlanıyor.
+
+.articles{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    .article1{
+        background-color: grey;
+        width: 50%;
+        border: $myBorder;
+        border-radius: 10px;
+        height: 10rem;
+        // margin-right: 1rem;
+    }
+
+    .article2{
+        @extend .article1;  //* article1 den herşeyi miras aldı, farklı olanı değiştirdik.
+        background-color: hotpink;
+        color: black;
+        border-color:blue;
+
+    }
+}

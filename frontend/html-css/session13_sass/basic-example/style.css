@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: pink;
+  font-size: 1.2rem;
+  color: white;
+}
+
+header {
+  background-color: #30a7c3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header img {
+  width: 80px;
+  border: 2px solid brown;
+  border-radius: 10px;
+}
+header ul {
+  list-style-type: none;
+}
+header ul li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+header ul li:hover {
+  text-decoration: underline;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: hotpink;
+  line-height: 2rem;
+  letter-spacing: 2px;
+}
+.banner aside button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #30a7c3;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+.banner aside button:hover {
+  background-color: pink;
+  cursor: pointer;
+}
+.banner img {
+  width: 35%;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+.cards {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.8rem;
+}
+.cards .card1 {
+  background-color: green;
+  color: white;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+.cards .card2 {
+  background-color: brown;
+  color: white;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+.cards .card3 {
+  background-color: yellow;
+  color: black;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+.cards .card4 {
+  background-color: rgb(10, 33, 56);
+  color: white;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+
+.articles {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+.articles .article1, .articles .article2 {
+  background-color: grey;
+  width: 50%;
+  border: 2px solid brown;
+  border-radius: 10px;
+  height: 10rem;
+}
+.articles .article2 {
+  background-color: hotpink;
+  color: black;
+  border-color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
