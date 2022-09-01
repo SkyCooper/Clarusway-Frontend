@@ -69,7 +69,7 @@ header {
       background-color: $navBgColor;
       margin-top: 1rem;
       margin-right: 1rem;
-      &:hover{
+      &:hover {
         background-color: pink;
         cursor: pointer;
       }
@@ -77,7 +77,7 @@ header {
   }
   img {
     width: 35%;
-    max-width:400px ;
+    max-width: 400px;
     min-width: 200px;
   }
 }
@@ -88,30 +88,31 @@ header {
 //*****************
 
 @mixin myBox($bgColor, $fontColor) {
-    background-color: $bgColor;
-    color: $fontColor;
-    width: 25%;
-    height: 15rem;
-    border: $myBorder;
-    border-radius: 5px;
+  background-color: $bgColor;
+  color: $fontColor;
+  width: 25%;
+  height: 15rem;
+  border: $myBorder;
+  border-radius: 5px;
 }
 
-.cards{
-    display: flex;
-    gap: 0.5rem;
-    padding: 0.8rem;
-    .card1{
-        @include myBox(green,white)  //* mixin calling
-    }
-    .card2{
-        @include myBox(brown,white)
-    }
-    .card3{
-        @include myBox(yellow,black)
-    }
-    .card4{
-        @include myBox(rgb(10,33,56),white)
-    }
+.cards {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  .card1 {
+    @include myBox(green, white) //* mixin calling
+;
+  }
+  .card2 {
+    @include myBox(brown, white);
+  }
+  .card3 {
+    @include myBox(yellow, black);
+  }
+  .card4 {
+    @include myBox(rgb(10, 33, 56), white);
+  }
 }
 
 //*******  ARTICLES *********/
@@ -122,24 +123,71 @@ header {
 
 //? ortak klas yazmadan aktarmaya yarıyor, miras alıyor, farklı olanlar sonradan tanımlanıyor.
 
-.articles{
-    display: flex;
-    gap: 1rem;
+.articles {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  .article1 {
+    background-color: grey;
+    width: 50%;
+    border: $myBorder;
+    border-radius: 10px;
+    height: 10rem;
+    // margin-right: 1rem;
+  }
+
+  .article2 {
+    @extend .article1; //* article1 den herşeyi miras aldı, farklı olanı değiştirdik.
+    background-color: hotpink;
+    color: black;
+    border-color: blue;
+  }
+}
+
+//*******  Footer *********/
+
+//*****************
+//! IF-ELSE
+//*****************
+
+$dark: 2;
+//* değer değiştikçe if koşuluna göre p özellikleri değişir.
+
+footer {
+  p {
     padding: 1rem;
-    .article1{
-        background-color: grey;
-        width: 50%;
-        border: $myBorder;
-        border-radius: 10px;
-        height: 10rem;
-        // margin-right: 1rem;
-    }
 
-    .article2{
-        @extend .article1;  //* article1 den herşeyi miras aldı, farklı olanı değiştirdik.
-        background-color: hotpink;
-        color: black;
-        border-color:blue;
-
+    @if $dark == 1 {
+      background-color: grey;
+    } @else if $dark==2 {
+      background-color: lightgreen;
+    } @else {
+      background-color: lightsalmon;
     }
+  }
+  span {
+    color: red;
+  }
+  .social {
+    display: flex;
+    height: 10rem;
+    $textColor: #990000, #55004e, #0fa8a1, #121456, #64c217;
+    //*renklerde oluşan bir dizi oluşturduk.
+
+    //* içinde 5 klas var, bunu for döngüsü ile yapıyoruz.
+    @for $i from 1 to 6 {
+      //* from 1 to through 5 inclusive olur.
+      .social#{$i} {
+        //* social1-2-3-4-5 demek,
+        width: 20%;
+        background-color: lighten($color: blue, $amount: $i * 6);
+        //* darken koyu yapar.
+        font-size: $i * 1rem;
+        color: nth($list: $textColor, $n: $i);
+      }
+    }
+  }
+}
+
+footer {
 }

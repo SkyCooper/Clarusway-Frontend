@@ -121,4 +121,46 @@ header a {
   border-color: blue;
 }
 
+footer p {
+  padding: 1rem;
+  background-color: lightgreen;
+}
+footer span {
+  color: red;
+}
+footer .social {
+  display: flex;
+  height: 10rem;
+}
+footer .social .social1 {
+  width: 20%;
+  background-color: #1f1fff;
+  font-size: 1rem;
+  color: #990000;
+}
+footer .social .social2 {
+  width: 20%;
+  background-color: #3d3dff;
+  font-size: 2rem;
+  color: #55004e;
+}
+footer .social .social3 {
+  width: 20%;
+  background-color: #5c5cff;
+  font-size: 3rem;
+  color: #0fa8a1;
+}
+footer .social .social4 {
+  width: 20%;
+  background-color: #7a7aff;
+  font-size: 4rem;
+  color: #121456;
+}
+footer .social .social5 {
+  width: 20%;
+  background-color: #9999ff;
+  font-size: 5rem;
+  color: #64c217;
+}
+
 /*# sourceMappingURL=style.css.map */
