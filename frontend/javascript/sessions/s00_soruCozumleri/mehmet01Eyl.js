@@ -85,6 +85,30 @@
 // console.log(mostFrequent(arr1));
  
 
+//-------------------------------------------------solution 2-----------------------------------
+// const mostFrequent=(arr)=>{
+//     // console.log(arr)
+//     let dict={}
+//     for(let i=0;i<arr.length;i++){
+//         if(!dict.hasOwnProperty(arr[i])){
+//             dict[arr[i]]=1
+//         }else{
+//             dict[arr[i]]++
+//         }
+//     }
+//     // console.log(dict)
+//     let result=Object.entries(dict)
+//     // console.log(result)
+//     result.sort((a,b)=>a[1]-b[1])
+//     // console.log(result[result.length-1])
+//     return `${result[result.length-1][0]} en çok tekrar eden sayı.${result[result.length-1][1]}  kere tekrar etmiştir`
+
+// }
+
+// console.log(mostFrequent([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]))
+
+
+//----------------------------solution 3-------------------------------
 // arr2 = [3, "a", "a", 3, "a", 3, 3, "a", "a", "b"];
 // arr2.sort();
 
@@ -109,6 +133,8 @@
 // Write a JavaScript program that accepts a string as input and swap the case of each character.
 // For example, if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
 
+//----------------------------solution 1-------------------------------
+
 let sentence = "The Quick Brown Fox";
 
 const swapCase = (str) => {
@@ -127,6 +153,7 @@ const swapCase = (str) => {
 
 console.log(swapCase(sentence));
 
+//----------------------------solution 2-------------------------------
 //****** map ile çözüm
 const swapCase = (str) => {
   let arr = str.split("");
@@ -136,3 +163,40 @@ const swapCase = (str) => {
     )
     .join("");
 };
+
+
+//---------------------------------------------------solution 3---------------------------
+// let str1="The Quick Brown Fox"
+// const swapCase1=(str)=>{
+//     let result=""
+//     for(let i=0;i<str.length;i++){
+//         if(str[i]==str[i].toLowerCase()){
+//             result+=str[i].toUpperCase()
+//         }else{
+//             result+=str[i].toLowerCase()
+//         }
+//     }
+//     return result
+// }
+
+// console.log(swapCase1(str1))
+
+
+
+//****************************solution 4 */********************************* */
+// let str1="The Quick Brown Fox"
+// const swapCase=(str)=>{
+//     let result=""
+//     for(let i=0;i<str.length;i++){
+//         if(str[i].match(/[A-Z]/)){
+//             result+=str[i].toLowerCase()
+//         }else if(str[i].match(/[a-z]/)){
+//             result+=str[i].toUpperCase()
+//                     }else{
+//                         result+=str[i]
+//                     }
+//     }
+// return result
+// }
+
+// console.log(swapCase(str1))
