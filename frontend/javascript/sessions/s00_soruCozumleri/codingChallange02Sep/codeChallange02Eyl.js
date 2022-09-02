@@ -1,7 +1,6 @@
 //! Code Challenge Fest -1
 //? 02 Eylül 2022, Cuma
 
-
 //todo, Pack-1
 // Easy - Array Sort CW-Repo ID: JS-CC-27
 // Difficult - TR National ID Validator CW-Repo ID: JS-CC-17
@@ -17,7 +16,6 @@
 //todo, Pack-4
 // Easy - Email Validator CW-Repo ID: JS-CC-05
 // Difficult - US SSN (Social Security Number ) Validator CW-Repo ID: JS-CC-28
-
 
 //! JS-CC-026 : Roll the Dices
 // The purpose of this coding challenge is to create two dice, shake them the desired number of times, and write a function that prints the results as text.
@@ -47,8 +45,6 @@ const roll = (number) => {
 };
 roll(10);
 
-
-
 //! JS-CC-019 : Student Registration
 // The purpose of this coding challenge is to display the data given as string in the browser console.
 
@@ -61,7 +57,6 @@ const arr = [
   "C2555 - William Cash, Manchester, Data-Science",
   "C2455 - Patrick Jane, Madrid, Full-Stack",
 ];
-
 
 const student = (a) => {
   // console.log(a);
@@ -78,7 +73,6 @@ Program: ${result[5]}\n
   });
 };
 student(arr);
-
 
 //! JS-CC-005 : Email Validator
 // The purpose of this coding challenge is to create a function that will check the given email address valid or not.
@@ -97,29 +91,28 @@ student(arr);
 // name.last_Name@company.c -> ❌ There should be at least two characters after the '.' sign.
 // name.last_Name@company -> ❌ There should be at least one '. after the '@' sign.
 
-
 const emailValidator = (email) => {
   const regexPatern = /^[A-Za-z0-9\_]+\@[A-Za-z]+\.[A_Za-z]{2,3}$/;
-    if (regexPatern.test(email)) {
-      console.log(`your email is true`);
-    } else {
-      console.log(`Your email is false`);
-    }
 
-    regexPatern.test(email)
-      ? console.log(`your email is true`)
-      : console.log(`Your email is false`);
+  // yazılış-1 (1-2-3 hepsi aynı sonucu verir, sadece 1 tanesini yazmak yeterli)
+  if (regexPatern.test(email)) {
+    console.log(`your email is true`);
+  } else {
+    console.log(`Your email is false`);
+  }
 
-    regexPatern.test(email) && console.log(`your email is true`);
+  // yazılış-2
+  regexPatern.test(email)
+    ? console.log(`Your email is true`)
+    : console.log(`Your email is false`);
 
+  // yazılı-3
+  regexPatern.test(email) && console.log(`your email is true`);
   !regexPatern.test(email) || console.log(`your email is false`);
 };
 emailValidator("osmanmerhaba@gmail.com");
 
-
-
 //** alternatif çözüm-1 */
-
 const email = "osmanmerhaba@gmail.com";
 function isValid(frm) {
   let atpos = email.indexOf("@");
@@ -134,10 +127,7 @@ function isValid(frm) {
 }
 isValid(email);
 
-
-
 //* ****alternatif çözüm - 2****
-
 let chars = "abcdefghijklmnopqrstuvwxyz0123456789_+.@";
 
 function ValidateEmailAddress(str) {
@@ -167,6 +157,14 @@ function ValidateEmailAddress(str) {
 
 console.log(ValidateEmailAddress("mark.m@clarusway.com"));
 
+//* ****alternatif çözüm - 3****
+const emailValidation = (email) => {
+  const emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  email.match(emailformat)
+    ? console.log("Valid email address!")
+    : console.log("You have entered an invalid email address!");
+};
+emailValidation("can.ocalir@gmail.com");
 
 //! JS-CC-027 : Return the requested element from an array.
 // The purpose of this coding challenge is to create a function that will take two parameters. The first parameter
@@ -197,8 +195,6 @@ const sortArr = function (arr, n) {
 const sample = [2, 35, 14, 3, 12, 15];
 
 console.log(sortArr(sample, 2));
-
-
 
 //! JS-CC-007 : TR Identity Number Validation
 // Purpose of the this coding challenge is to write a code that given TR Identity Number, returns valid or invalid.
@@ -238,10 +234,11 @@ const IdControl = function (str) {
   const s10 = (odd * 7 - even) % 10;
   const s11 = (even + odd + s10) % 10;
 
-  return s10 === +str[9] && s11 === +str[10] ? "TR Id is valid" : "TR Id is invalid";
+  return s10 === +str[9] && s11 === +str[10]
+    ? "TR Id is valid"
+    : "TR Id is invalid";
 };
 console.log(IdControl("14702551364"));
-
 
 //*** alternatif çözüm-1 */
 
@@ -279,7 +276,6 @@ let check = (tc) => {
 };
 
 console.log(check(11111111110));
-
 
 //! JS-CC-028 : SSN (Social Security Number) Validator
 // The purpose of this coding challenge is to create a function that will check the given SSN (Social Security Number) is valid or not valid.
@@ -327,8 +323,6 @@ let checkSgk = (id) => {
 
 console.log(checkSgk("268-26-3556"));
 
-
-
 //! JS-CC-025 : Camelizes the Sentences
 // The purpose of this coding challenge is to create a function that will take text in kebab case format or with spaces and output it in camel case format.
 // Expected Outcome
@@ -356,7 +350,6 @@ let camelCase = (id) => {
 
 console.log(camelCase("Javascript-code-woRld-pyTHon"));
 
-
 //! JS-CC-024 : Random Password Generator
 // Purpose of the this coding challenge is to write a code that can generate random password for 10 characters
 // as default and expected constraints below.
@@ -378,3 +371,43 @@ console.log(camelCase("Javascript-code-woRld-pyTHon"));
 // ab123&!xyz    no upper case letters
 // Aa@c456stu    only one symbol
 // 12aA(p?rsz    only two numbers
+
+//* çözüm-1**********
+let passChars =
+  "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let passwordLength = 10;
+let password = "";
+for (let i = 0; i <= passwordLength; i++) {
+  let randomNumber = Math.floor(Math.random() * passChars.length);
+  password += passChars.substring(randomNumber, randomNumber + 1);
+}
+console.log(`Random pasword : `, password);
+
+//* çözüm-2**********
+function passwordGenerator() {
+  let password = [];
+  let specialCharacters = "!@#$%^&*(_+~|}{[]:;?><,./-=";
+  let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+  for (let i = 0; i < 3; i++) {
+    password.push(Math.floor(Math.random() * 10));
+  }
+  for (let i = 0; i < 2; i++) {
+    password.push(specialCharacters[Math.floor(Math.random() * 27)]);
+  }
+  password.push(letters[Math.floor(Math.random() * 26)]);
+  password.push(letters[Math.floor(Math.random() * 26) + 26]);
+  for (let i = 0; i < 3; i++) {
+    password.push(letters[Math.floor(Math.random() * 52)]);
+  }
+  // console.log(password.join(""));
+  for (let i = password.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    let temp = password[i];
+    password[i] = password[j];
+    password[j] = temp;
+  }
+  return password.join("");
+}
+
+console.log(`Generated password : `, passwordGenerator());
