@@ -78,6 +78,31 @@ console.log(result);
 console.log(Array.from(Array(10).keys()));
 
 
+//* yöntem 1
+let bul = (array) => {
+  //   1,2,3,4,6,7,8,9,10  1,2,3,4,5,6,7,8,9,10
+  array = array.sort((a, b) => a - b);
+  console.log(array);
+  for (let i = 1; i < 11; i++) {
+    if (i != array[i - 1]) {
+      return i;
+    }
+  }
+};
+console.log(Array.from(Array(12).keys()));
+console.log(bul([1, 2, 3, 10, 6, 7, 8, 9, 4]));
+
+
+
+//* yöntem 2
+function findMissing(normal, missing) {
+  sumNormal = (normal.length * (normal.length + 1)) / 2;
+  const sumWithInitial = missing.reduce((a, b) => a + b);
+  return sumNormal - sumWithInitial;
+}
+console.log(findMissing([1, 2, 3, 4, 5, 6], [1, 2, 3, 5, 6]));
+
+
 //* yöntem 3
 let bul2 = (array) => {
   array = array.sort((a, b) => a - b);
