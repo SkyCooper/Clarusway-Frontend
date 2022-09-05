@@ -58,26 +58,26 @@ console.log(tekCift1(5));
 
 //* bu örnek için default olrak 0 girilmez, eksi sayılardan büyük olacağı için sonuç yanlış olur. ( Number.MAX_VALUE kullanılabilir. başına eksi koyarak,  Number.MİN_VALUE  eksi değildir, 0,000000gibi en küçük pozitif sayıdır. )
 
-const buyukBul = function (n1, n2, n3) {
-  let enBuyuk;
-  if (n1 >= n2 && n1 >= n3) {
-    enBuyuk = n1;
-  } else if (n2 >= n1 && n2 >= n3) {
-    enBuyuk = n2;
-  } else if (n3 >= n1 && n3 >= n2) {
-    enBuyuk = n3;
-  }
-  return enBuyuk;
-};
+// const buyukBul = function (n1, n2, n3) {
+//   let enBuyuk;
+//   if (n1 >= n2 && n1 >= n3) {
+//     enBuyuk = n1;
+//   } else if (n2 >= n1 && n2 >= n3) {
+//     enBuyuk = n2;
+//   } else if (n3 >= n1 && n3 >= n2) {
+//     enBuyuk = n3;
+//   }
+//   return enBuyuk;
+// };
 
-const n1 = +prompt("Sayi1:");
-const n2 = +prompt("Sayi2:");
-const n3 = +prompt("Sayi3:");
+// const n1 = +prompt("Sayi1:");
+// const n2 = +prompt("Sayi2:");
+// const n3 = +prompt("Sayi3:");
 
-console.log("Girilen syıların en büyüğü: ", buyukBul(n1, n2, n3));
-console.log(Number.MAX_VALUE);
-console.log(-Number.MAX_VALUE);
-console.log(Number.MIN_VALUE);
+// console.log("Girilen syıların en büyüğü: ", buyukBul(n1, n2, n3));
+// console.log(Number.MAX_VALUE);
+// console.log(-Number.MAX_VALUE);
+// console.log(Number.MIN_VALUE);
 
 //? Daha önceden if/else ile yapılmış hali
 // const n1 = +prompt("Sayi1:");
@@ -91,3 +91,15 @@ console.log(Number.MIN_VALUE);
 // } else if (n3 >= n1 && n3 >= n2) {
 //   console.log(`${n3} en buyuk sayidir`);
 // }
+
+
+//* arguments kullanımı;
+const sumAll = function(){
+  let total = 0;
+  for (let i=0; i<arguments.length; i++){
+    total += arguments[i]
+  }
+  return total
+}
+
+console.log(sumAll(10,20,30,30,10)); //100
