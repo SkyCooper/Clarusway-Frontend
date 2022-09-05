@@ -14,22 +14,22 @@ const hesapB = {
   ekHesap: 2000,
 };
 
-// const hesaplar = {
-//   hesapA: {
-//     ad: "Cooper",
-//     hesapNo: "123456",
-//     bakiye: 2000,
-//     ekHesap: 1000,
-//     paraCinsi: ["dolar", "euro", "TL"],
-//   },
-//   hesapB: {
-//     ad: "Jack",
-//     hesapNo: "789123",
-//     bakiye: 3000,
-//     ekHesap: 2000,
-//     paraCinsi: ["dolar", "euro", "TL"],
-//   },
-// };
+const hesaplar = {
+  hesapA: {
+    ad: "Cooper",
+    hesapNo: "123456",
+    bakiye: 2000,
+    ekHesap: 1000,
+    paraCinsi: ["dolar", "euro", "TL"],
+  },
+  hesapB: {
+    ad: "Jack",
+    hesapNo: "789123",
+    bakiye: 3000,
+    ekHesap: 2000,
+    paraCinsi: ["dolar", "euro", "TL"],
+  },
+};
 
 // console.log(hesaplar.hesapB.paraCinsi[1]);
 
