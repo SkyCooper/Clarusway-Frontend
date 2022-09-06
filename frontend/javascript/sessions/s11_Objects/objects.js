@@ -181,7 +181,7 @@ const people = {
     name: "coop",
     surname: "SKY",
     dob: "1981",
-    job: "FS",
+    job: "developer",
     salary: "110000",
     drivingLicense: true,
   },
@@ -197,7 +197,15 @@ console.log("salary of p2 :", people.person2.salary);
 
 //? Objelerin key ve value'larini okumak icin built-in metotlar vardir.
 //? Bu mettotlar aslinda objelerin key ve/veya value'lari bir dizi olarak dondurur.
+
 console.log(Object.keys(people));
+//* people objesinin key'lerini array olarak döndürür.
+
+console.log(Object.values(people));
+//* people objesinin value'lerini array olarak döndürür.
+
+console.log(Object.entries(people));
+//* people objesinin key ve value'lerini array olarak döndürür.
 
 //! FOR - IN
 //* for (key in object) {
@@ -214,6 +222,43 @@ for (let person in people) {
 //*   code block to be executed
 //* }
 
-// for (let person of people) {
-//   console.log(person);
-// }
+
+console.log("****************");
+for (let key of Object.keys(people)) {
+  console.log(key);
+}
+
+
+console.log("****************");
+//? people objesindeki tum salary 'leri yazdir
+for (let v of Object.values(people)) {
+  console.log(v.salary);
+  // console.log(v["salary"]);  //* alternatif yazım
+}
+
+
+//? people objesindeki tum salary 'leri yazdir
+for (let [k, v] of Object.entries(people)) {
+  console.log(`${k} - ${v.salary}`);
+}
+
+//! ARRAY METOTLARI ILE;
+
+console.log("********");
+Object.keys(people).forEach((p) => console.log(p)); // person1, person2, person3
+
+
+console.log("********");
+Object.values(people).forEach((p) => console.log(p.surname)); // canan, sweat, SKY
+
+
+//? job = developer olanlarin dob degelerini yazdiriniz.
+console.log("*** DOB ****");
+Object.values(people)
+  .filter((p) => p.job === "developer")
+  .forEach((p) => console.log(p.dob)); // 1990, 1981
+
+
+//********************************************************
+//* JSON => Javascript Object Notation
+//********************************************************
