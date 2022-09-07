@@ -260,3 +260,12 @@ Object.values(people).filter((p) => p.job === "developer").forEach((p) => consol
 //********************************************************
 //* JSON => Javascript Object Notation
 //********************************************************
+
+const team = [
+  { name: "Josh", surname: "Adams", job: "developer", age: 30 },
+  { name: "Mary", surname: "Bary", job: "tester", age: 22 },
+  { name: "Hazel", surname: "Nut", job: "developer", age: 20 },
+];
+
+const teamAgeAverage = team.reduce(function (avg, person, _, { length }) {return avg + person.age / length;}, 0);
+console.log(teamAgeAverage);
