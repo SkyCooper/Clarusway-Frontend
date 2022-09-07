@@ -112,16 +112,16 @@ console.log(products);
 //! Array.filter() metodu, bir fonksiyonu parametre olarak alır ve orijinal dizinin kopyasını bu fonksiyona göre filtreleyerek döndürür • Yani bir dizideki istediğimiz elemanların seçmek için kullanılır • filter() metodu orijinal diziyi değiştirmez Yeni bir dizi oluşturarak döndürür.
 //* ======================================================
 
-const maaslar = [5500, 8000, 6500, 9000, 10000, 15000, 25000];
+const salaries = [5500, 8000, 6500, 9000, 10000, 15000, 25000];
 
 //?-------------- ÖRNEK -------------------
 //? Maasi 10000'den buyuk olanlari ayri bir diziye saklayalim
 
-const bigThan = maaslar.filter((m) => m > 10000);
-console.log(bigThan, maaslar);
+const bigThan = salaries.filter((m) => m > 10000);
+console.log(bigThan, salaries);
 //* orjinal dizi 7 elemanlı/ dönen dizi 2 elemanlı
 
-const range = maaslar.filter((s) => s >= 6000 && s <= 10000);
+const range = salaries.filter((s) => s >= 6000 && s <= 10000);
 console.log(range);
 
 //?-------------- ÖRNEK -------------------
@@ -154,13 +154,52 @@ salaries
 //? • reduce() metodu orijinal diziyi değiştirmez Sadece bir değer döndürür.
 //* ======================================================
 
+//todo, acc--> toplam   val-->salaries dizisindeki herbir maaş,  i--> acc'nin default değeridir.
+//todo, i default yazılmaz ise sıfırdır, toplama yapılacaksa sorun olmaz ama çarpma yapılacaksa i = 1 olarak değişmeli
+
 // const salaries = [5500, 8000, 6500, 9000, 10000, 15000, 25000];
 
 const sumOfSalaries = salaries.reduce((acc, val, i) => acc + val, 0);
 console.log("SUM:", sumOfSalaries);
 
-//todo, acc--> toplam   val-->salaries dizisindeki herbir maaş,  i--> acc'nin defaul değeridir.
-//todo, i default yazılmaz ise sıfırdır, toplama yapılacaksa sorun olmaz ama çarpma yapılacaksa i = 1 olarak değişmeli
+const sumOfSalariesi = salaries.reduce((acc, val) => acc + val, 1);
+console.log("SUM:", sumOfSalariesi);
+//* i yazılmasa bile hata vermez, toplama işlemini yapar.
+
+const fark100000 = salaries.reduce((acc, val, i) => acc - val, 100000);
+console.log("100000 den kalan fark:", fark100000);
+
+
+let arr = [1, 2, 3, 1, 4, 4, 4, 6, 7, 7, 7, 7, 5, 6, 7, 8];
+let oku = arr.reduce((acc, itm) => {
+  if (itm > 0) {
+    acc.push(itm * 2);
+  }
+  return acc;
+}, []);
+console.log(oku);
+
+
+let toplamArr = salaries.reduce((acc, val) => {
+  if (acc.length > 1) {
+    acc.push(val + Number(acc[acc.length - 1]));
+  } else {
+    acc.push(val + Number(acc));
+  }
+  return acc;
+}, []);
+console.log(toplamArr);
+// const salaries = [5500, 8000, 6500, 9000, 10000, 15000, 25000];
+
+//! reduce ile fibonacci dizisi toplama;
+function fib(n) {
+  return new Array(n).fill(1).reduce((arr, _, i) => {
+    arr.push(i <= 1 ? i : arr[i - 2] + arr[i - 1]);
+    return arr;
+  }, []);
+}
+console.log(fib(10));
+
 
 //? Ornek: Bir Firma, 9000 TL den az olan maaşlara %10 zam yapmak istiyor
 //? ve zam yapılan bu kişilere toplam kaç TL ödeneceğini bilmek istiyor.
@@ -170,5 +209,4 @@ const sumOfRaisedSalaries = salaries
   .filter((sal) => sal <= 9000)
   .map((sal) => Math.trunc(sal * 1.1))
   .reduce((acc, salary) => acc + salary, 0);
-
 console.log("Sum Of Raised Salaries:", sumOfRaisedSalaries);

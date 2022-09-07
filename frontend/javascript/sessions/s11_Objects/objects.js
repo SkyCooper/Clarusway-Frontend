@@ -254,9 +254,7 @@ Object.values(people).forEach((p) => console.log(p.surname)); // canan, sweat, S
 
 //? job = developer olanlarin dob degelerini yazdiriniz.
 console.log("*** DOB ****");
-Object.values(people)
-  .filter((p) => p.job === "developer")
-  .forEach((p) => console.log(p.dob)); // 1990, 1981
+Object.values(people).filter((p) => p.job === "developer").forEach((p) => console.log(p.dob)); // 1990, 1981
 
 
 //********************************************************
