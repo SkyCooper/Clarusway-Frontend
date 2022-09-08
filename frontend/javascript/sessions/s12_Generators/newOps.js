@@ -15,7 +15,7 @@ const name1 = car.name;
 const model1 = car["model"];
 
 //* 2.YONTEM: DESTRUCTURING
-const { name, colors, model, engine } = car; // sırası önemli değil aynı olması yeterli
+const { name, colors, model, engine } = car; // sırası önemli değil  ama key ile aynı olması gerekli
 console.log(name, model, engine, colors);
 
 //* EXAMPLE: NESTED
@@ -35,11 +35,14 @@ const cars = {
 const {car1, car2} = cars;
 console.log(car1);
 
+
 // const {name, model} = car1 
 // const {name, model} = car2
 // obje key isimleri aynı olduğundan isim değişikliği zaruri hale geliyor.
-
-// const {name :}
+//! aynı key:value gibi destruct etmek istediğimiz objenin keyine yeni değer ataması yapabiliyoruz  name : c1name yani car1 in name keyini c1name e atıyorum.
+const { name: c1Name, model: c1Model } = car1;
+const { name: c2Name, model: c2Model } = car2;
+console.log(c1Name, c2Name);
 
 
 //örnek, bu objelerdeki valuleri alt alta yazdırın
@@ -83,7 +86,7 @@ team.forEach((p)=> {
     console.log("Age:", age);
 });
 
-//* function'nın döndürdüğü obje  doğrudan dest. yapılabilir.
+//todo, function'nın döndürdüğü obje  doğrudan dest. yapılabilir.
 const getInfo = () => {
     return {
         id : 1,
@@ -98,12 +101,13 @@ console.log("Pruduct Name:", pruductName);
 console.log("Price:", price);
 
 
-//? fokksiyonların obje paramertesi doğrudan dest. yapılabilir.
+//todo, fonksiyonların obje parametreleri doğrudan dest. yapılabilir.
+//todo, 
 const calculate = ({id, price}) => {
     console.log(price);
 };
 
-calculate({id:1, price:3000});
+calculate({id:14, price:4285});
 
 //* ======================================================
 //*  DESTRUCTURING (ARRAY)
@@ -131,7 +135,7 @@ console.log(p1,p2,p4); // Ahmet Mehmet İsmet
 //!    ayri dizi yada objelere kopyalanmasini saglayabilir.
 
 //* REST: (Arrays)
-//* bmw-mercedes-ferrari bir dizi kalanlar ise değişkene atansın
+//* bmw-mercedes-ferrari bir diziye, geri kalanlar ise değişkene atansın
 const vehicles = ["anadol", "reno", "bmw", "mercedes", "ferrari",];
 
 const [anadol,reno, ...restVehicles]= vehicles; // 1-2nci değişkene atadık, kalanları diziye attık
@@ -147,11 +151,11 @@ const personel = {
   };
 
 const { pName, job, ...ageSurname} = personel;
-console.log(ageSurname); //{ pname: 'Josh', surname: 'Barry', age: 30 }
+console.log(ageSurname); //{ surname: 'Barry', age: 30 }
 //* çıktısı obje olur. tek bir elemt kalsa bile
 console.log(pName, job); 
 
-
+//! 2- Bir fonksiyonun argumanlarini diziye cevirmek icin kullanilabilir.
 const sum = (x,y) => x+y;
 console.log(sum(1, 2, 3, 4, 5, 6));
 // sadece ilk 2 argümanı toplar 1+2=3 yapar.
@@ -161,8 +165,9 @@ const sumAll = (...numbers) => {
   // rest operatörü aldığı sayıları diziye çevirir.
   console.log(numbers); // [ 1, 2, 3, 4, 5 ] dizi oldu
   return numbers.reduce((acc,val)=> acc+val,0)
+  // return numbers.reduce((sum, num) => (sum += num),0) // bu şekilde de yazılabilir.
 }
-console.log(sumAll(1, 2, 3, 4, 5));
+console.log("SUM OF NUMBERS:", sumAll(1, 2, 3, 4, 5));
 
 
 const showName = (name, surname, ...titles) => {
