@@ -17,7 +17,7 @@ console.log("******* Objects *********");
 //* 1- Object() class'ından new Operatörü ile
 //* ----------------------------------------------
 
-const arabalar = new Object();  //büyük harf olmalı class ismi
+const arabalar = new Object(); //büyük harf olmalı class ismi
 arabalar.marka = "BMW";
 arabalar.motor = "1.3";
 arabalar.model = 2022;
@@ -33,23 +33,21 @@ console.log("MODEL:", arabalar["model"]); //? Square bracket notation
 const key = "marka";
 console.log(arabalar[key]);
 
-
-arabalar.motor = "2.4"; 
+arabalar.motor = "2.4";
 console.log(arabalar.motor); //re-assing edilebilir.
-
 
 //* ----------------------------------------------
 //* 2- object constructor kullanarak (OOP ile ayrintili anlatilacak)
 //* ----------------------------------------------
 
 //? Object Constructure,
-function Personel(id, ad, maas){
-    this.perId = id;
-    this.perAd = ad;
-    this.maas = maas;
-    console.log(this);//! personel objesine bağlanmıştır. (binded)
+function Personel(id, ad, maas) {
+  this.perId = id;
+  this.perAd = ad;
+  this.maas = maas;
+  console.log(this); //! personel objesine bağlanmıştır. (binded)
 }
-console.log(this);  //! çalıştığı yere göre değişir. 
+console.log(this); //! çalıştığı yere göre değişir.
 //! Global alanda yani burada window nesnesini gösterir.
 
 const kisi1 = new Personel("123456", "Cooper", 15000);
@@ -59,36 +57,35 @@ console.log(kisi1["perId"]);
 console.log(kisi2.maas);
 // console.log(kisi1);
 
-
 //* ----------------------------------------------
 //* 3- Object literal (en çok kullanılan)
 //* ----------------------------------------------
 
 const worker = {
-    name : "can",
-    surname : "canan",
-    age : 44,
-    job : "devaloper",
-    languages : ["c++", "java", "javascript", "python"],
-    salary : 140000
-}
+  name: "can",
+  surname: "canan",
+  age: 44,
+  job: "devaloper",
+  languages: ["c++", "java", "javascript", "python"],
+  salary: 140000,
+};
 
 console.log(worker);
 console.log(worker.job);
-console.log(worker.languages[worker.languages.length-1]);
+console.log(worker.languages[worker.languages.length - 1]);
 console.log(worker["name"]);
 
 console.log("Known Languages:", worker["languages"]);
 // 4 elemanlı languages dizini yazdırır.
-worker["languages"].forEach((l)=> console.log(l));
+worker["languages"].forEach((l) => console.log(l));
 // 4 elemanlı languages dizininin elemanlarını tek tek yazdırır.
 
 worker.birthYear = 1981;
 worker.email = "coop@gmail.com";
 console.log(worker);
-// chrome alfabetik olarak yeni keyleri ekler. 
+// chrome alfabetik olarak yeni keyleri ekler.
 
-worker["salary"] = worker.salary*1.1
+worker["salary"] = worker.salary * 1.1;
 // worker["salary"] *= 1.1   //! bu da kullanılabilir.
 console.log(worker.salary);
 
@@ -96,7 +93,7 @@ console.log(worker.salary);
 
 //todo, shallow -sığ- copy
 //todo, Object.create(), Object.assign(), spread(...), concat(), slice() ---> hepsi sığ kopyalama yapar.
-const person = worker;  
+const person = worker;
 console.log("PERSON :", person);
 
 person.birthYear = "1999"; //tekrar atama yapıldı
@@ -110,17 +107,14 @@ console.log(JSON.stringify(worker)); // herşeyi tamamen string yapar.
 console.log("DEEP : ", deepCopyOfWorker);
 
 deepCopyOfWorker.birthYear = "2001";
-// deep copy olduğundan sadece kendi değeri değişir. 
+// deep copy olduğundan sadece kendi değeri değişir.
 console.log(deepCopyOfWorker.birthYear); //2001
 console.log(worker.birthYear); //1999
 console.log(person.birthYear); //1999
 
-
 //* ----------------------------------------------
 //* Object Metodları
 //* ----------------------------------------------
-
-
 
 const personel = {
   name: "Can",
@@ -128,21 +122,21 @@ const personel = {
   dob: "1990",
   job: "devaloper",
   salary: 140000,
-  driveingLicense : true,
-  calculateAge : function (){
+  driveingLicense: true,
+  calculateAge: function () {
     return new Date().getFullYear() - this.dob;
   },
 
   //? expression veya declaration ile fonksiyon tanımlanırsa hata vermez
 
-  summary : () => {
-      console.log(this);  // burada window döndürür.
-      return `${this.name} is ${this.calculateAge()} years old` // bundan dolayı yazarken hata vermez ama çalışmaz.
-    }
-    //? arrow ile fonksiyon tanımlanırsa hata verir.
+  summary: () => {
+    console.log(this); // burada window döndürür.
+    return `${this.name} is ${this.calculateAge()} years old`; // bundan dolayı yazarken hata vermez ama çalışmaz.
+  },
+  //? arrow ile fonksiyon tanımlanırsa hata verir.
 };
 
-console.log(personel.calculateAge());  //32  yani 2022-1990
+console.log(personel.calculateAge()); //32  yani 2022-1990
 // console.log(personel.summary());  //! this.calculateAge is not a function
 
 //! NOT: arrow fonksiyonlari ozellikle callback fonksiyonu olarak
@@ -153,11 +147,9 @@ console.log(personel.calculateAge());  //32  yani 2022-1990
 //! gösterir. Bunu engellemek için object fonksiyonlarini tanimlarken
 //! diger (func. expression veya declaration) yontemlerini kullanabilir.
 
-
 // * ======================================================
 // *                  OBJECT ITERATION
 // * ======================================================
-
 
 //? nested
 const people = {
@@ -191,7 +183,6 @@ console.log(people);
 
 console.log("salary of p2 :", people.person2.salary);
 
-
 //? Javascript'de Objeler default olarak iterable degildir.
 //? Ama for in ve for of donguleri ile itere edilebilirler.
 
@@ -222,12 +213,10 @@ for (let person in people) {
 //*   code block to be executed
 //* }
 
-
 console.log("****************");
 for (let key of Object.keys(people)) {
   console.log(key);
 }
-
 
 console.log("****************");
 //? people objesindeki tum salary 'leri yazdir
@@ -235,7 +224,6 @@ for (let v of Object.values(people)) {
   console.log(v.salary);
   // console.log(v["salary"]);  //* alternatif yazım
 }
-
 
 //? people objesindeki tum salary 'leri yazdir
 for (let [k, v] of Object.entries(people)) {
@@ -247,25 +235,80 @@ for (let [k, v] of Object.entries(people)) {
 console.log("********");
 Object.keys(people).forEach((p) => console.log(p)); // person1, person2, person3
 
-
 console.log("********");
 Object.values(people).forEach((p) => console.log(p.surname)); // canan, sweat, SKY
 
-
 //? job = developer olanlarin dob degelerini yazdiriniz.
 console.log("*** DOB ****");
-Object.values(people).filter((p) => p.job === "developer").forEach((p) => console.log(p.dob)); // 1990, 1981
-
+Object.values(people)
+  .filter((p) => p.job === "developer")
+  .forEach((p) => console.log(p.dob)); // 1990, 1981
 
 //********************************************************
 //* JSON => Javascript Object Notation
 //********************************************************
+const example = [{}, {}, {}, {}]; //* JSON fornmatı
 
 const team = [
   { name: "Josh", surname: "Adams", job: "developer", age: 30 },
   { name: "Mary", surname: "Bary", job: "tester", age: 22 },
   { name: "Hazel", surname: "Nut", job: "developer", age: 20 },
-];
+]; 
 
-const teamAgeAverage = team.reduce(function (avg, person, _, { length }) {return avg + person.age / length;}, 0);
+console.log("---JSON----");
+console.log(team); // tamamını yazdırır.
+console.log(team[2]); // 2nci indistedli objeyi yazdırı.
+
+//* Ornek1: team dizisindeki job'lari tek tek yazdiriniz.
+console.log(team.map((p) => p.job)); // dizi olarak yazdırı.
+team.map((p) => console.log(p.job)); // tek tek yazdırı.
+team.forEach((person) => console.log(person.job)); //tek tek yazdırı.
+
+//* Ornek2: age'leri bir artirarak yeni bir diziye saklayiniz.
+console.log(team.map((p) => p.age + 1)); // direk çıktı verir.
+const agesPlus = team.map((p) => p.age + 1); // değişkene atama yapar.
+console.log(agesPlus);
+
+//* Ornek3: name ve surname'leri birlestirip buyuk harfe ceviren ve
+//* bunu fullName key'i olarak saklayan, ayni zamanda age degerlerini 5
+//* arttirarak age key'ine saklayan ve olusan diziyi donduren kodu yazınız.
+
+ //! istenen çıktı diz içinde obje olduğundan, arrow function tanımlandığında açılan süslü parantez derleyici tarafından fonksiyon süslüsü olarak algılanır, 
+ 
+ //! 1- ondan dolayı ya başına normal parantez koymak gerekir
+ const fullyName = team.map((p) => ({
+   fullName: p.name.toLocaleUpperCase() + " " + p.surname.toLocaleUpperCase(),
+   age: p.age + 5,
+  }));
+  
+  console.log(fullyName);
+  
+//! 2- veya süslü açıp retrun dedikten sonra tekrar süslü açmak gerekir.
+//?Alternativly
+const teamFullName = team.map((p) => {
+  return {
+    //* süslü içerisi obje formatında yazılır.
+    fullName: p.name.toUpperCase() + " " + p.surname.toUpperCase(),
+    age: p.age + 5,
+  };
+});
+
+console.log(teamFullName);
+
+//* Ornek4: Yasi(age) 22 'den kucuk esit olan kisilerin adlarini (name) listeyiniz.
+team.filter((p)=>p.age<=22).forEach((p)=> console.log(p.name)); // tek tek yazdırır.
+
+//* Ornek5: 22 yasindan kucuk ve esit olanlarin isimlerini diziye saklayiniz.
+console.log(team.filter((p) => p.age <= 22).map((p) => p.name)); // dizi olarak yazdırır.
+
+//* Ornek6: ortalama yasi hesaplayiniz.
+const avgAge = team.map((p)=>p.age).reduce((acc,val)=> acc+val,0) / team.length;
+console.log(avgAge);
+
+const avarageAge = team.reduce((acc, val) => acc + val.age, 0) / team.length;
+console.log(avarageAge);
+
+const teamAgeAverage = team.reduce(function (avg, person, _, { length }) {
+  return avg + person.age / length;
+}, 0);
 console.log(teamAgeAverage);
