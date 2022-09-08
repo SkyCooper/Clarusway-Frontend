@@ -62,8 +62,26 @@ console.log(positiveSumAll3([1, 3, -5, 12, 4, -21, 3, -2]));
 // Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
 
 const countBits = (num) =>{
-    let binary = num.toString(2);
-    return binary.split("").filter((item)=> item ==1).length
+  let binary = num.toString(2);
+  
+  // çözüm
+  //return binary.split("").filter((item) => item == 1).length;
+    return binary.split("").reduce((acc, val)=> acc + +val,0);
+
+  // çözüm 1
+  // console.log(binary);
+  // console.log(binary.split("1"))
+  // return binary.split("1").length-1
+
+  //çözüm 2
+  // let count=0
+  // console.log(binary);
+  // binary.split("").map((item)=>item==1 && count++)
+  // return count
+
+  //çözüm 4
+  // console.log(binary)
+  // return binary.match(/1/g).length
 }
 console.log(countBits(1234));
 
@@ -87,28 +105,79 @@ console.log(countBits(1234));
 // Since the sum of its digits' factorial of 1! + 5! + 0! = 122 is not equal to number itself, Then it's Not Strong .
 
 
+const factorial=(num)=>{
+    let total=1;
+    for(let i=1;i<=num;i++){
+        total*=i
+    }
+    return total
+}
+const isStrong =(num)=>{
+
+    // çözüm 1
+    let arr=num.toString().split("")
+    console.log(arr)
+    let sum=0
+    arr.map((item)=>sum+=factorial(item))
+    return sum==num ? "STRONG" : "NOT STRONG"
+
+    // çözüm 2
+    // reduce
+}
+console.log(isStrong(123));
+console.log(isStrong(1));
+console.log(isStrong(145));
+console.log(isStrong(150));
+
+
+console.log(factorial(5));
+
 //************************************************************QUESTION 6***************************** */
 // Complete the solution so that it splits the string into pairs of two characters.
 //  If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
 // Examples:
 // * 'abc' =>  ['ab', 'c_']
 // * 'abcdef' => ['ab', 'cd', 'ef']
+
+const twoPair = (str)=>{
+    let arr=str.split("")
+    console.log(arr);
+    let pair=""
+    let result=[]
+    str.length%2 !=0 && arr.push("_")
+    for(let i=0;i<arr.length;i+=2){
+        pair=arr[i]+arr[i+1]
+        result.push(pair)
+    }
+    return result
+}
+
+console.log(twoPair("abcdef"))
+console.log(twoPair("abc"))
+
 //************************************************************QUESTION 7***************************** */
 //Write a function to accept two arrays. Does the first array contain all elements represented in the second array?
 
-// const containsAllElements = (firstArray, secondArray) => {
-//     // your code
-// }
+const containsAllElements = (firstArray, secondArray) => {
+    return secondArray.every((item)=>firstArray.includes(item))
+}
 
-// console.log(containsAllElements(["monday", "tuesday"], ["tuesday"])) // false
-// console.log(containsAllElements([1,2,3,4,5,6,78,9,], [1,2,3,5]))  //true
+console.log(containsAllElements(["monday", "tuesday"], ["tuesday","deneme"])) 
+console.log(containsAllElements([1,2,3,4,5,6,78,9,], [1,2,3,55])) 
+
 
 //************************************************************QUESTION 8***************************** */
 //Write a function that accepts an array as a parameter and returns the first item that smaller than the average of its elements
 
-// const smallerThanAvg = ([1,2,6]) => {
-//     // your code
-// }
+const smallerThanAvg = (arr) => {
+    let total=arr.reduce((total,item)=>total+=item,0)
+    console.log(total)
+    let avg=total/arr.length
+    console.log(avg);
+    return arr.find((item)=>item<avg)
+}
+
+console.log(smallerThanAvg([45,30,5,8,99,6]))
 
 
 
