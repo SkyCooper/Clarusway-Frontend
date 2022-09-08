@@ -1,10 +1,64 @@
+:root {
+  --red: #dc3545;
+}
+
 /*! -------------- 1- NAVBAR ---------------- */
+.navbar {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.nav-link {
+  color: black;
+  transition: color 0.5s;
+}
+.nav-link:hover {
+  color: var(--red);
+}
 
 /*! ------------- 2- CAROUSEL --------------- */
+.carousel-item  {
+    max-height: calc(100vh - 88px);
+}
+.carousel-caption h5 {
+  color: red;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 3px black;
+}
+
+.carousel-item p {
+  text-shadow: 2px 2px 3px black;
+  font-weight: 600;
+}
+.carousel-item button {
+width: 7rem;
+}
+
+.carousel-indicators button{
+    background-color: var(--red) !important;
+    height: 0.5rem !important;
+    width: 3rem !important;
+}
 
 /*! ------------ 3- ABOUT SECTION ----------- */
 
 /*! ------------- 4- INSTRUCTORS -------------*/
+
+section#instructors .card{
+    transition: transform 0.5s;
+}
+
+section#instructors .card:hover{
+    transform:scale(1.1) ;
+}
+
+section#instructors .socials i {
+  transition: opacity 0.5s;
+}
+
+section#instructors .socials i:hover {
+  opacity: 0.5;
+}
 
 /*! ----------- 4- STUDENTS SECTION ----------*/
 
