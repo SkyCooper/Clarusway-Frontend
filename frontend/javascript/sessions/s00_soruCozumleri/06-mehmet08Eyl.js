@@ -12,14 +12,21 @@
 // Notes
 // The input array will always contain only positive numbers, and will never be empty or null.
 
+const rootOrSquare = (arr) =>{
+//  return  arr.map((item)=> (item**0.5) % 1 == 0 ? item**0.5 : item**2)
+ return  arr.map((item)=> Number.isInteger(item**0.5) ? item**0.5 : item**2)
+}
+
+console.log(rootOrSquare([4, 3, 9, 7, 2, 1]));
+
 //*******************************QUESTION 2********************************************/
 
 // JavaScript Arrays support a filter function (starting in JavaScript 1.6). Use the filter functionality to complete the function given.
 // The solution would work like the following:
 // getEvenNumbers([2,4,5,6]) // should == [2,4,6]
 
-
-// console.log(getEvenNumbers([2,3,8,9,4,5,6]));
+const getEvenNumbers = (arr) => arr.filter((num) => num%2 == 0)
+console.log(getEvenNumbers([2,3,8,9,4,5,6]));
 
 //*******************************QUESTION 3********************************************/
 
@@ -32,6 +39,20 @@
 // input:[-3,-5,1,-87]
 // output:1
 
+const positiveSumAll1 = (arr) => arr.reduce((acc, val) => acc + (val>0 ? val : 0 ),0)
+const positiveSumAll2 = (arr) => arr.reduce((acc, val) => acc + (val>0 && val),0) //*short circut kullanma
+const positiveSumAll3 = (arr) => {
+  //çözüm 3
+  let total = 0;
+  arr.filter((item) => item > 0).map((item) => (total += item));
+  return total;
+}
+
+console.log(positiveSumAll1([1, 3, -5, 12, 4, -21, 3, -2]));
+console.log(positiveSumAll2([1, 3, -5, 12, 4, -21, 3, -2]));
+console.log(positiveSumAll3([1, 3, -5, 12, 4, -21, 3, -2]));
+
+
 // *******************************QUESTION 4********************************************/
 
 // Write a function that takes an integer as input, 
@@ -40,6 +61,11 @@
 
 // Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
 
+const countBits = (num) =>{
+    let binary = num.toString(2);
+    return binary.split("").filter((item)=> item ==1).length
+}
+console.log(countBits(1234));
 
 // *******************************QUESTION 5*******************************************/
 

@@ -74,3 +74,10 @@ let reverse = (xx) => {
 };
 
 console.log(reverse("Merhaba Ali Veli"));
+
+
+const solution1 = (str) => str.split("").reverse().join("");
+const solution2 = (s) => [...s].reverse().join("");
+
+console.log(solution1("world"));
+console.log(solution2("world"));

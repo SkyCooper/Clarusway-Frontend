@@ -167,3 +167,17 @@ console.log(count(dizi1));
 // digPow(92, 1) should return -1 since there is no k such as 9¹ + 2² equals 92 * k
 // digPow(695, 2) should return 2 since 6² + 9³ + 5⁴= 1390 = 695 * 2  => return 2
 // digPow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51 => return 51
+
+
+
+// Given an array of integers your solution should find the smallest integer.
+// For example:
+// Given [34, 15, 88, 2] your solution will return 2
+// Given [34, -345, -1, 100] your solution will return -345
+
+const enKucukBul1 = (arr) => arr.sort((a,b)=> a-b)[0];
+console.log(enKucukBul1([34, 15, 88, 2]));
+
+
+const enKucukBul2 = (arr) => Math.min(...arr);
+console.log(enKucukBul2([34, 15, 88, 2]));

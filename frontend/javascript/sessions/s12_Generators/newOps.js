@@ -179,3 +179,55 @@ showName(`Noah`, `Adams`, `Developer`, `Instr`, `Professor`, `Dad`);
 //*======================================================
 //*  SPREAD (...)  -->
 //* ======================================================
+
+//todo, Spread operatoru ise iterables olan bir elemani bireysel degerler haline getirir.
+
+const flyingVecihles = ["Aircraft", "Helicopter", "QuadCopter"];
+const automobiles = ["Truck", "Bus", "Car", "SUV"];
+
+const allVehicles1 = [flyingVecihles, automobiles];
+const allVehicles2 = [...flyingVecihles, ...automobiles];
+console.log(allVehicles1); // içinde 2 dizi olan tek dizi
+console.log(allVehicles2); // içinde 7 eleman olan tek dizi
+
+//*Example;
+const citrus = ["orange", "lime", "lemon"];
+const friuts = ["apple", ...citrus, "banana", "pear"];
+console.log(friuts); // 6elemanlı dizi oldu.
+
+//*string spread
+const str = "Hello FS12";
+const charArray = [...str];
+charArray[0] = "X";
+console.log(charArray, str); //orjinal str değişmez
+console.log(...str); // H e l l o   F S 1 2
+
+
+//* Max() fonksiyonu örneği,
+//*dizileri fonksiyonlara açık bir şekilde parametre olarak vermek için
+console.log(Math.max(1,3,5,2,10)); // 10
+const nums = [1, 3, 5, 2, 10];
+console.log(Math.max(nums)); // NaN
+console.log(Math.max(...nums)); // 10
+
+
+//* Array Copy
+const myNumbers = [1,2,3];
+const hisNumbers = [...myNumbers];
+console.log(hisNumbers); // birebir kopyası olur.
+hisNumbers.push(11);
+console.log(hisNumbers); //4 elemanlı oldu, orjinal ise 3 elemanlı değişmez
+const herNumbers = [-1, 0, ...myNumbers, 4, 8];
+
+
+//* Object Copy
+const myObj = {a:1, b:2, c:3};
+const herObj = {a:2, z:4, k:3};
+
+const copiedObj = {...myObj};
+console.log(copiedObj); // birebir kopyası olur.
+copiedObj.c = "33"; // sadece kopya değişir, orjinal değişmez
+
+const combinedObj ={...myObj, ...herObj};
+console.log(combinedObj); // { a: 2, b: 2, c: 3, z: 4, k: 3 }
+//* a her ikisinde olduğundan sona yazılanın değerini alır.
