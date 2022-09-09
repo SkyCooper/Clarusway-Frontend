@@ -17,6 +17,11 @@ if (operator === "*") {
 }
 console.log(`Answer is : ${execute}`);
 
+//! eval ile yapılması
+function basicOp(o, a, b) {
+  return eval(a + o + b);
+}
+console.log(basicOp("*", 5, 3));
 
 /* //!değişkenlerin + ile number yapılması
 *Two number calculator
