@@ -16,8 +16,11 @@ const rootOrSquare = (arr) =>{
 //  return  arr.map((item)=> (item**0.5) % 1 == 0 ? item**0.5 : item**2)
  return  arr.map((item)=> Number.isInteger(item**0.5) ? item**0.5 : item**2)
 }
+const squareOrSquareRoot = (array) =>
+  array.map((a) => (Math.sqrt(a) % 1 == 0 ? Math.sqrt(a) : a * a));
 
 console.log(rootOrSquare([4, 3, 9, 7, 2, 1]));
+console.log(squareOrSquareRoot([4, 3, 9, 7, 2, 1]));
 
 //*******************************QUESTION 2********************************************/
 
@@ -67,6 +70,7 @@ const countBits = (num) =>{
   // çözüm
   //return binary.split("").filter((item) => item == 1).length;
     return binary.split("").reduce((acc, val)=> acc + +val,0);
+    // return n.toString(2).replace(/0/g, "").length;
 
   // çözüm 1
   // console.log(binary);
