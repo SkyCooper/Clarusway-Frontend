@@ -120,9 +120,12 @@ const mehmet = names[1];  //* indexleme
 
 //*destructing ile, sırası önemli, köseli parantez ile yapılıyor.
 const [p1, p2, p4] = names;
-// const [p1, p2, , p4] = names; böyle olursa  Ahmet Mehmet Saffet olurdu..
+// const [p1, p2, ,p4] = names; //böyle olursa  Ahmet Mehmet Saffet olurdu..
 console.log(p1,p2,p4); // Ahmet Mehmet İsmet
 
+const surNames = ["Demir", "Beton", "Çelik", "Odun"];
+const [,,,s1] = surNames; // virgül ile atama yapılacak veri boş geçilir.
+console.log(s1);
 
 //*======================================================
 //  REST (...) //! --> geriye kalanlar, arta kalanlar gibi
@@ -169,7 +172,7 @@ const sumAll = (...numbers) => {
 }
 console.log("SUM OF NUMBERS:", sumAll(1, 2, 3, 4, 5));
 
-
+// showName'den ilk 2 değer name ve surname olarak değişkene atandı, geri kalanlar titles değikeni içine dizi olarak atandı.
 const showName = (name, surname, ...titles) => {
   const summary = `${name} ${surname} is a ${titles.join(" and ")}`;
   console.log(summary); // Noah Adams is a Developer and Instr and Professor and Dad
