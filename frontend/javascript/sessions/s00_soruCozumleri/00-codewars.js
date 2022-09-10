@@ -234,3 +234,84 @@ const arrAdder = (arr) => {
 
 console.log(arrAdder(liveLife));
 console.log(arrAdder(theMit));
+
+
+//! List Filtering - 7kyu
+// In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+// Example
+// filter_list([1,2,'a','b']) == [1,2]
+// filter_list([1,'a','b',0,15]) == [1,0,15]
+// filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+
+const filter_list = (arr) => {
+  // return arr.filter((item)=> typeof(item) == "number")
+   return arr.filter((item) => Number.isInteger(item));
+}
+
+
+console.log(filter_list([1, 2, "a", "b"]));
+console.log(filter_list([1, "a", "b", 0, 15]));
+console.log(filter_list([1, 2, "aasf", "1", "123", 123]));
+
+let a = 1;
+let b = "1";
+console.log(typeof(a));
+console.log(typeof(b));
+
+
+//! Regex validate PIN code - 7 kyu
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+// If the function is passed a valid PIN string, return true, else return false.
+
+// Examples (Input --> Output)
+// "1234"   -->  true
+// "12345"  -->  false
+// "a234"   -->  false
+
+const validatePIN = (pin) => {
+  // if (
+  //   (pin.length == 4 || pin.length == 6) &&
+  //   pin.split("").every((item) => typeof item == "number")
+  // ) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+
+  
+  // if (
+  //   (!isNaN(pin) && Number.isInteger(pin) && pin.toString().length == 4) ||
+  //   pin.toString().length == 6
+  // ) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+
+  // return /^(\d{4}|\d{6})$/.test(pin);
+  return /^([0-9]{4}|[0-9]{6})$/.test(pin);
+}
+
+console.log((validatePIN("a234")));
+console.log((validatePIN(1234)));
+console.log((validatePIN("098765")));
+console.log((validatePIN("12345")));
+
+//! Alternate capitalization - 7kyu
+// Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
+// For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+// The input will be a lowercase string with no spaces.
+
+// function capitalize(str){
+//   let str1 = [...str].map((item)=> {for(let i=0; i <= str.length; i +=2) {String(item[i]).toUpperCase()}});
+//   let str2 = [...str].map((item)=> {for(let i=1; i <= str.length; i +=2) {String(item[i]).toUpperCase();}});
+//   return [str1, str2]
+// };
+
+// console.log(capitalize("abcdef"));
+// console.log(capitalize("codewars"));
+
+let str = "codewars";
+let str1 = [...str].map((item)=> {for(let i=0; i <= str.length; i +=2) {String(item[i]).toUpperCase();}}).join("");
+console.log(str1);
