@@ -173,21 +173,22 @@ console.log(animalYears(5));
 // The input string will only consist of lower case letters and/or spaces.
 
 function getCount(str) {
-  return str
-    .split("")
-    .filter((x) => x == "a" || x == "e" || x == "i" || x == "o" || x == "u")
-    .length;
+  // return str
+  //   .split("")
+  //   .filter((x) => x == "a" || x == "e" || x == "i" || x == "o" || x == "u")
+  //   .length;
 
   // return (str.match(/[aeiou]/gi) || []).length;
   // return str.replace(/[^aeiou]/gi, "").length;
-  //  return str.split("").filter((c) => "aeiouAEIOU".includes(c)).length;
+  // return str.split("").filter((c) => "aeiouAEIOU".includes(c)).length;
 }
 
 console.log(getCount("abracadabra")); //5
 
-//! Adding Arrays
+//! Adding Arrays-7kyu
 // Create a function that takes an array of letters, and combines them into words in a sentence.
 // The array will be formatted as so:
+
 const liveLife = [
   ["J", "L", "L", "M"],
   ["u", "i", "i", "a"],
@@ -195,15 +196,41 @@ const liveLife = [
   ["t", "e", "e", ""],
 ];
 
+const theMit = [
+  ["T", "M", "i", "t", "p", "o", "t", "c"],
+  ["h", "i", "s", "h", "o", "f", "h", "e"],
+  ["e", "t", "", "e", "w", "", "e", "l"],
+  ["", "o", "", "", "e", "", "", "l"],
+  ["", "c", "", "", "r", "", "", ""],
+  ["", "h", "", "", "h", "", "", ""],
+  ["", "o", "", "", "o", "", "", ""],
+  ["", "n", "", "", "u", "", "", ""],
+  ["", "d", "", "", "s", "", "", ""],
+  ["", "r", "", "", "e", "", "", ""],
+  ["", "i", "", "", "", "", "", ""],
+  ["", "a", "", "", "", "", "", ""],
+];
+
+// Pattern you need to produce, use a loop to iterate through the index of each element,
+// and use map to grab each element to loop through.
+// arr[0][0] + arr[1][0] + arr[2][0]
+// arr[0][1] + arr[1][1] + arr[2][1]
+// arr[0][2] + arr[1][2] + arr[2][2]
+
 const arrAdder = (arr) => {
   let str = "";
-  for (let i = 0; i < arr.length-1; i++) {
-    for (let k = 0; k <= i; k++){
-     str += arr[i][k];
+  for (let i = 0; i <= arr[0].length-1; i++) {
+    for (let k = 0; k <= arr.length - 1; k++) {
+      str += arr[k][i];
     }
-        
+    str += " ";
   }
-  return str;
+  return str.trimEnd();
 };
 
+// const arrAdder = (arr) => arr[0].map((_, i) => arr.map((_, j) => arr[j][i]).join("")).join(" ");
+
+// const arrAdder = (arr) => arr[0].map((_, idx) => arr.reduce((pre, val) => pre + val[idx], ``)).join(` `);
+
 console.log(arrAdder(liveLife));
+console.log(arrAdder(theMit));
