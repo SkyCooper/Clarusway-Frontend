@@ -1,3 +1,81 @@
+
+//! Array.diff - 6kyu
+// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+// It should remove all values from list a, which are present in list b keeping their order.
+
+// arrayDiff([1,2],[1]) == [2]
+// If a value is present in b, all of its occurrences must be removed from the other:
+// arrayDiff([1,2,2,2,3],[2]) == [1,3]
+
+const arrayDiff = (arr1, arr2) => {
+
+}
+
+console.log(arrayDiff([1, 2], [1])); // [2]
+console.log(arrayDiff([1, 2, 2], [1])); // [2,2]
+console.log(arrayDiff([], [1, 2])); // []
+
+//! Is the date today - 8kyu
+// Write a simple function that takes a Date as a parameter and returns a Boolean representing whether the date is today or not.
+// Make sure that your function does not return a false positive by only checking the day.
+
+function isToday(date) {
+  //Code goes here.
+}
+
+console.log(isToday());
+const today = new Date();
+console.log(today);
+
+//! Alternate capitalization - 7kyu
+// Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
+// For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+// The input will be a lowercase string with no spaces.
+
+//? klasik uzun çözüm,
+// const capitalize = (str) => {
+//   const arr1 = [];
+//   const arr2 = [];
+//   for(let i=0; i < str.length; i++){
+//     if(i%2 == 0){
+//       arr1.push(String(str[i]).toUpperCase());
+//     }else{
+//       arr1.push(str[i]);
+//     }
+//   }
+//   for(let i=0; i < str.length; i++){
+//     if(i%2 !== 0){
+//       arr2.push(String(str[i]).toUpperCase());
+//     }else{
+//       arr2.push(str[i]);
+//     }
+//   }
+//   return [arr1.join(""), arr2.join("")];
+// }
+
+//? map ile çözüm
+function capitalize(str) {
+  let str1 = [...str]
+    .map((item, i) => (i % 2 == 0 ? item.toUpperCase() : item))
+    .join("");
+  let str2 = [...str]
+    .map((item, i) => (i % 2 !== 0 ? item.toUpperCase() : item))
+    .join("");
+  return [str1, str2];
+}
+
+//! reduce ile;
+// function capitalize(s) {
+//     return [...s].reduce((acc, val, i) => {
+//         acc[0] += i % 2 === 0 ? val.toUpperCase() : val.toLowerCase();
+//         acc[1] += i % 2 === 0 ? val.toLowerCase() : val.toUpperCase();
+//         return acc;
+//     }, ['', '']);
+// };
+
+console.log(capitalize("abcdef"));
+console.log(capitalize("codewars"));
+
 //! Century From Year
 // The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
 // Examples
@@ -177,7 +255,6 @@ function getCount(str) {
   //   .split("")
   //   .filter((x) => x == "a" || x == "e" || x == "i" || x == "o" || x == "u")
   //   .length;
-
   // return (str.match(/[aeiou]/gi) || []).length;
   // return str.replace(/[^aeiou]/gi, "").length;
   // return str.split("").filter((c) => "aeiouAEIOU".includes(c)).length;
@@ -219,7 +296,7 @@ const theMit = [
 
 const arrAdder = (arr) => {
   let str = "";
-  for (let i = 0; i <= arr[0].length-1; i++) {
+  for (let i = 0; i <= arr[0].length - 1; i++) {
     for (let k = 0; k <= arr.length - 1; k++) {
       str += arr[k][i];
     }
@@ -235,7 +312,6 @@ const arrAdder = (arr) => {
 console.log(arrAdder(liveLife));
 console.log(arrAdder(theMit));
 
-
 //! List Filtering - 7kyu
 // In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 
@@ -246,9 +322,8 @@ console.log(arrAdder(theMit));
 
 const filter_list = (arr) => {
   // return arr.filter((item)=> typeof(item) == "number")
-   return arr.filter((item) => Number.isInteger(item));
-}
-
+  return arr.filter((item) => Number.isInteger(item));
+};
 
 console.log(filter_list([1, 2, "a", "b"]));
 console.log(filter_list([1, "a", "b", 0, 15]));
@@ -256,9 +331,8 @@ console.log(filter_list([1, 2, "aasf", "1", "123", 123]));
 
 let a = 1;
 let b = "1";
-console.log(typeof(a));
-console.log(typeof(b));
-
+console.log(typeof a);
+console.log(typeof b);
 
 //! Regex validate PIN code - 7 kyu
 // ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
@@ -279,7 +353,6 @@ const validatePIN = (pin) => {
   //   return false;
   // }
 
-  
   // if (
   //   (!isNaN(pin) && Number.isInteger(pin) && pin.toString().length == 4) ||
   //   pin.toString().length == 6
@@ -291,27 +364,9 @@ const validatePIN = (pin) => {
 
   // return /^(\d{4}|\d{6})$/.test(pin);
   return /^([0-9]{4}|[0-9]{6})$/.test(pin);
-}
+};
 
-console.log((validatePIN("a234")));
-console.log((validatePIN(1234)));
-console.log((validatePIN("098765")));
-console.log((validatePIN("12345")));
-
-//! Alternate capitalization - 7kyu
-// Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
-// For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
-// The input will be a lowercase string with no spaces.
-
-// function capitalize(str){
-//   let str1 = [...str].map((item)=> {for(let i=0; i <= str.length; i +=2) {String(item[i]).toUpperCase()}});
-//   let str2 = [...str].map((item)=> {for(let i=1; i <= str.length; i +=2) {String(item[i]).toUpperCase();}});
-//   return [str1, str2]
-// };
-
-// console.log(capitalize("abcdef"));
-// console.log(capitalize("codewars"));
-
-let str = "codewars";
-let str1 = [...str].map((item)=> {for(let i=0; i <= str.length; i +=2) {String(item[i]).toUpperCase();}}).join("");
-console.log(str1);
+console.log(validatePIN("a234"));
+console.log(validatePIN(1234));
+console.log(validatePIN("098765"));
+console.log(validatePIN("12345"));
