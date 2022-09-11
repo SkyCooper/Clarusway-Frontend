@@ -185,9 +185,9 @@ console.log(school.availableQuota());
 
 // console.log(`Doğum tarihi : ${tarih} , Yaşınız: ${yasHesapla(tarih)}`);
 // //? console.log("YASINIZ:" + yasHesapla2(tarih));
-// //Funct expression ve arrow func yontemlerinde
-// // Once fonks tanimlanmalidir sonra cagrilmalidir.
-// // Aksi takdirde hata alrsiniz.
+//Funct expression ve arrow func yontemlerinde
+// Once fonks tanimlanmalidir sonra cagrilmalidir.
+// Aksi takdirde hata alırsiniz.
 
 // //?-----------------------------------------
 

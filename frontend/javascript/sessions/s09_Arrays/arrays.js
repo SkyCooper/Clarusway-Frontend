@@ -97,8 +97,11 @@ const arabalar = ["BMW", "Mercedes", "Fiat", "Anadol"];
 const silinen = arabalar.pop();
 console.log(arabalar, silinen);
 
-//* push() dizinin sonuna eleman ekler ve dizinin son eleman sayisini dondurur.
+//* shift() dizinin 0. indeks elemanini siler ve silenen elemani dondurur
+const audi = arabalar.shift();
+console.log(arabalar, audi);
 
+//* push() dizinin sonuna eleman ekler ve dizinin son eleman sayisini dondurur.
 const n = arabalar.push("Citroen");
 console.log(arabalar, n);
 
@@ -106,14 +109,12 @@ console.log(arabalar, n);
 const n1 = arabalar.unshift("Audi");
 console.log(arabalar, n1);
 
-//* dizinin 0. indeks elemanini siler ve silenen elemani dondurur
-const audi = arabalar.shift();
-console.log(arabalar, audi);
 
 //* splice()
 //? 1.parametre: eklenecek indis numarasi
 //? 2.parametre: 0 ise araya ekleme, 1 ise uzerine yazma
 //? 3.parametre: yeni eklenecek veri
+
 arabalar.splice(1, 0, "Passat");
 console.log(arabalar);
 
@@ -143,11 +144,11 @@ console.log(sayilar);
 //todo, array metodlarının mutate veye does not mutate durumuna dikkat
 
 //* fill()
-const array1 = [1, 2, 3, 4];
-array1.fill(0);
+const array1 = [1, 2, 3, 4, 5];
+array1.fill(0); // hepsini sıfır yap
 console.log(array1);
 
-array1.fill(1, 2, 4);
+array1.fill(1, 2, 4); // 2den 4e kadar olanları 1 yap
 console.log(array1);
 array1.fill(-1, 1); //* 1. eleman ve sonrasini -1 yap
 console.log(array1);
@@ -159,8 +160,8 @@ const sayilar1 = [3, 5, 2, "2", "üc", "3", "bes", "5", "4", 6];
 
 //* includes()
 //*-----------------------------------------------------------
-console.log(sayilar1.includes(5)); //?true
-console.log(sayilar1.includes("5")); //?false
+console.log(sayilar1.includes(5)); //true
+console.log(sayilar1.includes("1")); //false
 
 //* indexOf(),  lastIndexOf();
 //*-----------------------------------------------------------
@@ -169,7 +170,7 @@ console.log(sayilar1.includes("5")); //?false
 console.log(sayilar1.indexOf(2)); //? 2
 console.log(sayilar1.lastIndexOf(2)); //? 5
 console.log(sayilar1.lastIndexOf(4)); //? -1 bulamzsa, yoksa
-
+ /*
 //! Odev: prompt ile konsoldan bir sayi istenmeli (string veya number
 //! olarak) eger bu girilen sayi, dizi icerisinde bulunuyorsa indisi
 //! (string ve number olarak ayri) yazdirilmalidir. Eger bulunamadiysa
@@ -197,6 +198,7 @@ if (sayilar1.indexOf(enterNum1) >= 0) {
 } else {
   console.log("Aranan değer bulunamamıştır.");
 }
+*/
 
 //* join()
 //*-----------------------------------------------------------
@@ -209,7 +211,8 @@ console.log(sayilar1.join()); //3,5,2,2,üc,2,3,bes,5
 //*-----------------------------------------------------------
 //? toString fonksiyonu sadece dizinin elemanlarinin aralarina
 //? (virgul) koyarak birlestirir ve string yapar.
-console.log(sayilar1.toString());
+let sayilar21 = [3, 5, 2, "2", "üc", "3", "bes", "5", "4", 6];
+console.log(sayilar21.toString());
 
 //* slice()
 //*-----------------------------------------------------------

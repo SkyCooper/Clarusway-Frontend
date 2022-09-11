@@ -122,7 +122,7 @@ do {
   not1 = +prompt("1-100 arasında bir sayı giriniz: ");
 } while (not1 < 1 || not1 > 100)
 console.log(`Girilen not : ${not1} while ile yapıldı.`);
-// bu çalışır fakat hat kodu yok, 
+// bu çalışır fakat hata kodu yok, 
 
 // do {
 //   not1 = +prompt("1-100 arasında bir sayı giriniz: ");

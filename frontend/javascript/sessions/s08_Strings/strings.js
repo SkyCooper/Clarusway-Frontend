@@ -11,12 +11,12 @@ let strA = "Clarusway";
 let strB = " Hello";
 let strC = " Full Stack";
 
-console.log(strA, typeof strA);
+console.log(strA, typeof strA); // string tip
 
 
 //!2 - Non-primitive String tanımlama
 let strD = new String("Non-Primitive");
-console.log(typeof strD);
+console.log(typeof strD); //object tip
 
 //?----------------------------------------
 console.log(strA.toLowerCase());
@@ -65,7 +65,7 @@ console.log(s3);
 
 // ➤ The concat() method can be used instead of the plus(+) operator.
 
-s3 = s1 + s2;
+s3 = s1 + "js " + s2;
 console.log(s3);
 
 x = "a, b";
@@ -123,7 +123,7 @@ console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
 console.log("-- charAt() Method --");
 
 // ➤ The charAt() method returns the char value at the specified index in a string.
-// ➤The index of the first character is 0 and the index of the last character is string.length-1.
+// ➤ The index of the first character is 0 and the index of the last character is --> (string.length-1.)
 
 let str = "Clarusway";
 
@@ -247,7 +247,7 @@ console.log(wordTobe.search(nokta)); //? -1
 
 
 // ➤ The search() method searches a string for a given value and returns the position of the match.
-// ➤The search() method accepts a regular expression and returns the index of the first match in a string
+// ➤ The search() method accepts a regular expression and returns the index of the first match in a string
 // ➤ This method returns -1 if the value is not found.
 
 let str3 = "You do not Know what you do not know until you know.";
@@ -278,7 +278,7 @@ console.log(oku);  //Oku Baban gibi, akilli ol
 
 
 // regex ile yapılması
-oku = oku.replace(/BASARILI/i, "Zengin");
+oku = oku.replace(/AKILLI/i, "Zengin");
 console.log(oku);  //Oku Baban gibi, Zengin ol
 
 //! NOT: replace metodu eger Regex ile aksi belirtilmiyorsa (g) sadece ilk buldugunu degistirir.
@@ -294,11 +294,11 @@ console.log(oku);  //Oku Baban gibi, Zengin ol
 
 let myString = "Mr Brown has a brown house and a brown car";
 let myNewString = myString.replace("brown", "red");
-console.log(myNewString); //Mr Brown has a red house and a brown car sadece ilk bulduğunu değiştirdi
+console.log(myNewString); //Mr Brown has a red house and a brown car -- sadece ilk bulduğunu değiştirdi
 console.log(myString); // Mr Brown has a brown house and a brown car
 
 // ➤ To replace case insensitive, use a regular expression with an /i flag (insensitive).
-// ➤/g flag (global) replaces all matches.
+// ➤ /g flag (global) replaces all matches.
 
 myNewString = myString.replace(/brown/gi, "green"); // (global/insensitive)
 
@@ -354,23 +354,25 @@ console.log(word.slice(-8, -4)); // LARU
 let sentence = "Welcome to Clarusway.";
 
 console.log(sentence.substring(5, 10)); //me to
-console.log(sentence.substring(10, 5)); //me to
+console.log(sentence.substring(10, 5)); //me to , //!önce büyük yazılsada küçük olandan başlar
+console.log(sentence.substring(3, 7)); //come
+console.log(sentence.substring(7, 3)); //come , //!önce büyük yazılsada küçük olandan başlar
 console.log(sentence.substring(11)); //Clarusway.
-console.log(sentence.substring(10, 100)); //Clarusway.
+console.log(sentence.substring(10, 100)); //Clarusway. //!hata vermez
 
 //* ----------------------------------------------------------
 //*  slice(beginIndex[, endIndex])
 //*  substring(beginIndex[, endIndex])
-//*  substr (depreceated)
+//  substr (depreceated) //! kaldırıldı
 //* ----------------------------------------------------------
 const veysel = "Uzun ince bir yoldayim yuruyorum gunduz gece..";
 
 const sliced = veysel.slice(33);
-console.log(sliced, typeof sliced); //? gunduz gece..
+console.log(sliced, typeof sliced); // gunduz gece..
 
-console.log(veysel.slice(17, 30)); //? dayim yuruyor.
-console.log(veysel.slice(-10)); //? duz gece..
-console.log(veysel.slice(-23, -19)); //? yuru
+console.log(veysel.slice(17, 30)); // dayim yuruyor.
+console.log(veysel.slice(-10)); // duz gece..
+console.log(veysel.slice(-23, -19)); // yuru
 
 console.log(veysel.substring(17, 30)); //? dayim yuruyor
 //! negatif indeks substring ile kullanilamaz.

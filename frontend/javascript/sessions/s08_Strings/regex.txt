@@ -1,0 +1,27 @@
+//* regular expression(regex)
+//* https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html  nasıl yazılacağına buradan bak.
+// any character that is not a word character or whitespace
+//? const regex = /[^\w\s]/g;
+//* ---------------------------------------------------
+
+const buyukHarf = /[A-Z]/;
+const nokta = /[.]/;
+const virgul = /[,]/;
+console.log(wordTobe.search(buyukHarf)); //? ilk buyuk harfin indeksi 0
+console.log(wordTobe.search(virgul)); //?  18
+console.log(wordTobe.search(nokta)); //? -1
+
+
+//todo, örnek kullanım;
+// function palindrome() {
+//   var str = prompt("enter a sentence: ");
+//   var re = /[\W_]/g;
+//   var lowRegStr = str.toLowerCase().replace(re, "");
+//   console.log(lowRegStr);
+//   var reverseStr = lowRegStr.split("").reverse().join("");
+//   console.log(reverseStr);
+//   return reverseStr === lowRegStr;
+// }
+// console.log(palindrome());
+
+//!  /^[A-Za-z0-9\_]+\@[A-Za-z]+\.[A_Za-z]{2,3}$/ basit bir email validasyon regex patterni

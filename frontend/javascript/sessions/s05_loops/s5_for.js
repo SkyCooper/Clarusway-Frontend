@@ -64,9 +64,9 @@ console.log("The answer is " + x);
 
 //todo, inclas sorusu, 0-100 arasında 10 adet rastgele sayı üreten kodu yazın
 //* NOT:
-//* Math.floor() =>surekli asagiya yuvarlar  49.9-->49 yapar
-//* Math.ceil() =>sürekli yukariya yuvarlar  49.1-->50 yapar
-//* Math.round() => degerine gore yuvarlar.
+//* Math.floor() => surekli asagiya yuvarlar   49.9-->49 yapar
+//* Math.ceil()  => sürekli yukariya yuvarlar  49.1-->50 yapar
+//* Math.round() => degerine gore yuvarlar.    49.4-->49  49.6-->50
 //* Math.trunc() => kesirli sayinin tam kismini alir.  49.1 veya 49.9 --> 49
 
 for (let i = 1; i <= 10; i++) {

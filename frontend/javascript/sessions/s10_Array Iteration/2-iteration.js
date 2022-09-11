@@ -26,7 +26,6 @@ fiyatlar.forEach((f) => (sum += f));
 
 //! NOT: forEach metodu void metottur.(Herhangi bir deger dondurmez)
 console.log(fiyatlar.forEach((f) => (sum += f))); //!undefined --> VOID olduğu için return yok
-
 console.log("Toplam : " + sum);
 
 //?  Dizideki bütün fiyatların ara toplam değerlerini toplayıp konsola bastiriniz.
@@ -65,6 +64,9 @@ let names = ["Mustafa", "Murat", "Ahmet", "Mustafa", "Ayşe", "canan"];
 
 const newNames = names.map((name) => name.toUpperCase());
 console.log(newNames); //* orjinal değişmeden başka bir değişkene atama yapıldı.
+
+names.map((name, i, arr) => arr[i]=name.toUpperCase());
+console.log(names); //! orjinal dizi değişti
 
 //?-------------- ÖRNEK -------------------
 //? tlFiyatlar dizisindeki rakamlarin Euro ve dolar

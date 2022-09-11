@@ -24,6 +24,15 @@ console.log(negatifler);
 console.log(pozitifler);
 console.log(dizi);
 
+//! filter ile yapılması
+const dizim = [-5, 15, 22, -4, 45, 78];
+const negatiflerm = [];
+const pozitiflerm = [];
+
+console.log(dizim.filter((val)=> val>0 ? pozitiflerm.push(val) : negatiflerm.push(val)));
+console.log(negatiflerm);
+console.log(pozitiflerm);
+
 //?-------------- ÖRNEK -------------------
 //? Dizideki notlarin ortalamasini hesaplayiniz.
 const notlar = [55, 77, 23, 89, 100];
@@ -38,6 +47,9 @@ const ortalama = (arr) => {
   return `Sayıların ortalaması ${toplam / count}`;
 };
 console.log(ortalama(notlar));
+
+//! reduce ile kısa yapımı,
+console.log(notlar.reduce((acc,val)=>acc+val,0)/notlar.length);
 
 //* ======================================================
 //*                   FOR-IN LOOP
