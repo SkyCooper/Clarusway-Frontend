@@ -29,10 +29,11 @@ mybutton.style.fontSize = "1.2rem";
 
 myInput.style.padding = "1rem";
 myInput.style.borderRadius = "10px";
+myInput.style.fontSize = "1.2rem";
 
 
 //*===========================================
-//*          GETELEMENTSBYTAGNAME()
+//*          GETELEMENTSBYTAGNAME() -çıktısı HTML Collection olur.
 //*===========================================
 
 //*EXAMPLE-3
@@ -51,10 +52,13 @@ elementThree.textContent = "React / Vue / Angular"
 elementThree.innerHTML = "React / Angular"
 elementThree.innerText = "Angular"
 
-console.log(list[1].textContent);
-console.log(list[1].innerText);
-console.log(list[1].innerHTML);
-
+//! textContent , innerHTML , innerText FARKLARI!!!!
+console.log(list[1].textContent); // içindeki yazıyı verir.
+// CSS  Cascade Style Sheet SASS
+console.log(list[1].innerText); // kullanıcının gördüğü yazyı verir.
+// CSS  SASS
+console.log(list[1].innerHTML); // tag'ın içindeki HTML'in aynısını verir.
+// CSS <span style="display: none"> Cascade Style Sheet</span> SASS
 
 list[4].innerHTML = `<a href="https://www.google.com">Google Web Page</a>`;
 // html kodlarını çalıştırır.
@@ -119,9 +123,9 @@ itemH2.style.backgroundColor = "yellow";
 
 //input'lardan type button olanı seç,
 const myBtn = document.querySelector("input[type='button']");
+// burada tırnak tek/çift önemli;
 console.log(myBtn);
 // <input id="btn" type="button" value="ADD" style="background: black; color: white; width: 7rem; border: none; border-radius: 10px; padding: 1rem; font-size: 1.2rem; cursor: pointer;">
-// burada tırnak tek/çift önemli;
 
 
 
@@ -145,5 +149,5 @@ lists.forEach((li) => console.log(li.innerText));
 // All ile seçim yapınca tek elemanlı nodelist gelir, onun ilk indisini almak lazım
 console.log(document.querySelectorAll("section ul li:nth-child(3)")[0].innerText);
 
-// düz seçim yapınca tek eleman geldiğnden direk yazdırılabilir.
+// düz seçim yapınca(All demeden) tek eleman geldiğnden direk yazdırılabilir.
 console.log(document.querySelector("section ul li:nth-child(3)").innerText);

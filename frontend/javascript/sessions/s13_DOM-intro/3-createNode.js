@@ -40,3 +40,23 @@ newP.classList.remove("new-class");
 const ul = document.querySelector("ul");
 ul.innerHTML += `<li id="list-id" class="list">Boostrap</li>`;
 
+
+//! post-class deneme;
+const newDiv = document.createElement("div");
+newDiv.className = "new-divclass";
+newDiv.setAttribute("id", "new-divid")
+// newDiv.setAttribute("class", "new-divclass")
+const divText = document.createTextNode("div oluştu mu?");
+newDiv.appendChild(divText);
+
+console.log(newDiv);
+console.log(newDiv.innerText);
+console.log(newDiv.getAttribute("id"));
+console.log(newDiv.getAttribute("class"));
+console.log(newDiv.classList.contains("new-divclass"));
+newDiv.classList.add("divClass1");
+newDiv.classList.add("divClass2");
+newDiv.classList.add("divClass3");
+console.log(newDiv.classList);
+newDiv.classList.remove("divClass3");
+console.log(newDiv.classList);

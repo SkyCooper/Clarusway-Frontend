@@ -45,3 +45,5 @@ btn1.addEventListener("click", () => {
   let headings = document.getElementsByTagName("h4");
   console.log(`The number of H2 tags: ${headings.length}`);
 });
+
+ele

@@ -38,7 +38,7 @@ itemListSec.style.background = "grey";
 
 
 
-//* 1- Aşağı Yonde traverse
+//* 2- Aşağı Yonde traverse
 //*----------------------------------------------
 
 const addItem = document.querySelector(".add-item");
@@ -66,11 +66,11 @@ const myList = ul.children;
 console.log(myList); // [li.list, li.list, li.list, li.list, li.list]
 const javascript = myList[2];
 
-// siblinglerinden css değişmek istiyorum
+// siblinglerinden css ulaşmak istiyorum
 const css = javascript.previousElementSibling;
 console.log(css.innerText); // CSS
 
-// siblinglerinden react değişmek istiyorum
+// siblinglerinden react ulaşmak / değiştirmek istiyorum
 const react = javascript.nextElementSibling;
 react.style.color = "yellow";
 
