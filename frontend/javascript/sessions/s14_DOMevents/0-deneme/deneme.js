@@ -35,10 +35,14 @@ console.log(buttons);
 
 
 
-function colorChange () { if (this.getElementById == "btn-1"){
+function colorChange() {
+  if (this.id == "blueBtn") {
     document.getElementsByTagName("body")[0].style.background = "blue";
-
-} console.log(this.getElementById);
+  } else if (this.id == "yellowBtn") {
+    document.getElementsByTagName("body")[0].style.background = "yellow";
+  } else {
+    document.getElementsByTagName("body")[0].style.background = "green";
+  }
 }
 
 blueBtn.addEventListener("click", colorChange);
@@ -51,7 +55,8 @@ console.log(document.getElementsByTagName("h1"));
 
 
 //!ÖRNEK-2
-//butona her basıldığında sayfanın arkaplan rengini rasgele olarak değiştiren uygulamayı yazınız.
+// butona her basıldığında sayfanın arkaplan rengini rasgele olarak değiştiren uygulamayı yazınız.
+// NOT:Renkler(Mavi,Yeşil,Sarı,Siyah,Pembe v.b)dizide saklanacak Ve aktifolan renk h1 elamanı olarak ekranda yazdırılacaktır.
 
 const change = document.querySelector(".change");
 console.log(change);

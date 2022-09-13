@@ -104,10 +104,23 @@ console.log("Price:", price);
 //todo, fonksiyonların obje parametreleri doğrudan dest. yapılabilir.
 //todo, 
 const calculate = ({id, price}) => {
-    console.log(price);
+    console.log(price*1.1);
 };
 
 calculate({id:14, price:4285});
+
+
+//* Nested Object Destructuring
+// bmwCar objesinden brand, model,name,surname propertilerini destruct ediniz
+const bmwCar = {
+    brand: 'BMW',
+    models: 1990,
+    engine: 1.6,
+    owner:{name1: 'Ahmet', surname1: 'Can'},
+};
+
+const {brand, models, owner:{name1, surname1}} = bmwCar;
+console.log(brand, models, name1, surname1)
 
 //* ======================================================
 //*  DESTRUCTURING (ARRAY)
