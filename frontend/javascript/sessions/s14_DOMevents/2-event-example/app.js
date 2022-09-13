@@ -14,6 +14,9 @@ langList.appendChild(newUl);
 addBtn.addEventListener("click", () => {
   if (!langInput.value) {
     alert("Burası boş, bir dil yaz");
+  } else if (langInput.value.toLowerCase() == "javascript") {
+    newUl.innerHTML += `<li class="text-danger"> ${langInput.value}</li>`;
+    langInput.value = ""; // input içini silmek için
   } else {
     newUl.innerHTML += `<li> ${langInput.value}</li>`;
     langInput.value = ""; // input içini silmek için
@@ -37,14 +40,8 @@ langInput.addEventListener('keydown', (event)=> {
     // console.log(event.keyCode); // keycode --> numara
     // console.log(event.code); // code --> tuş ismi
     // console.log(event.key); // key --> tuş ismi
-     if (event.key === "Enter"){
-        addBtn.click();
-     }
-
-
-
+     if (event.key === "Enter"){addBtn.click();}
 })
-
 
 langInput.addEventListener("keydown", (event) => {
   event.key === "Delete" &&  deleteBtn.click() }
