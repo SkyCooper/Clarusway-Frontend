@@ -4,29 +4,46 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>DOM Events demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <link rel="stylesheet" href="deneme.css">
+    <link rel="stylesheet" href="deneme.css">
 </head>
 
 <body>
-    <h1 class="text-center">Hello, world!</h1>
+    <!-- <h1 class="text-center">Hello, world!</h1>
 
     <div id="btn" class="d-flex justify-content-center gap-5">
-        <button id="blueBtn" type="button" class="btn btn-primary" data="blueBtn" onclick="">Primary</button>
-        <button id="yellowBtn" type="button" class="btn btn-warning" data="yellowBtn" >Warning</button>
-        <button id="greenBtn" type="button" class="btn btn-success" data="greenBtn">Success</button>
+        <button id="blueBtn" type="button" class="btn btn-primary" data="blueBtn" onclick="blueBtn">Primary</button>
+        <button id="yellowBtn" type="button" class="btn btn-warning" data="yellowBtn"
+            onclick="yellowBtn">Warning</button>
+        <button id="greenBtn" type="button" class="btn btn-success" data="greenBtn" onclick="greenBtn">Success</button>
     </div>
 
 
     <br><br><br><br><br>
 
 
-
     <div class="m-auto w-25">
+        <h2 id="h2">Değişen Renk</h2>
         <button type="button" class="btn btn-outline-secondary change">RENK DEĞİŞTİR</button>
-    </div>
+    </div> -->
+
+
+    <br><br><br><br><br>
+
+    <main class="d-flex flex-column align-items-center">
+        <section>
+            <img class="lamba on" src="./lambaOff.png" alt="">
+            <img class="lamba off d-none" src="./lambaOn.png" frameborder="0"></img>
+        </section>
+
+        <div id="btn" class="d-flex justify-content-center gap-5">
+            <button id="greenBtn" type="button" class="btn btnOn btn-success" data="greenBtn" onclick="greenBtn">Lamba ON</button>
+    
+            <button id="blueBtn" type="button" class="btn btnOff btn-danger" data="blueBtn" onclick="blueBtn">Lamba OFF</button>
+        </div>
+    </main>
 
 
 
