@@ -12,13 +12,13 @@
 <body>
     <main>
         <div class="container mt-4">
-            <h1 class="text-center display-3 fw-semibold">Kredi Hesaplama Aracı</h1>
+            <h1 id="baslik" class="text-center text-warning display-3 fw-semibold">Kredi Hesaplama Aracı</h1>
             <form class="mt-4">
 
                 <select id="krediTipi" class="form-select" aria-label="Default select example">
                     <option >Kredi Tipini Seçiniz</option>
-                    <option selected value="konut">Konut Kredisi</option>
-                    <option value="ihtiyac">İhtiyaç Kredisi</option>
+                    <option  value="konut">Konut Kredisi</option>
+                    <option selected value="ihtiyac">İhtiyaç Kredisi</option>
                     <option value="arac">Araç Kredisi</option>
                 </select>
 
@@ -33,9 +33,61 @@
                     <input type="number" class="form-control" id="tutar">
                 </div>
 
-                <button type="submit" class="btn btn-primary w-100">Hesapla</button>
+                <button type="submit" class="btn btn-warning w-100">Hesapla</button>
 
             </form>
+
+            <div id="plan" class="col-md-5 col-lg-4 order-md-last d-none w-100">
+                <h4 class=" mt-5 mb-3 text-center text-primary display-3 fw-semibold">
+                  Ödeme Planı
+                
+                </h4>
+                <ul class="list-group mb-3">
+                  <li class="list-group-item d-flex justify-content-between lh-sm">
+                    <div>
+                      <h6 id=""  class="my-0">Kredi Miktarı</h6>
+                    </div>
+                    <span id="krediMiktari" class="text-muted">0</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between lh-sm">
+                    <div>
+                      <h6 id=""  class="my-0">Kredi Tipi</h6>
+                     
+                    </div>
+                    <span id="krediTipiTablo" class="text-muted">0</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between lh-sm">
+                    <div>
+                      <h6 id=""  class="my-0">Vadesi</h6>
+                      
+                    </div>
+                    <span id="vadesi" class="text-muted">0</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between lh-sm">
+                    <div>
+                      <h6 id=""  class="my-0">Faiz Oranı</h6>
+                      
+                    </div>
+                    <span id="faizOrani" class="text-muted">0</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between lh-sm">
+                    <div>
+                      <h6 id=""  class="my-0">Aylık Taksit Tutarı</h6>
+                      
+                    </div>
+                    <span id="taksitTutari" class="text-muted">0</span>
+                  </li>
+                  
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Toplam Ödenecek Tutar</span>
+                    <span id="genelToplam" class="text-success"><strong>0</strong></span>
+                  </li>
+                </ul>
+            </div>
+             
+  
+            
+              </div>
         </div>
     </main>
 
