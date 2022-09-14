@@ -11,20 +11,25 @@
 </head>
 
 <body>
-    <!-- <h1 class="text-center">Hello, world!</h1>
+    <h1 class="text-center">DOM Event Örnekleri</h1>
+    <br><br>
 
     <div id="btn" class="d-flex justify-content-center gap-5">
-        <button id="blueBtn" type="button" class="btn btn-primary" data="blueBtn" onclick="blueBtn">Primary</button>
+        <!-- butonlara attribute olarak onclick ve onmouseover özelliği eklendi -->
+        <button id="blueBtn" type="button" class="btn btn-primary" data="blueBtn" onmouseover="colorChange('blueBtn')">Primary</button>
+
         <button id="yellowBtn" type="button" class="btn btn-warning" data="yellowBtn"
-            onclick="yellowBtn">Warning</button>
-        <button id="greenBtn" type="button" class="btn btn-success" data="greenBtn" onclick="greenBtn">Success</button>
+            onclick="colorChange('yellowBtn')">Warning</button>
+
+        <button id="greenBtn" type="button" class="btn btn-success" data="greenBtn" onclick="colorChange('greenBtn')">Success</button>
+
     </div>
 
 
     <br><br><br><br><br>
 
 
-    <div class="m-auto w-25">
+    <!-- <div class="m-auto w-25">
         <h2 id="h2">Değişen Renk</h2>
         <button type="button" class="btn btn-outline-secondary change">RENK DEĞİŞTİR</button>
     </div> -->
