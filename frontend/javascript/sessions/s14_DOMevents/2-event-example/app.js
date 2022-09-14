@@ -24,6 +24,7 @@ addBtn.addEventListener("click", () => {
   langInput.focus(); // eklemeden sonra focus ol
 });
 
+
 //todo deleteBtn event handler
 deleteBtn.addEventListener("click", function () {
   newUl.childElementCount > 0
@@ -51,6 +52,3 @@ langInput.addEventListener("keydown", (event) => {
 window.addEventListener("load", () => {
   langInput.focus(); // sayfa refresh olduğunda focus ol
 });
-
-
-//!ödev javascript girilince KIRMIZI yazsın.
