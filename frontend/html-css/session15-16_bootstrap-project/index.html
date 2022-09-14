@@ -16,7 +16,7 @@
 
 <body>
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-sm bg-gradient navbar-light">
+  <nav class="navbar navbar-expand-lg bg-gradient navbar-light" id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="./img/CLARUSWAY_LOGO.png" alt="logo">
@@ -258,48 +258,203 @@
     </section>
 
     <!-- STUDENTS -->
-    <section id="students"></section>
+    <section id="students" class="container bg-light p-3">
+      <h2 class="display-6 text-danger">OUR STUDENTS</h2>
+      <div class="row alingn-item">
+        <div class="col-md-6">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit fugit alias eaque vero minima!
+            Debitis vel saepe deserunt. Magni tempora voluptatum quos aut illum distinctio voluptatibus reprehenderit
+            eos voluptates id totam laboriosam facere, saepe minus praesentium consequuntur ad atque? Optio.</p>
+          <button class="btn btn-danger">Learn More</button>
+        </div>
+        <div class="col-md-6">
+          <img src="./img/students1.png" width="70%" alt="student">
+        </div>
+    </section>
 
     <!-- COURSES -->
-    <section id="courses">
+    <section id="courses" class="container bg-dark p-3">
+      <h2 class="display-6 text-danger">COURSES</h2>
+
       <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
-            role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#fs-images"
+            type="button" role="tab" aria-controls="pills-home" aria-selected="true">Fullstack</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
-            role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#ds-images"
+            type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Data Science</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button"
-            role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled"
-            type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Disabled</button>
+          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#dev-images"
+            type="button" role="tab" aria-controls="pills-contact" aria-selected="false">DevOps</button>
         </li>
       </ul>
+
       <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-          ...</div>
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...
+        <div class="tab-pane fade show active" id="fs-images" role="tabpanel" aria-labelledby="pills-home-tab"
+          tabindex="0">
+
+          <div class="row g-2">
+            <div class="col-md-6 col-lg-3">
+              <a data-fslightbox href="./img/thumbnail/fs1.jpg">
+                <img src="./img/thumbnail/fs1.jpg" class="img-thumbnail" alt="fs1" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <a data-fslightbox href="./img/thumbnail/fs2.jpg">
+                <img src="./img/thumbnail/fs2.jpg" class="img-thumbnail" alt="fs2" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <a data-fslightbox href="./img/thumbnail/fs3.jpg">
+                <img src="./img/thumbnail/fs3.jpg" class="img-thumbnail" alt="fs3" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <a data-fslightbox href="./img/thumbnail/fs4.jpg">
+                <img src="./img/thumbnail/fs4.jpg" class="img-thumbnail" alt="fs4" />
+              </a>
+            </div>
+
+          </div>
+
         </div>
-        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...
+        <div class="tab-pane fade" id="ds-images" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+
+          <div class="row g-2">
+            <div class="col-md-6 col-lg-3">
+              <a data-fslightbox href="./img/thumbnail/ds1.jpg">
+                <img src="./img/thumbnail/ds1.jpg" class="img-thumbnail" alt="ds1" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <a data-fslightbox href="./img/thumbnail/ds2.jpg">
+                <img src="./img/thumbnail/ds2.jpg" class="img-thumbnail" alt="ds2" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <a data-fslightbox href="./img/thumbnail/ds3.jpg">
+                <img src="./img/thumbnail/ds3.jpg" class="img-thumbnail" alt="ds3" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <a data-fslightbox href="./img/thumbnail/ds4.jpg">
+                <img src="./img/thumbnail/ds4.jpg" class="img-thumbnail" alt="ds4" />
+              </a>
+            </div>
+
+          </div>
+
         </div>
-        <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...
+        <div class="tab-pane fade" id="dev-images" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+
+          <div class="row g-2">
+            <div class="col-md-6 col-lg-3">
+              <a data-fslightbox href="./img/thumbnail/ops1.jpg">
+                <img src="./img/thumbnail/ops1.jpg" class="img-thumbnail" alt="ops1" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <a data-fslightbox href="./img/thumbnail/ops2.jpg">
+                <img src="./img/thumbnail/ops2.jpg" class="img-thumbnail" alt="ops2" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <a data-fslightbox href="./img/thumbnail/ops3.jpg">
+                <img src="./img/thumbnail/ops3.jpg" class="img-thumbnail" alt="ops3" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <a data-fslightbox href="./img/thumbnail/ops4.jpg">
+                <img src="./img/thumbnail/ops4.jpg" class="img-thumbnail" alt="ops4" />
+              </a>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact"></section>
+    <section id="contact" class="container bg-light p-3">
+      <h2 class="display-6 text-danger">CONTACTS</h2>
+
+      <article id="form">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, facilis quis. Animi omnis possimus odit cum totam vel! Eligendi, dicta.</p>
+
+        <div class="row">
+          <div class="col-md-4">
+            <i class="fas fa-phone fa-2x text-danger"></i>
+            <h4>Telephone</h4>
+            <a href="tel:+903665344030">+903665344030</a>
+          </div>
+          <div class="col-md-4">
+            <i class="fa-brands fa-whatsapp fa-2x text-danger "></i>
+            <h4>Whatsapp</h4>
+            <a href="https://wa.me/+903665344030">+903665344030</a>
+          </div>
+          <div class="col-md-4">
+            <i class="fas fa-envelope fa-2x text-danger"></i>
+            <h4>Mail</h4>
+            <a href="mailto:coopersky@gmail.com">coopersky@gmail.com</a>
+          </div>
+        </div>
+
+        <form class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" id="email" placeholder="Enter your e-mail">
+          </div>
+          <div class="col-12">
+            <input type="text" class="form-control" id="subject" placeholder="Enter your subject">
+          </div>
+          <div class="col-12 form-floating">
+              <textarea type="text" class="form-control" id="comment" placeholder="Enter your comments"></textarea>
+              <label for="comment">Comment</label>
+          </div>
+        
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-danger" style="width:7rem ;">Sign in</button>
+          </div>
+        </form>
+
+      </article>
+
+      <article id="location" class="mt-4">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d792139.7510800626!2d-75.38665644999999!3d39.14525095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c705764d0cd63b%3A0x941d2d128c04e878!2sDelaware%2C%20Amerika%20Birle%C5%9Fik%20Devletleri!5e0!3m2!1str!2str!4v1663183735241!5m2!1str!2str"
+          width="100%" height="450" style="border:0;" allowfullscreen="true" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </article>
+
+    </section>
   </main>
 
 
   <!-- FOOTER -->
+  <footer class="bg-dark text-center text-white p-4">
+    <article class="">
+      <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+      <a href="#"> <i class="fab fa-youtube"></i> </a>
+      <a href="#"> <i class="fab fa-linkedin"></i> </a>
+      <a href="#"> <i class="fab fa-instagram"></i> </a>
+    </article>
+
+    <article class="p-4 h6">&copy <script> document.write(new Date().getFullYear()) </script> Copyright by <span class="text-danger">Cooper SKY</span></article>
+  </footer>
 
   <!-- UP-BTN -->
+
+  <a href="#navbar">
+    <i class="fa-solid fa-arrow-turn-up"></i>
+  </a>
 
 
 

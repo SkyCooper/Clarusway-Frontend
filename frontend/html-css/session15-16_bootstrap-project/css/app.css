@@ -61,11 +61,52 @@ section#instructors .socials i:hover {
 }
 
 /*! ----------- 4- STUDENTS SECTION ----------*/
+section#students img{
+  max-width: 400px;
+  min-width: 200px;
+}
 
 /*! ----------- 5- COURSES SECTION ----------- */
 
+section#courses .nav-link.active{
+  background-color: #dc3545;
+}
+section#courses .nav-link{
+  color: white; }
+
 /*! ----------- 6- CONTACT SECTION ------------ */
+
+/*! --------------- 7- FOOTER ----------------- */
+footer i{
+  color:white;
+  font-size: 2rem;
+  margin-right: 1rem;
+  transition: color 1s;
+}
+footer i:hover{
+  color:var(--red);
+}
 
 /** -------------- UP-BUTTON ------------------ */
 
-/*! --------------- 7- FOOTER ----------------- */
+.fa-arrow-turn-up{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #dc3545;
+  color: white;
+  width: 50px;
+  height:50px ;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.fa-arrow-turn-up:hover{
+color: black;
+transform: scale(1.2);
+font-size: 1.4rem;
+}
