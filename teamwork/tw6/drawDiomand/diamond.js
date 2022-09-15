@@ -1,22 +1,9 @@
-// function diamondOfWidth(n) {
-//   var i,
-//     diamonds = "*";
-//   for (i = 1; i < 2 * n; i++) {
-//     document.write("<pre>" + diamonds + "</pre>");
-//     diamonds += i < n ? "  *" : "";
-//     diamonds = i >= n ? diamonds.slice(3) : diamonds;
-//   }
-//   document.body.style.textAlign = "center";
-//   document.body.style.lineHeight = 0.5;
-// }
-// console.log(diamondOfWidth(8));
-
 
 const input = document.querySelector("#input");
-console.log(input);
+// console.log(input);
 
 const result = document.querySelector("#result");
-console.log(result);
+// console.log(result);
 
 
 const diamond = (n) => {
@@ -53,5 +40,34 @@ const diamond = (n) => {
 
 input.addEventListener("change", function () {
   result.innerHTML = diamond(input.value);
-  
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function diamondOfWidth(n) {
+//   var i,
+//     diamonds = "*";
+//   for (i = 1; i < 2 * n; i++) {
+//     document.write("<pre>" + diamonds + "</pre>");
+//     diamonds += i < n ? "  *" : "";
+//     diamonds = i >= n ? diamonds.slice(3) : diamonds;
+//   }
+//   document.body.style.textAlign = "center";
+//   document.body.style.lineHeight = 0.5;
+// }
+// console.log(diamondOfWidth(8));
