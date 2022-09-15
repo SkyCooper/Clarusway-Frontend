@@ -87,8 +87,6 @@ document.querySelector(".guess-input").addEventListener("keydown", (e) => {
 // console.log(typeof readOBJ);
 // console.log(readOBJ);
 
-
-
 //* PUSEDUO
 //? 1-100 arasinda rasgele bir sayi tut.
 //? eger input girilmediyse Kullaniciya uyari ver.
