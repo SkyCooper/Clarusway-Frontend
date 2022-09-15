@@ -1,1 +1,54 @@
 /******** SHAKE *******/
+div{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem
+  ;
+}
+
+div i{
+  font-size: 10rem;
+  color:red;
+}
+
+.fa-bell:hover {
+  animation-name: shake;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes shake {
+  0%{
+transform: rotate(20deg);
+  }
+  50%{
+transform: rotate(-20deg);
+  }
+  100%{
+transform: rotate(0deg);
+  }
+}
+
+/* devamlı çalışsın */
+.fa-dollar-sign{
+  animation: snake 1s ease 0.5s infinite alternate forwards;
+}
+
+/* hover olunca dursun */
+.fa-dollar-sign:hover{
+  animation-play-state: paused;
+}
+
+/* sadece 2 aralık belirleyecksek from-to */
+@keyframes snake {
+  from{
+transform: skew(30deg);
+  }
+  to{
+transform: skew(-30deg);
+  }
+}
