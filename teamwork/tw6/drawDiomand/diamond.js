@@ -9,25 +9,49 @@
 //   document.body.style.textAlign = "center";
 //   document.body.style.lineHeight = 0.5;
 // }
+// console.log(diamondOfWidth(8));
 
-const input = document.querySelector("#input").value;
+
+const input = document.querySelector("#input");
 console.log(input);
 
-input.addEventListener("click", function(){
-diamondOfWidth();
-})
+const result = document.querySelector("#result");
+console.log(result);
 
-function diamondOfWidth() {
-  var i,
-  diamonds = "*";
-  for (i = 1; i < 2 * input.value; i++) {
-    document.write("<pre>" + diamonds + "</pre>");
-    diamonds += i < input.value ? "  *" : "";
-    diamonds = i >= input.value ? diamonds.slice(3) : diamonds;
+
+const diamond = (n) => {
+  let string = "";
+  for (let i = 1; i <= n; i++) {
+    for (let j = n; j > i; j--) {
+      string += "&nbsp;&nbsp;&nbsp;";
+    }
+    for (let k = 0; k < i * 2 - 1; k++) {
+      if (k === 0 || k === 2 * i - 2) {
+        string += "*";
+      } else {
+        string += "&nbsp;&nbsp;&nbsp;";
+      }
+    }
+    string += "<br>";
   }
-  document.body.style.textAlign = "center";
-  document.body.style.lineHeight = 0.5;
-}
+  for (let i = 1; i <= n - 1; i++) {
+    for (let j = 0; j < i; j++) {
+      string += "&nbsp;&nbsp;&nbsp;";
+    }
+    for (let k = (n - i) * 2 - 1; k >= 1; k--) {
+      if (k === 1 || k === (n - i) * 2 - 1) {
+        string += "*";
+      } else {
+        string += "&nbsp;&nbsp;&nbsp;";
+      }
+    }
+    string += "<br>";
+  }
+  return string;
+};
 
 
-// console.log(diamondOfWidth(8));
+input.addEventListener("change", function () {
+  result.innerHTML = diamond(input.value);
+  
+});
