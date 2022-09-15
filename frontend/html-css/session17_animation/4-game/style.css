@@ -52,7 +52,7 @@ body {
 
 @keyframes right {
   100% {
-    transform: translate(-2000px);
+    transform: translate(-735px);
   }
 }
 
@@ -71,7 +71,7 @@ body {
 
 
 .right{
-  animation: right 5s linear infinite;
+  animation: right 3s linear infinite;
 }
 
 .pop-up{
