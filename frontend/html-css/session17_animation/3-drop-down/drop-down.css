@@ -1,1 +1,68 @@
 /******* DROP-DOWN ANIMATION *******/
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+.card{
+  background-color: lightcyan;
+  padding: 1rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  /* top: -20%  olursa animasyonda forwards demeye gerek kalmaz*/
+  position: absolute;
+
+  /* başlangıçta gözükmesin, sonra ortaya gelip biraz orada dursun, sonra tekrar kaybolsun */
+  animation: drop-down 3s ease-in-out forwards alternate, fadeIn 2s ease-in-out forwards;
+}
+
+.card button{
+  border: none;
+  padding: 1rem;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.card button:hover{
+  background-color: bisque;
+  color: black;
+}
+
+ /* başlangıçta gözükmesin, sonra ortaya gelip biraz orada dursun, sonra tekrar kaybolsun */
+
+ /* sadece gelip gitmesi değil başka özelliklere de animasyon veilebilir */
+@keyframes drop-down {
+  0%{
+    top: -20%;
+    filter: hue-rotate(0deg);
+  }
+  20%{
+    top: 40%;
+    background-color: burlywood;
+  }
+  80%{
+    top: 40%;
+    filter: hue-rotate(360deg);
+    /* background-color: rgba(219, 205, 187, 0.582); */
+  }
+  100%{
+    top: -20%;
+  }
+  
+}
+
+/* 2 tane animasyon yapılabilir */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
