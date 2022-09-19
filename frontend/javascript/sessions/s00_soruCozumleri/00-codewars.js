@@ -1,4 +1,24 @@
 
+//! Regex count lowercase letters - 8kyu
+// Your task is simply to count the total number of lowercase letters in a string.
+
+
+// Examples
+// lowercaseCount("abc"); ===> 3
+// lowercaseCount("abcABC123"); ===> 3
+// lowercaseCount("abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"); ===> 3
+
+function lowercaseCount(str) {
+  //     return str.replace(/[^qwertyuopasdfghjklizxcvbnm]/g, "").length;
+  return str.match(/[a-z]/g || []).length;
+}
+
+console.log(lowercaseCount("abc"));
+console.log(lowercaseCount("abcABC123"));
+console.log(lowercaseCount("abcABC123!@€£#$%^&*()_-+=}{[]|':;?/>.<,~"));
+
+
+
 //! Array.diff - 6kyu
 // Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
 // It should remove all values from list a, which are present in list b keeping their order.
@@ -7,13 +27,13 @@
 // If a value is present in b, all of its occurrences must be removed from the other:
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
-const arrayDiff = (arr1, arr2) => {
+// const arrayDiff = (arr1, arr2) => {
+//   arr1.filter((arr2)=>arr2.split(""))
+// }
 
-}
-
-console.log(arrayDiff([1, 2], [1])); // [2]
-console.log(arrayDiff([1, 2, 2], [1])); // [2,2]
-console.log(arrayDiff([], [1, 2])); // []
+// console.log(arrayDiff([1, 2], [1])); // [2]
+// console.log(arrayDiff([1, 2, 2], [1])); // [2,2]
+// console.log(arrayDiff([], [1, 2])); // []
 
 //! Is the date today - 8kyu
 // Write a simple function that takes a Date as a parameter and returns a Boolean representing whether the date is today or not.
