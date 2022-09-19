@@ -7,19 +7,19 @@ const greenBtn = document.getElementsByClassName("btn-success");
 const body = document.getElementsByTagName("body")[0];
 const h1 = document.getElementsByTagName("h1")[0];
 
-// blueBtn.addEventListener("click", function () {
-//   document.getElementsByTagName("body")[0].style.background = "blue";
-//   document.getElementsByTagName("h1")[0].style.color = "white";
-// });
+blueBtn.addEventListener("click", function () {
+  document.getElementsByTagName("body")[0].style.background = "blue";
+  document.getElementsByTagName("h1")[0].style.color = "white";
+});
 
-// yellowBtn.addEventListener("click", function () {
-//   body.style.background = "yellow";
-//   h1.style.color = "black";
-// });
+yellowBtn.addEventListener("click", function () {
+  body.style.background = "yellow";
+  h1.style.color = "black";
+});
 
-// greenBtn[0].addEventListener("click", function () {
-//   body.style.background = "green";
-// });
+greenBtn[0].addEventListener("click", function () {
+  body.style.background = "green";
+});
 
 //! HTML-ONCLİCK -ONMOUSEOVER ekleyerek yapma
 // const colorChange = (event) => {if (event == "blueBtn") {
