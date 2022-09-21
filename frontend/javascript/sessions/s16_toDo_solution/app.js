@@ -86,7 +86,7 @@ function createListElement(newTodo) {
 
   //! meydana gelen li elementini ul'ye bağla
   todoUl.appendChild(li);
-};
+}
 
 //* ul içinde capturing yapıldı, ve içindeki her element yakalandı, şimdi yakalanan elementin klasında trash varsa, yakalanan elemanın parentini sil diyoruz, yani li'nin hepsini.
 
@@ -113,6 +113,14 @@ todoUl.addEventListener("click", (e) => {
     //? ilgili li elementinde checked adinda bir class'i varsa bunu sil
     //?  aksi takdirde ekle (DOM)
     e.target.parentElement.classList.toggle("checked");
+
+    //? Dizinin ilgili elementini değiştir.
+    todos = todos.filter((todo) => {
+      return !todo.completed && true;
+    });
+
+    //? todos dizisinin son halini localStorage'e sakla
+    localStorage.setItem("TODOS", JSON.stringify(todos));
   }
 });
 
