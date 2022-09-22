@@ -12,11 +12,10 @@
 //? asil thread bu konuda bilgilendirilir. Asenkron programlama, uygulamalarin
 //? performansininin artirilmasina ve daha iyi kullanici deneyimine katki saglamaktadir.
 
-//? Ozellikle bir API'den veya Veritabanindan veri cekme, Giris/Cikis islemleri,
-//? Dosya Okuma/Yazma islemleri gibi zaman tuketen kodlarda Asyn Programlama
-//? kullanilmasi cok onemlidir.
+//? Ozellikle bir API'den veya Veritabanindan veri cekme, Giris/Cikis islemleri, Dosya Okuma/Yazma islemleri gibi zaman tuketen kodlarda Asyn Programlama kullanilmasi cok onemlidir.
 
 //* Senkron
 //* ------------------------------------------------
+//* sıralı bir şeklilde yukarıdan aşağıya doğru çalışan programlar, takibi kolaydır.
 
 console.log("Timeout-Interval");
