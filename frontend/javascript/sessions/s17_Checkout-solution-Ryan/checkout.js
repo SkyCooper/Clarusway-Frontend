@@ -116,6 +116,3 @@ const calculateCartPrice = () => {
     shippingPrice
   ).toFixed(2);
 };
-
-//deneme;
-const degisik = ("Algılanadı";)
