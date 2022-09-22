@@ -53,19 +53,22 @@
 //* Asenkron (setInterval, clearInterval)  --> bize belirli zaman tekrarı oluşturuyor, non-blocking code
 //* ------------------------------------------------
 
-console.log("Timer Started");
+console.log("Timer Stoped");
 
+console.log("Timer Started");
 let counter = 0;
 const intervalId = setInterval(() => {
-  // fonksiyon dönüş değerini değişkene atadık
+  fonksiyon dönüş değerini değişkene atadık
   console.log(++counter);
-  if (counter > 0) {
+  if (counter > 4) {
     clearInterval(intervalId);
-    console.log("Timer Stoped"); // burada olursa
+    console.log("Timer Stoped");
   }
 }, 1000); // her 1snde counter 1 arttır demek
 
-// console.log("Timer Stoped");
+console.log("Timer Stoped");
+
+
 
 
 //! Callback Hell (nested ve birbirine bagli callback'ler)
