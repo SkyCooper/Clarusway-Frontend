@@ -1,6 +1,6 @@
 const taxRate = 0.18;
-const shippingPrice = 15;
-const shippingFreePrice = 300;
+const shippingPrice = 450;
+const shippingFreePrice = 5000;
 
 window.addEventListener("load", () => {
   calculateCartPrice();

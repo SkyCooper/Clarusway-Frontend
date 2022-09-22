@@ -123,7 +123,7 @@ main form {
   position: absolute;
   width: 100%;
   border-radius: 10px;
-  background-color: #eeeeee;
+  background-color: rgb(245, 231, 213);
   padding: 10px 20px;
   display: flex;
   flex-wrap: wrap;
@@ -140,6 +140,7 @@ main form {
   width: 40%;
   border-radius: 10px;
   margin-right: 20px;
+  background-color: white;
 }
 
 .product-info {
