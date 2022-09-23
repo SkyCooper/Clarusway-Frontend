@@ -114,10 +114,13 @@ todoUl.addEventListener("click", (e) => {
     //?  aksi takdirde ekle (DOM)
     e.target.parentElement.classList.toggle("checked");
 
-    //? Dizinin ilgili elementini değiştir.
-    todos = todos.filter((todo) => {
-      return !todo.completed && true;
+    //? todos dizisindeki ilgili elementin completed kismini guncelle
+    todos.map((todo, index) => {
+      if (todo.id == id) {
+        todos[index].completed = !todos[index].completed;
+      }
     });
+    console.log(todos);
 
     //? todos dizisinin son halini localStorage'e sakla
     localStorage.setItem("TODOS", JSON.stringify(todos));
@@ -136,7 +139,10 @@ window.onload = function () {
   todoInput.focus();
 };
 
-//! ödev yapılan değişiklik localstorage da işlensin ve dizi güncellensin.
+
+
+//! ÖDEC: check yapılan (TAMAMLANAN) değişiklik localstorage da işlensin ve dizi güncellensin.
+//! 117-126 ARASINA EKLENDİ
 // } else if (e.target.classList.contains("fa-check")) {
 //  bunun altına
 //? Dizinin ilgili elementini sil
@@ -145,3 +151,12 @@ window.onload = function () {
 //? todos dizisinin son halini localStorage'e sakla
 //*  localStorage.setItem("TODOS", JSON.stringify(todos));
 // bunun aynısı yazılacak  (105-109 arasını incele)
+
+
+//? grup olark biz böyle çözmüştük;
+// let todosChecked = todos.filter((todo) => todo.id === Number(id));
+    // if (todosChecked[0].completed == true) {
+    //   todosChecked[0]["completed"] = false;
+    // } else {
+    //   todosChecked[0]["completed"] = true;
+    // }
