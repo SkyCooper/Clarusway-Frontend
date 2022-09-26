@@ -33,14 +33,20 @@ console.log("Promise");
 const myPromise = new Promise((resolve, reject) => {
   // isimler değişebilir ama best practise kullanım budur. Bunlarda fonksiyondur.
   // resolve --> başarılı ise 200 başlar
-  // reject --> başarısız 400başlar
+  // reject --> başarısız ise 400 başlar
 
   const success = Math.floor(Math.random() * 2);
+  console.log(success);
+  //* 0,1,2 rastgele bu üç sayıdan birisini üreten bir değişken oluşturduk.
   const data = { a: 1, b: 2 };
+  //* data isimli bir obje oluşturup içine temsili olarak değerler yazdık.
   if (success) {
-    console.log("Data fetchd");
+    //* eğer rastgele sayımız 1 veya 2 gelirse yani TRUE ise ekrana Data fetched yaz,
+    //* resolve ile yani başarılı ile datayı yazdır.
+    console.log("Data fetched");
     resolve(data);
   } else {
+    //* eğer rastgele sayımız 0 gelirse yani FALSE ise reject ile hata mesajını yazdır.
     reject(new Error("Fetch halted")); // sıfır gelirse hata kodu çalışır.
   }
 });
