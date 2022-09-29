@@ -43,6 +43,8 @@ class Magazine extends Book {
 
   //? aynı fonksiyonu aynı isimle içini değiştirip yeniden yazdı, yani OVERRIDE etti.
   //? parentten aldığını EZDİ.
+  //! Overrided Metot (Parent class'daki bir metodun farkli
+  //! fonksiyonellikle fakat ayni isimle tanimlanmasi)
   getSummary() {
     return `${this.title} written by ${this.author} in ${this.year} in ${this.month}`;
   }
