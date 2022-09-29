@@ -10,7 +10,7 @@
 //? yaygin kullanim class-tabanli oldugu icin syntax'ini O'na benzetmistir.
 
 //? Bir parent class'in degisken ve fonksiyonelliği extends
-//? keyword'u ile child class'a gecmektedir.(INHERITANCE)
+//? keyword'u ve super () ile child class'a gecmektedir.(INHERITANCE)
 
 class Book {
   constructor(title, author, year) {
@@ -56,7 +56,7 @@ class Magazine extends Book{ //* Book classından Magazin clasını genişlet
   }
 }
 
-//*instance
+//* Magazine objesinden yeni instance
 const mag1 = new Magazine("Science", "Einttein", 2001, "September");
 console.log(mag1);
 console.log(mag1.getSummary());
