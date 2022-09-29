@@ -14,11 +14,11 @@
 function Book(t, author, year) {
   //* this ile yazılan oluşacak obejenin keyidir, paramatre ismi ile aynı olmak zorunda değildir.
   this.title = t;
-  (this.author = author),
-    (this.year = year),
-    (this.getSummery = function () {
-      return `${this.title} written by ${this.author} in ${this.year}`;
-    });
+  this.author = author;
+  this.year = year;
+  this.getSummery = function () {
+    return `${this.title} written by ${this.author} in ${this.year}`;
+  };
 }
 
 //? new keyword'u Book Constructor'ini parameterler ile cagirmaktadir.
