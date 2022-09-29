@@ -28,7 +28,7 @@ button {
 }
  
 input {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
 }
  
 button,
@@ -61,6 +61,12 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.choices{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
 }
 
 
