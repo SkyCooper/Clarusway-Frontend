@@ -103,9 +103,9 @@ const getWeatherDataFromApi = async () => {
         degree == "°C" ? (degree = "°F") : (degree = "°C");
         console.log(units);
         console.log(degree);
-        e.target.innerHTML = `
-          <div class="city-temp">${units}<sup>${degree}</sup></div>
-          `;
+        // e.target.innerHTML = `
+        //   <div class="city-temp">${units}<sup>${degree}</sup></div>
+        //   `;
       }
     });
 
