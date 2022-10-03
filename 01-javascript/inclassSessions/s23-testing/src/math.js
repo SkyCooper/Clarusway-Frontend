@@ -17,3 +17,16 @@ const fibonacci = (num = 1) => {
   }
   return series[num - 1];
 };
+
+//** ES& module formatında export
+
+// export {calculateTotal, celsiusToFahrenheit, fibonacci, fahrenheitToCelsius};
+// ctrl + space ile süslü içinde seçiyoruz
+
+//! node module formatında export
+module.exports = {
+  calculateTotal,
+  celsiusToFahrenheit,
+  fahrenheitToCelsius,
+  fibonacci,
+};
