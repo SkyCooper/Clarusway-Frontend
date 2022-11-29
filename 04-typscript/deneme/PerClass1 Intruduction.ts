@@ -1,3 +1,12 @@
+//* Yaygın olarak web uygulamalarında kullanılan JavaScript, Node.js ile birlikte sunucu taraflı uygulamalarda, Electron.js ile birlikte masaüstü uygulamalarda, çeşitli kütüphaneler sayesinde de hibrit mobil uygulama geliştirmede sıkça kullanılmaya başlandı ve tahmin edilmeyen bir büyüme gösterdi. Tasarlanma amacı olarak bu tarz platformlar ve büyük çaplı uygulamalar düşünülmediğinden JavaScript'in bazı yapısal eksiklikleri vardı. Nesne tabanlı dillerin sağladığı tip kontrolü, sınıflar gibi yapılar bulunmuyordu, dinamik olmasından dolayı derleme aşaması yoktu ve hata kontrolü zor yapılıyordu. TypeScript bu eksikleri gidermek ve JavaScript'i büyük projelerde daha etkili şekilde kullanmak için tasarlanmış bir programlama dili olarak ortaya çıktı.
+
+//* "TypeScript, uygulama ölçeğinde geliştirme için JavaScript." olarak tanımlanmaktadır. TypeScript strongly-typed, nesne yönelimli ve derlenebilir açık kaynaklı bir programlama dilidir. Microsoft çalışanı ve C# dilinin tasarımcısı olan Anders Hejlsberg tarafından tasarlanmıştır.
+
+//* JavaScript'in tüm özelliklerini içinde barındıran ve ek özellikler eklenmiş bir üst kümesi olarak tanımlanabilir. Büyük ve kodlanma aşaması karmaşık olan projelerde verimliliği arttırır.
+
+// javascript = dynamically typed lang,
+// typescript = statically typed lang
+
 //! What is Typescript?
 // TypeScript is an open-source language with continuous development and maintenance by Microsoft. It is a superset of JavaScript. That is, it's JavaScript with a bunch of additional features. 
 
