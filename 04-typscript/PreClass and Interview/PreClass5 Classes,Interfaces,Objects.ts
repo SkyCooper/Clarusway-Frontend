@@ -1,4 +1,5 @@
 //! Classes, Interfaces, Objects;
+
 //! ************** Classes ***********
 // ➤ TypeScript offers full support for the class keyword introduced in ES2015.
 
@@ -76,13 +77,16 @@ class Derived extends Base {
 //?  Access Modifiers & Readonly
 // ➤ Access modifiers change the visibility of the properties and methods of a class. TypeScript provides three access modifiers:
 
-// public
-// private
-// protected
+//! public
+//! private
+// !protected
+
 // Note that TypeScript controls the access logically during compilation time, not at runtime.
 
 
-// ● Public
+//? ● Public
+// * belirtilmediyse public'tir.
+//* dışarıdan erişilebilir yani obje oluşturulunca . nokta notasyonu ile erişilebilir.
 
 // The default visibility of class members is public. A public member can be accessed anywhere. If you don’t specify any access modifier for properties and methods, they will take the public modifier by default.
 
@@ -95,7 +99,8 @@ let emp = new Employee();
 emp.id= 1;
 emp.name= "Mark";
 
-// ● Private
+//? ● Private
+//* dışarıdan erişilemez yani obje oluşturulunca . nokta notasyonu ile ulaşılmaz ve değiştirilmez.
 
 // The private access modifier ensures that class members are visible only to that class and are not accessible outside the containing class.
 
@@ -115,7 +120,12 @@ class Person {
     }
 }
 
-// readonly
+//? Protected
+
+
+//? readonly
+//* başlangıçta bir kere tanımlanıp değer atanır ve bir daha güncellenmez
+//* private readonly, public readonly olarak tanımlanabilir.
 
 // Fields may be prefixed with the readonly modifier. Prefix readonly is used to make a property as read-only. Read-only members can be accessed outside the class, but their value cannot be changed. They need to be initialized at
 
@@ -142,6 +152,14 @@ emp.name = 'Sally';
 
 
 //todo, Interfaces
+
+//* TypeScript'teki bir Interface, aşağı yukarı bir object için önceden kurgulanmış plan gibi davranır. Object'lerde ki property(özellik) adları ve value(değerleri) hakkındaki bilgileri tanımlar. Bu, TypeScript derleyicisinin object'lerinizi doğrulamasına yardımcı olabilir, böylece object'leri yanlış biçimde tanımlamazsınız.
+
+//* TypeScript'deki interface, temelinde bir tip tanımından başka birşey değildir. ***class*** ve ***function***'lar nesnelerin davranışlarını tanımlarken, ***interface***'ler nesnelerin tiplerini tanımlar şeklinde düşünebiliriz. 
+
+//! Javascript'de interface kavramı olmadığı için TypeScript'de bir interface tanımladığınız ve compile ettiğiniz zaman, onun bir Javascript kodu üretmediğini görürsünüz. Bu noktada interface'lerin compile zamanında tipleri tanımladığını ve geliştirme aşamasında da kolaylık sağlar.
+
+
 // ➤ TypeScript interfaces define the contracts within your code. An interface defines the syntax for classes to follow. Classes that are derived from an interface must follow the structure provided by their interface. The TypeScript compiler will not convert interface to JavaScript. Interfaces are used for type checking only.
 
 // ➤ The interface names follow the PascalCase convention just as classes. Uppercase I letter is prefixed by convention for clean code.
@@ -252,6 +270,7 @@ let person1: IEmployee = {
 }
 person1.SSN = 32382322; // compiler error
 
+
 // ➤ Function Types with Interfaces
 // ​ ● In addition to describing an object with properties, interfaces also allow you to describe function types.
 
@@ -266,6 +285,15 @@ interface StringFormat {
 // }
 // ➤ Differences Between Type Aliases and Interfaces
 // Type aliases and interfaces are very similar, and in many cases you can choose between them freely. Almost all features of an interface are available in type, the key distinction is that a type cannot be re-opened to add new properties vs an interface which is always extendable.
+
+//? Abstract Class örnek; (Anthony)
+// Senaryo: Bir gün canınız sıkıldı ve çocukluğunuzda kalmış tatlı bir aktivite olan lunaparka gidip çarpışan arabaya binmek istediniz. Biletinizi aldınız ve seçtiğiniz arabaya oturup size gelen görevliye bileti teslim ettiniz. Görevli alana baktı ve araçları hareket ettirecek olan elektriği vermek için yeterli sayıda kişinin olduğuna karar verip bir düğmeye bastı. Görevlinin düğmeye basmasıyla çarpışan arabaların hareket etmesi için gerekli olan elektrik akımı verildi ve arabanız çalışır hale geldi. Direksiyonu, gaz pedalını ve freni kullanarak dilediğiniz şekilde aracı kullanmaya başladınız.
+
+// Şimdi gelin bu gerçek hayatın birebir içinden olan senaryodaki soyutlamaları (abstractions) inceleyelim. Böylece yazılım alanında da aslında aynı mantığın kullanıldığını ve soyutlamanın hayatımızı nasıl kolaylaştırdığını daha iyi anlamış olacağız.
+
+// Senaryoda Yer Alan Soyutlamalar(Abstractions): İlk soyutlama örneğimiz biletinizi teslim ettiğiniz görevlinin eğlenceyi başlatmak için bastığı küçük kırmızı düğme 🙂 Görevli o kırmızı düğmeye bastığında bizler sadece eğlencenin başlayacağını biliyoruz, görevli de on dakikalık bir seansa daha start vereceğini biliyor yalnızca. Düğmeye basıldığı anda elektrik devresindeki anahtarın kapanıp akımın başlayacağını ne biz ne de görevli aklının ucundan dahi geçirmiyor. İşte bu tam bir soyutlama örneği. Yalnızca input(düğmeye basmak) ve output(eğlencenin başlaması) değerleriyle ilgileniyoruz. Arka tarafta dönen teknik hadiseleri hiç düşünmeden bize sunulmuş bir düğmeyi kullanarak işimizi görüyoruz.
+
+// Eğer hala bir şeyler oturmadıysa kafanızda bir de çarpışan arabamızdaki soyutlamaya bakalım. Siz arabayı kullanırken direksiyonu gitmek istediğiniz yöne çeviriyor, gaz pedalına basarak ilerliyorsunuz. Gaz pedalına bastığınızdaki motorda oluşan tetiklenmeleri, direksiyonu çevirdiğinizde lastiklerin dönmesini sağlayan mekanizmayı hiç düşünmeden yalnızca iki pedal bir direksiyonla aslında arka planında onlarca aksiyon yatan bir işlevi gerçekleştirmiş oluyorsunuz. Input (gaz/fren pedalları, direksiyon) ve output (arabanın gitmesi) değerlerini bilmek size yetiyor.
 
 
 //todo, Inheritance

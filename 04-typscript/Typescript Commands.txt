@@ -24,5 +24,6 @@ cd ts-intro ile klasör içine girdi
 npm init -y ile npm node projesi haline getirilir.
 nmp -i typescript ile sadece mevcut klasör içine ts kurulumu yapılır.
 npx tsc -v ile çalıştırılır ve versiyona bakılır.
+npx tsc --init
 
 
