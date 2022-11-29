@@ -15,6 +15,13 @@
 
 // Be specific about the type of data you're dealing with if you have a possibility of knowing.
 
+//* herhangi birşey olabilir demek, yani js gibi yazmak anlamına gelir ts tipten dolayı uyarı/hata vermez
+let anything: any = "Hello World";
+anything = 23;
+anything = true;
+anything = [1];
+console.log(anything);
+
 //? ➤ Type : unknown
 
 // unknown type means that the type of variable is not known . It is the type - safe counterpart of any .
@@ -38,10 +45,19 @@ let newValue4: object = value; // Error
 let newValue5: any[] = value; // Error
 let newValue6: Function = value; // Error
 
+//! tipi unnokn olan sadece any'ye atanabilir. Yoksa yukarıdaki gibi hata verir.
+
+let v1:unknown = 5;
+// let v2:number = v1; hata verir,
+let v2:number = v1 as number; // hata vermez.
+
 //* The special types unknown and any can carry any value.
 //* unknown is preferred over any. Because it provides safer typing – if you wish to conduct operations on unknown , you must use type assertion or narrow to a specified type.
 
 //? ​➤ Type : void
+//* bir fonksiyonun dönüş tipi olarak kullanılır. (never gibi)
+//* içinde return yoksa void olur.
+//* veya return var ama karşılığı yok
 
 // In programming languages such as Java, void is used when there is no data. For example, if a function does not return any value then you can specify void as return type.
 
@@ -59,6 +75,9 @@ let z: void = 1; // Error
 
 
 //? ➤ Type : never
+//* bir fonksiyonun dönüş tipi olarak kullanılır. (void gibi)
+//* hata oluşturan bir fonksiyondur ve asla sona ulaşmaz ve hata verir --> demek
+
 // The never type represents the value that will never happen .
 
 // We use it as the return type of a function , which does not return a value . For example , the function that always throws an exception is shown below .
@@ -80,20 +99,21 @@ let nothing: never = null;
 
 // Like JavaScript, TypeScript has support for arrays. There are two ways to declare an array:
 
-// ●1. Using square brackets. This approach is comparable to how array declaration works in JavaScript.
-let lessons: string[] = ['HTML', 'CSS', 'React'];
+//* ●1. Using square brackets. This approach is comparable to how array declaration works in JavaScript.
+//! en yaygın bu 1nci yöntem kullanılır
+let lessons12: string[] = ['HTML', 'CSS', 'React'];
 
 
-// ●2. With generic array type, Array
-let lessons: Array<string> = ['HTML', 'CSS', 'React'];
-let nums: Array<number> = [1 , 2 , 3 , 4];
+//* ●2. With generic array type, Array
+let lessons13: Array<string> = ['HTML', 'CSS', 'React'];
+let nums12: Array<number> = [1 , 2 , 3 , 4];
 
-// Obviously, you could initialize a mix array as shown below, but then you wouldn't benefit from TypeScript's type system.
+//* ●3. Obviously, you could initialize a mix array as shown below, but then you wouldn't benefit from TypeScript's type system.
 let arr =  ['HTML', 'CSS', 1,  'React', 4]
 
 
 // ➤The generic array type syntax used by TypeScript allows an array to hold elements of many data types, as demonstrated below.
-let values: (string | number)[] =['HTML', 'CSS', 1, 'React', 4]
+let values11: (string | number)[] =['HTML', 'CSS', 1, 'React', 4]
 
 // Accessing Array Elements:
 values[0]; //returns HTML
@@ -136,7 +156,7 @@ let score: number[] = []
 
 // We often use them when working with a pair of values for example let's say for each user we want to represent two values an id and an a so we declare a variable and annotate it using a special syntax;
 
-let user: [number, string] = [1, 'Matthew'];
+let user11: [number, string] = [1, 'Matthew'];
 
 // First we add square brackets and then tell the compiler that the first element is going to be a number whereas the second element is going to be a string. We have a fixed length array with exactly two elements nothing more nothing less so if we add a third element here we get a compilation error.
 
@@ -181,6 +201,7 @@ instructors.push([3, 'Ryan']);
 
 
 //! *************** Enums **************
+//* 0'dan başlayarak otomatik sayı eşleştiri veya string bir karşılık da eşleştirebilir eğer biz kendimiz yazarsak..
 
 // ➤ Enums or enumerations are a new data type supported in TypeScript. Enums are commonly used in object-oriented languages like Java and C#. Enums allow a developer to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases. TypeScript is now also supported for this.
 
@@ -245,6 +266,9 @@ console.log(States.Connecticut); // 8
 
 
 //! ************** Union Types ****************
+//* bizim belirlediğimiz herhangi 2 değer olabilir tipi demek..
+//* if else içinde kullanmaya type narrowing --> tip daraltma denir.
+
 // ➤We can define a variable in TypeScript that can contain several types of values. In other words, TypeScript may combine one or two separate types of data (such as numbers, strings, and so on) into a single type known as a union type. Union types are an effective means of expressing a variable that has numerous kinds. Using the pipe ('|') symbol between two or more data types, they can be merged.
 
 function addOrConcat(input1: number | string, input2: number | string) {
