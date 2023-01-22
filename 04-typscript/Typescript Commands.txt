@@ -1,4 +1,4 @@
---------- 1nci kurulum yöntemi
+--------- 1nci kurulum yöntemi---------
 
 npm i -g typescript
 kendi bilgisayarımıza global olrak kurulum yapar..
@@ -10,7 +10,7 @@ versiyonuna bakılır.
 npm ls -g
 npm içinde nereye kurulduğunu gösterir.
 
------------ 2nci kurulum yöntemi
+----------- 2nci kurulum yöntemi-------------
 
 npx create-react-app my-app --template typescript
 yarn create react-app my-app --template typescript
@@ -18,7 +18,7 @@ yarn create react-app my-app --template typescript
 react projesi olarak içinde typscript olan kurulum yapar
 
 
------------3ncü kurulum yöntemi
+-----------3ncü kurulum yöntemi--------
 terminal açıp --> mkdir ts-intro isimli klasör oluşturuldu
 cd ts-intro ile klasör içine girdi
 npm init -y ile npm node projesi haline getirilir.
